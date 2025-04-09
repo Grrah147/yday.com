@@ -46,7 +46,6 @@ const toggleDropdown = () => {
 const selectLanguage = (code) => {
   language.value = code;
   isOpen.value = false;
-  // console.log(`Language switched to ${code}`);
 };
 </script>
 
@@ -79,8 +78,6 @@ nav a {
 
 nav a:hover,
 nav a.router-link-exact-active {
-  /* color: #2C3930;
-  font-weight: bold; */
   text-shadow: 0 0 .8px #2C3930, 0 0 .1px #2C3930;
 }
 
