@@ -22,10 +22,14 @@ body {
   padding: 1rem;
 }
 
+#navbar,
 #home {
   display: flex;
+}
+#home {
   height: 100%;
 }
+#navbar .p-menubar,
 #home .p-card {
   flex: 1;
 }
