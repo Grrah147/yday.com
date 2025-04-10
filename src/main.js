@@ -6,6 +6,7 @@ import PrimeVue from 'primevue/config'
 import { definePreset } from '@primeuix/themes'
 // import primevue components
 import Aura from '@primeuix/themes/aura'
+import Card from 'primevue/card'
 import Menubar from 'primevue/menubar'
 import Button from 'primevue/button'
 import Badge from 'primevue/badge'
@@ -56,6 +57,7 @@ app
   .component('Button', Button)
   .component('Menubar', Menubar)
   .component('Badge', Badge)
+  .component('Card', Card)
 
 app.directive('ripple', Ripple)
 

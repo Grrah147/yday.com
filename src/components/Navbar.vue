@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div id="navbar" class="card">
         <Menubar :model="items">
             <template #start>
                 <span class="permanent-marker-regular">YDay.com</span>
@@ -96,6 +96,7 @@ const selectLanguage = (code) => {
     gap: var(--p-menubar-item-gap);
     user-select: none;
     outline: 0 none;
+    filter: grayscale(20%);
 }
 
 .dropdown-menu {
