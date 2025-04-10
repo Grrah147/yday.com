@@ -1,17 +1,18 @@
 <template>
-  <div class="home">
+  <div id="home">
+
   </div>
 </template>
 
 <script>
-import { inject } from 'vue';
+// import { inject } from 'vue';
 
-export default {
-  setup() {
-    const { translations, language } = inject('language');
-    return { translations, language };
-  },
-};
+// export default {
+//   setup() {
+//     const { translations, language } = inject('language');
+//     return { translations, language };
+//   },
+// };
 </script>
 
 <style scoped></style>

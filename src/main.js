@@ -1,9 +1,18 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+
 import PrimeVue from 'primevue/config'
 import { definePreset } from '@primeuix/themes'
+// import primevue components
 import Aura from '@primeuix/themes/aura'
+import Menubar from 'primevue/menubar'
+import Button from 'primevue/button'
+import Badge from 'primevue/badge'
+// import OverlayBadge from 'primevue/overlaybadge'
+import Ripple from 'primevue/ripple'
+
+import 'primeicons/primeicons.css'
 
 const MyPreset = definePreset(Aura, {
   semantic: {
@@ -20,45 +29,18 @@ const MyPreset = definePreset(Aura, {
       900: '{red.900}',
       950: '{red.950}',
     },
-    colorScheme: {
-      light: {
-        surface: {
-          0: '#ffffff',
-          50: '{zinc.50}',
-          100: '{zinc.100}',
-          200: '{zinc.200}',
-          300: '{zinc.300}',
-          400: '{zinc.400}',
-          500: '{zinc.500}',
-          600: '{zinc.600}',
-          700: '{zinc.700}',
-          800: '{zinc.800}',
-          900: '{zinc.900}',
-          950: '{zinc.950}',
-        },
-      },
-      dark: {
-        surface: {
-          0: '#ffffff',
-          50: '{slate.50}',
-          100: '{slate.100}',
-          200: '{slate.200}',
-          300: '{slate.300}',
-          400: '{slate.400}',
-          500: '{slate.500}',
-          600: '{slate.600}',
-          700: '{slate.700}',
-          800: '{slate.800}',
-          900: '{slate.900}',
-          950: '{slate.950}',
-        },
-      },
+  },
+  components: {
+    menubar: {
+      padding: '0.5rem 1rem',
     },
   },
 })
 
 const app = createApp(App)
-app.use(router, PrimeVue, {
+
+app.use(router)
+app.use(PrimeVue, {
   theme: {
     preset: MyPreset,
     options: {
@@ -67,5 +49,14 @@ app.use(router, PrimeVue, {
       cssLayer: false,
     },
   },
+  ripple: true,
 })
+
+app
+  .component('Button', Button)
+  .component('Menubar', Menubar)
+  .component('Badge', Badge)
+
+app.directive('ripple', Ripple)
+
 app.mount('#app')
