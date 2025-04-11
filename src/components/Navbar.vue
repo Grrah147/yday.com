@@ -2,7 +2,7 @@
     <div id="navbar" class="card">
         <Menubar :model="items">
             <template #start>
-                <span class="permanent-marker-regular">YDay.com</span>
+                <span class="text-primary-500 dark:text-primary-400 yday-logo permanent-marker-regular">YDay.com</span>
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
                 <router-link v-if="item.route" v-slot="{ href, navigate, isActive, isExactActive }" :to="item.route"
@@ -53,7 +53,7 @@ const items = ref([
     },
     {
         label: 'order',
-        icon: 'pi pi-pen-to-square',
+        icon: 'pi pi-shopping-bag',
         route: '/order',
     },
     {
@@ -93,6 +93,10 @@ const selectLanguage = (code) => {
 
 #navbar .p-menubar {
     flex: 1;
+}
+
+.yday-logo {
+    font-size: 24px;
 }
 
 .router-link-active,
