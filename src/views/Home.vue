@@ -25,4 +25,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#home {
+  display: flex;
+  height: 100%;
+}
+
+#home .p-card {
+  flex: 1;
+}
+</style>

@@ -8,6 +8,14 @@ import { definePreset } from '@primeuix/themes'
 import Aura from '@primeuix/themes/aura'
 import Card from 'primevue/card'
 import Menubar from 'primevue/menubar'
+
+import Stepper from 'primevue/stepper'
+import StepList from 'primevue/steplist'
+import StepPanels from 'primevue/steppanels'
+import StepItem from 'primevue/stepitem'
+import Step from 'primevue/step'
+import StepPanel from 'primevue/steppanel'
+
 import Button from 'primevue/button'
 import Badge from 'primevue/badge'
 // import OverlayBadge from 'primevue/overlaybadge'
@@ -58,6 +66,12 @@ app
   .component('Menubar', Menubar)
   .component('Badge', Badge)
   .component('Card', Card)
+  .component('Stepper', Stepper)
+  .component('StepList', StepList)
+  .component('StepPanels', StepPanels)
+  .component('StepItem', StepItem)
+  .component('Step', Step)
+  .component('StepPanel', StepPanel)
 
 app.directive('ripple', Ripple)
 

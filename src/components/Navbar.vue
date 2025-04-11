@@ -5,8 +5,10 @@
                 <span class="permanent-marker-regular">YDay.com</span>
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
-                <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-                    <a v-ripple :href="href" v-bind="props.action" @click="navigate">
+                <router-link v-if="item.route" v-slot="{ href, navigate, isActive, isExactActive }" :to="item.route"
+                    custom>
+                    <a v-ripple :href="href" v-bind="props.action" @click="navigate" :active="isActive"
+                        :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']">
                         <span :class="item.icon" />
                         <span>{{ translations[language][item.label] }}</span>
                     </a>
@@ -85,6 +87,21 @@ const selectLanguage = (code) => {
 </script>
 
 <style scoped>
+#navbar {
+    display: flex;
+}
+
+#navbar .p-menubar {
+    flex: 1;
+}
+
+.router-link-active,
+.router-link-exact-active {
+    color: var(--p-menubar-item-focus-color);
+    background: var(--p-menubar-item-focus-background);
+    border-radius: var(--p-menubar-base-item-border-radius);
+}
+
 .dropdown {
     position: relative;
     cursor: pointer;
