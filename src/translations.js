@@ -3,9 +3,21 @@ export default {
     home: 'Home',
     order: 'Order',
     contact: 'Contact',
-    welcome: 'Welcome to YDay.com By Anoratorius',
+    welcome: 'Online shelf store,',
     intro:
-      'Craft your perfect shelf with ease! At YDay.com, we bring you high-quality, customizable shelves designed to fit your space and style. Use our innovative configurator to build your shelf in real-time and order it with fast delivery.',
+      'We offer a wide range of high-quality shelves with different functions and purposes,\n you can buy a shelf that is exactly tailored to your needs, space, and style for your home or office.',
+    ydAdv1: 'Innovative configurator',
+    ydAdv1Desc:
+      'With our innovative online configurator, you will be able to create your ideal shelf.',
+    ydAdv2: 'Online ordering and payment',
+    ydAdv2Desc:
+      'You will be able to place an order without leaving your home through our website.',
+    ydAdv3: 'Quick manufacturing',
+    ydAdv3Desc:
+      'Your order will be processed and manufactured as soon as possible.',
+    ydAdv4: 'Free delivery and installation',
+    ydAdv4Desc:
+      'You will be able to take advantage of free delivery and installation services in the fastest possible time.',
     configure: 'Configure Your Custom Shelf Now',
     about: 'About YDay.com',
     aboutText:
@@ -52,10 +64,21 @@ export default {
     home: 'მთავარი',
     order: 'შეკვეთა',
     contact: 'კონტაქტი',
-    welcome: 'მოგესალმებით YDay.com-ზე Anoratorius-ისგან',
+    welcome: 'თაროების ონლაინ მაღაზია,',
     intro:
-      'შექმენით თქვენი იდეალური თარო მარტივად! YDay.com-ზე ჩვენ გთავაზობთ მაღალი ხარისხის, კონფიგურირებად თაროებს, რომლებიც შეესაბამება თქვენს სივრცესა და სტილს. გამოიყენეთ ჩვენი ინოვაციური კონფიგურატორი თქვენი თაროს რეალურ დროში შესაქმნელად და შეუკვეთეთ სწრაფი მიწოდებით.',
-    configure: 'დააკონფიგურირეთ თქვენი თარო ახლავე',
+      'ჩვენ გთავაზობთ მაღალი ხარისხის, სხვადასხვა ფუნქციისა და დანიშნულების მქონე, მრავალფეროვან თაროებს,\n თქვენ შეძლებთ შეიძინოთ თარო, რომელიც ზუსტად იქნება მორგებული თქვენს საჭიროებაზე, სივრცეზე, და სტილზე, თქვენი სახლისა თუ ოფისისთვის.',
+    ydAdv1: 'ინოვაციური კონფიგურატორი',
+    ydAdv1Desc:
+      'ჩვენი ინოვაციური ონლაინ კონფიგურატორის მეშვეობით თქვენ შეძლებთ შექმნათ თქვენი იდეალური თარო.',
+    ydAdv2: 'ონლაინ შეკვეთა და გადახდა',
+    ydAdv2Desc:
+      'თქვენ შეძლებთ სახლიდან გაუსვლელად, ჩვენი ვებ-საიტის მეშვეობით გააკეთოთ შეკვეთა.',
+    ydAdv3: 'სწრაფი დამზადება',
+    ydAdv3Desc:
+      'უმოკლეს ვადებში მოხდება თქვენი შეკვეთის დამუშავება და დამზადება.',
+    ydAdv4: 'უფასო მიტანა და მონტაჟი',
+    ydAdv4Desc:
+      'თქვენ შეძლებთ ისარგებლოთ უფასო მიტანისა და მონტაჟის სერვისით, უსწრაფეს ვადებში.',
     about: 'YDay.com-ის შესახებ',
     aboutText:
       'ჩვენ ვართ ადგილობრივი ქართული ბიზნესი, რომელიც ქმნის ფუნქციურ, ელეგანტურ თაროებს თქვენი სახლისა თუ ოფისისთვის. ჩვენი მარტივი გამოსაყენებელი ვებსაიტით შეგიძლიათ შექმნათ და შეუკვეთოთ თქვენს საჭიროებებზე მორგებული თაროები.',
@@ -101,10 +124,19 @@ export default {
     home: 'Главная',
     order: 'Заказ',
     contact: 'Контакты',
-    welcome: 'Добро пожаловать на YDay.com от Anoratorius',
+    welcome: 'Интернет-магазин полок,',
     intro:
-      'Создайте свою идеальную полку с легкостью! На YDay.com мы предлагаем высококачественные, настраиваемые полки, которые идеально впишутся в ваше пространство и стиль. Используйте наш инновационный конфигуратор, чтобы создать полку в реальном времени и заказать ее с быстрой доставкой.',
-    configure: 'Настройте свою полку прямо сейчас',
+      'Мы предлагаем широкий ассортимент высококачественных полок с различными функциями и назначениями,\n Вы сможете приобрести полку, которая будет точно соответствовать вашим потребностям, пространству и стилю вашего дома или офиса.',
+    ydAdv1: 'Инновационный конфигуратор',
+    ydAdv1Desc:
+      'С помощью нашего инновационного онлайн-конфигуратора вы сможете создать свою идеальную полку.',
+    ydAdv2: 'Онлайн-заказ и оплата',
+    ydAdv2Desc: 'Вы сможете оформить заказ, не выходя из дома, через наш сайт.',
+    ydAdv3: 'Быстрое приготовление',
+    ydAdv3Desc: 'Ваш заказ будет обработан и изготовлен в кратчайшие сроки.',
+    ydAdv4: 'Бесплатная доставка и установка',
+    ydAdv4Desc:
+      'Вы сможете воспользоваться бесплатными услугами доставки и установки в кратчайшие сроки.',
     about: 'О YDay.com',
     aboutText:
       'Мы местный грузинский бизнес, создающий функциональные и стильные полки для вашего дома или офиса. С помощью нашего удобного сайта вы можете спроектировать и заказать полки, адаптированные под ваши потребности.',

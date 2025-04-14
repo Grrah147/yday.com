@@ -2,7 +2,8 @@
     <div id="navbar" class="card">
         <Menubar :model="items">
             <template #start>
-                <span class="text-primary-500 dark:text-primary-400 yday-logo permanent-marker-regular">YDay.com</span>
+                <span
+                    class="text-primary-500 dark:text-primary-400 text-3xl permanent-marker-regular px-3">YDay.com</span>
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
                 <router-link v-if="item.route" v-slot="{ href, navigate, isActive, isExactActive }" :to="item.route"
@@ -25,6 +26,8 @@
             </template>
             <template #end>
                 <div class="flex items-center gap-2">
+                    <Button :icon="ydAppDark ? 'pi pi-moon' : 'pi pi-sun'" variant="outlined" severity="secondary"
+                        aria-label="Theme" @click="toggleDarkMode()" />
                     <div class="lang-selector p-menubar-item">
                         <div class="dropdown p-menubar-item-content" @click="toggleDropdown">
                             <span :class="`flag-icon flag-icon-${flagMap[language]}`"></span>
@@ -63,6 +66,13 @@ const items = ref([
     }
 ]);
 
+const ydAppDark = ref(false);
+
+function toggleDarkMode() {
+    document.documentElement.classList.toggle('yd-app-dark');
+    ydAppDark.value = !ydAppDark.value;
+}
+
 /* Language Switch */
 const { translations, language } = inject('language');
 const languages = {
@@ -93,10 +103,6 @@ const selectLanguage = (code) => {
 
 #navbar .p-menubar {
     flex: 1;
-}
-
-.yday-logo {
-    font-size: 24px;
 }
 
 .router-link-active,

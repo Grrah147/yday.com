@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 @import 'tailwindcss-primeui';
 
+@custom-variant dark (&:where(.yd-app-dark, .yd-app-dark *));
+
 :root {
   font-size: 14px;
 }

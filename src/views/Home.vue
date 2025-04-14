@@ -1,19 +1,16 @@
 <template>
-  <card id="home" class="bg-surface-0 dark:bg-surface-950">
+  <card id="home">
     <template #content>
-      <div class="bg-surface-0 dark:bg-surface-950 px-6 md:px-12 lg:px-20 py-20 text-center">
+      <div class="px-6 md:px-12 lg:px-20 py-20 text-center">
         <div class="flex flex-col gap-6 md:gap-10 lg:gap-10">
           <div class="flex flex-col items-center gap-4">
             <div class="font-bold text-3xl leading-tight">
-              <span class="text-surface-900 dark:text-surface-0">თაროების ონლაინ მაღაზია, </span>
-              <span class="text-primary-500 dark:text-primary-400 permanent-marker-regular">YDay.com</span>
+              <span class="text-surface-900 dark:text-surface-0"> {{ translations[language].welcome }} </span>
+              <span class="text-primary-500 dark:text-primary-400 permanent-marker-regular"> YDay.com</span>
             </div>
-            <div class="text-surface-500 dark:text-surface-400 text-lg leading-tight">ჩვენ გთავაზობთ მაღალი ხარისხის,
-              სხვადასხვა
-              ფუნქციისა და დანიშნულების მქონე, მრავალფეროვან თაროებს,
-              თქვენ შეძლებთ შეიძინოთ თარო, რომელიც ზუსტად იქნება მორგებული თქვენს საჭიროებაზე, სივრცეზე, და სტილზე,
-              თქვენი
-              სახლისა თუ ოფისისთვის.</div>
+            <div class="text-surface-500 dark:text-surface-400 leading-tight whitespace-pre"> {{
+              translations[language].intro }}
+            </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="w-full rounded-md p-4">
@@ -22,11 +19,11 @@
                 <i class="pi pi-pen-to-square !text-2xl lg:!text-3xl text-primary-500 dark:text-primary-400" />
               </span>
               <div class="flex flex-col gap-1">
-                <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight">ინოვაციური
-                  კონფიგურატორი
+                <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight"> {{
+                  translations[language].ydAdv1 }}
                 </div>
-                <p class="text-surface-500 dark:text-surface-400 leading-normal">ჩვენი ინოვაციური ონლაინ კონფიგურატორის
-                  მეშვეობით თქვენ შეძლებთ შექმნათ თქვენი იდეალური თარო.</p>
+                <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv1Desc
+                }} </p>
               </div>
             </div>
             <div class="w-full rounded-md p-4">
@@ -35,13 +32,11 @@
                 <i class="pi pi-shopping-bag !text-2xl lg:!text-3xl text-primary-500 dark:text-primary-400" />
               </span>
               <div class="flex flex-col gap-1">
-                <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight">ონლაინ შეკვეთა და
-                  გადახდა
+                <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight"> {{
+                  translations[language].ydAdv2 }}
                 </div>
-                <p class="text-surface-500 dark:text-surface-400 leading-normal">თქვენ შეძლებთ სახლიდან გაუსვლელად,
-                  ჩვენი
-                  ვებ-საიტის
-                  მეშვეობით გააკეთოთ შეკვეთა.</p>
+                <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv2Desc
+                }} </p>
               </div>
             </div>
             <div class="w-full rounded-md p-4">
@@ -50,10 +45,11 @@
                 <i class="pi pi-hourglass !text-2xl lg:!text-3xl text-primary-500 dark:text-primary-400" />
               </span>
               <div class="flex flex-col gap-1">
-                <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight">სწრაფი დამზადება
+                <div class="text-surface-900 dark:text-surface-0  text-xl font-medium leading-tight"> {{
+                  translations[language].ydAdv3 }}
                 </div>
-                <p class="text-surface-500 dark:text-surface-400 leading-normal">უმოკლეს ვადებში მოხდება თქვენი შეკვეთის
-                  დამუშავება და დამზადება.</p>
+                <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv3Desc
+                }} </p>
               </div>
             </div>
             <div class="w-full rounded-md p-4">
@@ -62,19 +58,19 @@
                 <i class="pi pi-truck !text-2xl lg:!text-3xl text-primary-500 dark:text-primary-400" />
               </span>
               <div class="flex flex-col gap-1">
-                <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight">უფუასო მიტანა და
-                  მონტაჟი
+                <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight"> {{
+                  translations[language].ydAdv4 }}
                 </div>
-                <p class="text-surface-500 dark:text-surface-400 leading-normal">თქვენ შეძლებთ ისარგებლოთ უფასო მიტანისა
-                  და მონტაჟის სერვისით, უსწრაფეს ვადებში.</p>
+                <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv4Desc
+                }} </p>
               </div>
             </div>
           </div>
           <div class="flex flex-col items-center gap-4">
             <Button asChild v-slot="slotProps">
               <RouterLink to="/order" :class="slotProps.class" class="p-button-lg">
-                <span class="p-button-label">შეუკვეთე</span>
-                <span class="p-button-icon pi pi-angle-double-right"></span>
+                <span class="p-button-label"> {{ translations[language].order }} </span>
+                <span class="p-button-icon pi pi-chevron-right"></span>
               </RouterLink>
             </Button>
           </div>
@@ -98,12 +94,5 @@ export default {
 <style scoped>
 #home {
   flex: 1;
-  background-color: var(--p-surface-0);
-}
-
-#home.dark\:bg-surface-950 {
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--p-surface-950);
-  }
 }
 </style>
