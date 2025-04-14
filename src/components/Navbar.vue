@@ -39,6 +39,14 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="card flex justify-center">
+                        <Button type="button" class="!p-0 !m-0" @click="toggleAccountMenu" variant="outlined"
+                            severity="secondary" aria-haspopup="true" aria-controls="overlay_menu">
+                            <Avatar icon="pi pi-user" style="background-color: #dee9fc; color: #1a2551" />
+                        </Button>
+                        <Menu ref="accountMenu" id="overlay_menu" :model="accountMenuItems" :popup="true" />
+                    </div>
                 </div>
             </template>
         </Menubar>
@@ -66,6 +74,7 @@ const items = ref([
     }
 ]);
 
+/* Theme Switch */
 const ydAppDark = ref(false);
 
 function toggleDarkMode() {
@@ -93,7 +102,28 @@ const selectLanguage = (code) => {
     language.value = code;
     isOpen.value = false;
 };
-/* - */
+
+/* Log in */
+const accountMenu = ref();
+const accountMenuItems = ref([
+    {
+        label: 'nikoloz.u@gmail.com',
+        items: [
+            {
+                label: 'Active orders',
+                icon: 'pi pi-file-check'
+            },
+            {
+                label: 'Sign out',
+                icon: 'pi pi-sign-out'
+            }
+        ]
+    }
+]);
+
+const toggleAccountMenu = (event) => {
+    accountMenu.value.toggle(event);
+};
 </script>
 
 <style scoped>

@@ -1,6 +1,5 @@
 @import 'tailwindcss';
 @import 'tailwindcss-primeui';
-
 @custom-variant dark (&:where(.yd-app-dark, .yd-app-dark *));
 
 :root {
@@ -23,16 +22,16 @@ body {
   padding: 1rem;
 }
 
-.permanent-marker-regular {
-  font-family: 'Permanent Marker', cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .open-sans-regular {
   font-family: 'Open Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings: 'wdth' 100;
+}
+
+.permanent-marker-regular {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
+  font-style: normal;
 }

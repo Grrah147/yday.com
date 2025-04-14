@@ -8,7 +8,7 @@
               <span class="text-surface-900 dark:text-surface-0"> {{ translations[language].welcome }} </span>
               <span class="text-primary-500 dark:text-primary-400 permanent-marker-regular"> YDay.com</span>
             </div>
-            <div class="text-surface-500 dark:text-surface-400 leading-tight whitespace-pre"> {{
+            <div class="text-surface-500 dark:text-surface-400 leading-tight whitespace-pre-wrap"> {{
               translations[language].intro }}
             </div>
           </div>
@@ -23,7 +23,7 @@
                   translations[language].ydAdv1 }}
                 </div>
                 <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv1Desc
-                  }} </p>
+                }} </p>
               </div>
             </div>
             <div class="w-full rounded-md p-4">
@@ -36,7 +36,7 @@
                   translations[language].ydAdv2 }}
                 </div>
                 <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv2Desc
-                  }} </p>
+                }} </p>
               </div>
             </div>
             <div class="w-full rounded-md p-4">
@@ -49,7 +49,7 @@
                   translations[language].ydAdv3 }}
                 </div>
                 <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv3Desc
-                  }} </p>
+                }} </p>
               </div>
             </div>
             <div class="w-full rounded-md p-4">
@@ -62,7 +62,7 @@
                   translations[language].ydAdv4 }}
                 </div>
                 <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv4Desc
-                  }} </p>
+                }} </p>
               </div>
             </div>
           </div>

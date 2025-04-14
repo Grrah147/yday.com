@@ -3,6 +3,9 @@ export default {
     home: 'Home',
     order: 'Order',
     contact: 'Contact',
+    notFoundTitle: '404 Not Found',
+    notFoundContent: 'This page does not exist',
+    goBack: 'Go back',
     welcome: 'Online shelf store,',
     intro:
       'We offer a wide range of high-quality shelves with different functions and purposes,\n you can buy a shelf that is exactly tailored to your needs, space, and style for your home or office.',
@@ -18,7 +21,6 @@ export default {
     ydAdv4: 'Free delivery and installation',
     ydAdv4Desc:
       'You will be able to take advantage of free delivery and installation services in the fastest possible time.',
-    configure: 'Configure Your Custom Shelf Now',
     about: 'About YDay.com',
     aboutText:
       'We’re a local Georgian business dedicated to creating functional, stylish shelves for your home or office. With our easy-to-use website, you can design and order custom shelves tailored to your needs.',
@@ -64,6 +66,9 @@ export default {
     home: 'მთავარი',
     order: 'შეკვეთა',
     contact: 'კონტაქტი',
+    notFoundTitle: '404 არ მოიძებნა',
+    notFoundContent: 'ეს გვერდი არ არსებობს',
+    goBack: 'დაბრუნდი',
     welcome: 'თაროების ონლაინ მაღაზია,',
     intro:
       'ჩვენ გთავაზობთ მაღალი ხარისხის, სხვადასხვა ფუნქციისა და დანიშნულების მქონე, მრავალფეროვან თაროებს,\n თქვენ შეძლებთ შეიძინოთ თარო, რომელიც ზუსტად იქნება მორგებული თქვენს საჭიროებაზე, სივრცეზე, და სტილზე, თქვენი სახლისა თუ ოფისისთვის.',
@@ -124,6 +129,9 @@ export default {
     home: 'Главная',
     order: 'Заказ',
     contact: 'Контакты',
+    notFoundTitle: '404 Не найдено',
+    notFoundContent: 'Эта страница не существует',
+    goBack: 'возвращаться',
     welcome: 'Интернет-магазин полок,',
     intro:
       'Мы предлагаем широкий ассортимент высококачественных полок с различными функциями и назначениями,\n Вы сможете приобрести полку, которая будет точно соответствовать вашим потребностям, пространству и стилю вашего дома или офиса.',
