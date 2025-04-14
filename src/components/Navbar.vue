@@ -40,13 +40,10 @@
                         </div>
                     </div>
 
-                    <div class="card flex justify-center">
-                        <Button type="button" class="!p-0 !m-0" @click="toggleAccountMenu" variant="outlined"
-                            severity="secondary" aria-haspopup="true" aria-controls="overlay_menu">
-                            <Avatar icon="pi pi-user" style="background-color: #dee9fc; color: #1a2551" />
-                        </Button>
-                        <Menu ref="accountMenu" id="overlay_menu" :model="accountMenuItems" :popup="true" />
-                    </div>
+                    <Button icon="pi pi-user" type="button" variant="outlined" severity="secondary" aria-haspopup="true"
+                        aria-controls="overlay_menu" @click="toggleAccountMenu">
+                    </Button>
+                    <Menu ref="accountMenu" id="overlay_menu" :model="accountMenuItems" :popup="true" />
                 </div>
             </template>
         </Menubar>
@@ -103,7 +100,7 @@ const selectLanguage = (code) => {
     isOpen.value = false;
 };
 
-/* Log in */
+/* Account menu */
 const accountMenu = ref();
 const accountMenuItems = ref([
     {
