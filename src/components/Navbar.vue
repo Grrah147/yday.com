@@ -146,14 +146,6 @@ const toggleUserAccountDropdownMenu = (event) => {
 </script>
 
 <style scoped>
-#navbar {
-    display: flex;
-}
-
-#navbar .p-menubar {
-    flex: 1;
-}
-
 .router-link-active,
 .router-link-exact-active {
     color: var(--p-menubar-item-focus-color);

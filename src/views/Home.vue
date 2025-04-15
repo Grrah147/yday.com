@@ -95,8 +95,4 @@ export default {
 };
 </script>
 
-<style scoped>
-#home {
-  flex: 1;
-}
-</style>
+<style scoped></style>
