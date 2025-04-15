@@ -45,6 +45,8 @@
                     </Button>
                     <Menu ref="userAccountDropdownMenu" id="user_account_overlay_dropdown_menu"
                         :model="userAccountDropdownMenuItems" :popup="true" />
+                    <Button icon="pi pi-shopping-cart" variant="outlined" severity="secondary" aria-label="Theme"
+                        @click="" />
                 </div>
             </template>
         </Menubar>
@@ -113,6 +115,10 @@ const userAccountDropdownMenuItems = ref([
     {
         label: 'nikoloz.u@gmail.com',
         items: [
+            {
+                label: 'Cart',
+                icon: 'pi pi-shopping-cart'
+            },
             {
                 label: 'Order history',
                 icon: 'pi pi-history'
