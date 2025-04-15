@@ -1,6 +1,6 @@
 <template>
   <div id="order" class="card">
-    <Stepper value="1" linear>
+    <Stepper value="1">
       <StepItem value="1">
         <Step>Header I</Step>
         <StepPanel v-slot="{ activateCallback }">

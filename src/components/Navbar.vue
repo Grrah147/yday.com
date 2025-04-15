@@ -28,18 +28,17 @@
                 <div class="flex items-center gap-2">
                     <Button :icon="ydAppDark ? 'pi pi-moon' : 'pi pi-sun'" variant="outlined" severity="secondary"
                         aria-label="Theme" @click="toggleDarkMode()" />
-                    <div class="yd-language-switch-container">
-                        <Button type="button" class="yd-language-switch-button p-button-icon-only" variant="outlined"
-                            severity="secondary" @click="toggleLanguageSwitchDropdownMenu">
-                            <span :class="`flag-icon flag-icon-${flagMap[language]}`"></span>
-                            <div v-if="isOpen" class="yd-language-switch-dropdown-menu">
-                                <div v-ripple v-for="(lang, code) in languages" :key="code"
-                                    @click.stop="selectLanguage(code)">
-                                    <span :class="`flag-icon flag-icon-${flagMap[code]}`"></span>
-                                </div>
-                            </div>
-                        </Button>
-                    </div>
+                    <Button type="button" variant="outlined" id="yd_language_switch_button" class="p-button-icon-only"
+                        severity="secondary" aria-haspopup="true" aria-controls="yd_language_switch_dropdown_menu"
+                        @click="toggleLanguageSwitchDropdownMenu">
+                        <span :class="`flag-icon flag-icon-${flagMap[language]}`"></span>
+                    </Button>
+                    <Menu ref="languageSwitchDropdownMenu" id="yd_language_switch_dropdown_menu"
+                        :model="languageSwitchDropdownMenuItems" :popup="true">
+                        <template #item="{ item }">
+                            <span :class="item.icon" />
+                        </template>
+                    </Menu>
                     <Button icon="pi pi-user" type="button" variant="outlined" severity="secondary" aria-haspopup="true"
                         aria-controls="user_account_overlay_dropdown_menu" @click="toggleUserAccountDropdownMenu">
                     </Button>
@@ -94,27 +93,35 @@ function toggleDarkMode() {
 /* Language switch */
 const { translations, language } = inject('language');
 
-const languages = {
-    en: 'English',
-    ka: 'ქართული',
-    ru: 'русский',
-};
-
 const flagMap = {
     en: 'gb',
     ka: 'ge',
     ru: 'ru',
 };
 
-const isOpen = ref(false);
+const languageSwitchDropdownMenu = ref();
 
-const toggleLanguageSwitchDropdownMenu = () => {
-    isOpen.value = !isOpen.value;
+const languageSwitchDropdownMenuItems = ref([
+    {
+        icon: 'flag-icon flag-icon-gb',
+        command: () => selectLanguage('en'),
+    },
+    {
+        icon: 'flag-icon flag-icon-ge',
+        command: () => selectLanguage('ka'),
+    },
+    {
+        icon: 'flag-icon flag-icon-ru',
+        command: () => selectLanguage('ru'),
+    },
+]);
+
+const toggleLanguageSwitchDropdownMenu = (event) => {
+    languageSwitchDropdownMenu.value.toggle(event);
 };
 
 const selectLanguage = (code) => {
     language.value = code;
-    isOpen.value = false;
 };
 
 /* User account dropdown menu */
@@ -145,47 +152,4 @@ const toggleUserAccountDropdownMenu = (event) => {
 };
 </script>
 
-<style scoped>
-.router-link-active,
-.router-link-exact-active {
-    color: var(--p-menubar-item-focus-color);
-    background: var(--p-menubar-item-focus-background);
-    border-radius: var(--p-menubar-base-item-border-radius);
-}
-
-.yd-language-switch-container {
-    & .yd-language-switch-button {
-        filter: grayscale(20%);
-        overflow: visible !important;
-
-        & .yd-language-switch-dropdown-menu {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            display: flex;
-            flex-direction: column;
-            z-index: 1000;
-            padding: var(--p-menubar-submenu-padding);
-            background: var(--p-menubar-submenu-background);
-            border: 1px solid var(--p-menubar-submenu-border-color);
-            box-shadow: var(--p-menubar-submenu-shadow);
-            border-radius: var(--p-menubar-submenu-border-radius);
-            gap: var(--p-menubar-submenu-gap);
-
-            & div {
-                padding: var(--p-button-padding-y) var(--p-button-padding-x);
-                border-radius: var(--p-menubar-base-item-border-radius);
-
-                &:hover {
-                    color: var(--p-menubar-item-focus-color);
-                    background: var(--p-menubar-item-focus-background);
-                }
-            }
-        }
-    }
-
-    & .flag-icon {
-        line-height: inherit;
-    }
-}
-</style>
+<style scoped></style>

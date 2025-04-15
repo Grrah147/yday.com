@@ -2,6 +2,14 @@
 @import 'tailwindcss-primeui';
 @custom-variant dark (&:where(.yd-app-dark, .yd-app-dark *));
 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
 :root {
   font-size: 14px;
 }
@@ -13,14 +21,6 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
 body {
   min-height: 100dvh;
   font-family: 'Open Sans', sans-serif;
@@ -29,7 +29,7 @@ body {
   font-style: normal;
   font-variation-settings: 'wdth' 100;
 }
-
+/* Page containers*/
 #app {
   min-height: 100dvh;
   display: flex;
@@ -41,12 +41,13 @@ body {
 #navbar {
   flex: 0;
 }
+
 #home,
 #contact,
 #order {
   flex: 1;
 }
-
+/* Fonts */
 .open-sans-regular {
   font-family: 'Open Sans', sans-serif;
   font-optical-sizing: auto;
@@ -60,7 +61,35 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+/* Navbar */
+.router-link-active,
+.router-link-exact-active {
+  color: var(--p-menubar-item-focus-color);
+  background: var(--p-menubar-item-focus-background);
+  border-radius: var(--p-menubar-base-item-border-radius);
+}
 
 #user_account_overlay_dropdown_menu_list li:last-child > div > a {
   padding-bottom: 0.75rem;
+}
+
+#yd_language_switch_button {
+  & .flag-icon {
+    line-height: inherit !important;
+    filter: grayscale(25%);
+  }
+}
+
+#yd_language_switch_dropdown_menu {
+  min-width: min-content;
+
+  & div {
+    padding: var(--p-button-padding-y) var(--p-button-padding-x);
+    cursor: pointer;
+  }
+
+  & .flag-icon {
+    line-height: inherit !important;
+    filter: grayscale(25%);
+  }
 }
