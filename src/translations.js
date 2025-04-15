@@ -8,7 +8,7 @@ export default {
     goBack: 'Go back',
     welcome: 'Online shelf store,',
     intro:
-      'We offer a wide range of high-quality shelves with different functions and purposes,\n you can buy a shelf that is exactly tailored to your needs, space, and style for your home or office.',
+      'We offer a wide range of high-quality shelves with different functions and purposes,\nyou can buy a shelf that is exactly tailored to your needs, space, and style for your home or office.',
     ydAdv1: 'Innovative configurator',
     ydAdv1Desc:
       'With our innovative online configurator, you will be able to create your ideal shelf.',
@@ -24,7 +24,7 @@ export default {
     about: 'About YDay.com',
     aboutText:
       'We’re a local Georgian business dedicated to creating functional, stylish shelves for your home or office. With our easy-to-use website, you can design and order custom shelves tailored to your needs.',
-    contactUs: 'Contact Us',
+    contactUs: 'Contact us',
     phone: '+995 598 282 060',
     address: 'Anoratorius street. 47',
     email: 'info@yday.com',
@@ -71,7 +71,7 @@ export default {
     goBack: 'დაბრუნდი',
     welcome: 'თაროების ონლაინ მაღაზია,',
     intro:
-      'ჩვენ გთავაზობთ მაღალი ხარისხის, სხვადასხვა ფუნქციისა და დანიშნულების მქონე, მრავალფეროვან თაროებს,\n თქვენ შეძლებთ შეიძინოთ თარო, რომელიც ზუსტად იქნება მორგებული თქვენს საჭიროებაზე, სივრცეზე, და სტილზე, თქვენი სახლისა თუ ოფისისთვის.',
+      'ჩვენ გთავაზობთ მაღალი ხარისხის, სხვადასხვა ფუნქციისა და დანიშნულების მქონე, მრავალფეროვან თაროებს,\nთქვენ შეძლებთ შეიძინოთ თარო, რომელიც ზუსტად იქნება მორგებული თქვენს საჭიროებაზე, სივრცეზე, და სტილზე, თქვენი სახლისა თუ ოფისისთვის.',
     ydAdv1: 'ინოვაციური კონფიგურატორი',
     ydAdv1Desc:
       'ჩვენი ინოვაციური ონლაინ კონფიგურატორის მეშვეობით თქვენ შეძლებთ შექმნათ თქვენი იდეალური თარო.',
@@ -134,7 +134,7 @@ export default {
     goBack: 'возвращаться',
     welcome: 'Интернет-магазин полок,',
     intro:
-      'Мы предлагаем широкий ассортимент высококачественных полок с различными функциями и назначениями,\n Вы сможете приобрести полку, которая будет точно соответствовать вашим потребностям, пространству и стилю вашего дома или офиса.',
+      'Мы предлагаем широкий ассортимент высококачественных полок с различными функциями и назначениями,\nВы сможете приобрести полку, которая будет точно соответствовать вашим потребностям, пространству и стилю вашего дома или офиса.',
     ydAdv1: 'Инновационный конфигуратор',
     ydAdv1Desc:
       'С помощью нашего инновационного онлайн-конфигуратора вы сможете создать свою идеальную полку.',

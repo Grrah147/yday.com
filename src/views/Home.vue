@@ -8,7 +8,7 @@
               <span class="text-surface-900 dark:text-surface-0"> {{ translations[language].welcome }} </span>
               <span class="text-primary-500 dark:text-primary-400 permanent-marker-regular"> YDay.com</span>
             </div>
-            <div class="text-surface-500 dark:text-surface-400 leading-tight whitespace-pre-wrap"> {{
+            <div class="text-surface-500 dark:text-surface-400 text-lg leading-tight whitespace-pre-wrap"> {{
               translations[language].intro }}
             </div>
           </div>
@@ -22,8 +22,9 @@
                 <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight"> {{
                   translations[language].ydAdv1 }}
                 </div>
-                <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv1Desc
-                }} </p>
+                <p class="text-surface-500 dark:text-surface-400 text-lg leading-normal"> {{
+                  translations[language].ydAdv1Desc
+                  }} </p>
               </div>
             </div>
             <div class="w-full rounded-md p-4">
@@ -35,8 +36,9 @@
                 <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight"> {{
                   translations[language].ydAdv2 }}
                 </div>
-                <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv2Desc
-                }} </p>
+                <p class="text-surface-500 dark:text-surface-400 text-lg leading-normal"> {{
+                  translations[language].ydAdv2Desc
+                  }} </p>
               </div>
             </div>
             <div class="w-full rounded-md p-4">
@@ -45,10 +47,11 @@
                 <i class="pi pi-hourglass !text-2xl lg:!text-3xl text-primary-500 dark:text-primary-400" />
               </span>
               <div class="flex flex-col gap-1">
-                <div class="text-surface-900 dark:text-surface-0  text-xl font-medium leading-tight"> {{
+                <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight"> {{
                   translations[language].ydAdv3 }}
                 </div>
-                <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv3Desc
+                <p class="text-surface-500 dark:text-surface-400 text-lg leading-normal"> {{
+                  translations[language].ydAdv3Desc
                 }} </p>
               </div>
             </div>
@@ -61,16 +64,17 @@
                 <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight"> {{
                   translations[language].ydAdv4 }}
                 </div>
-                <p class="text-surface-500 dark:text-surface-400 leading-normal"> {{ translations[language].ydAdv4Desc
-                }} </p>
+                <p class="text-surface-500 dark:text-surface-400 text-lg leading-normal"> {{
+                  translations[language].ydAdv4Desc
+                  }} </p>
               </div>
             </div>
           </div>
           <div class="flex flex-col items-center gap-4">
-            <Button asChild v-slot="slotProps">
-              <RouterLink to="/order" :class="slotProps.class" class="p-button-lg">
+            <Button asChild v-slot="slotProps" raised>
+              <RouterLink to="/order" :class="slotProps.class" class="yd-home-order-button p-button-lg">
+                <span class="p-button-icon pi pi-shopping-bag"></span>
                 <span class="p-button-label"> {{ translations[language].order }} </span>
-                <span class="p-button-icon pi pi-chevron-right"></span>
               </RouterLink>
             </Button>
           </div>
