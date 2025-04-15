@@ -26,8 +26,6 @@
             </template>
             <template #end>
                 <div class="flex items-center gap-2">
-                    <Button :icon="ydAppDark ? 'pi pi-moon' : 'pi pi-sun'" variant="outlined" severity="secondary"
-                        aria-label="Theme" @click="toggleDarkMode()" />
                     <Button type="button" variant="outlined" id="yd_language_switch_button" class="p-button-icon-only"
                         severity="secondary" aria-haspopup="true" aria-controls="yd_language_switch_dropdown_menu"
                         @click="toggleLanguageSwitchDropdownMenu">
@@ -39,6 +37,8 @@
                             <span :class="item.icon" />
                         </template>
                     </Menu>
+                    <Button :icon="ydAppDark ? 'pi pi-moon' : 'pi pi-sun'" variant="outlined" severity="secondary"
+                        aria-label="Theme" @click="toggleDarkMode()" />
                     <Button icon="pi pi-user" type="button" variant="outlined" severity="secondary" aria-haspopup="true"
                         aria-controls="user_account_overlay_dropdown_menu" @click="toggleUserAccountDropdownMenu">
                     </Button>
