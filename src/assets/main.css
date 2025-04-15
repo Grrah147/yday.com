@@ -42,7 +42,8 @@ body {
   flex: 0;
 }
 #home,
-#contact {
+#contact,
+#order {
   flex: 1;
 }
 
@@ -58,4 +59,8 @@ body {
   font-family: 'Permanent Marker', cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+#user_account_overlay_dropdown_menu_list li:last-child > div > a {
+  padding-bottom: 0.75rem;
 }
