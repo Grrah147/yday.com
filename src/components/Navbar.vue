@@ -9,7 +9,7 @@
                 <router-link v-if="item.route" v-slot="{ href, navigate, isActive, isExactActive }" :to="item.route"
                     custom>
                     <a v-ripple :href="href" v-bind="props.action" @click="navigate" :active="isActive"
-                        :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active']">
+                        :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active', item.disabled && 'disabled']">
                         <span :class="item.icon" />
                         <span>{{ translations[language][item.label] }}</span>
                     </a>
@@ -61,17 +61,26 @@ const items = ref([
         label: 'home',
         icon: 'pi pi-home',
         route: '/',
+        disabled: false,
     },
     {
         label: 'order',
         icon: 'pi pi-shopping-bag',
         route: '/order',
+        disabled: false,
     },
     {
         label: 'contact',
         icon: 'pi pi-envelope',
         route: '/contact',
-    }
+        disabled: false,
+    },
+    {
+        label: 'vacancy',
+        icon: 'pi pi-user-edit',
+        route: '/vacancy',
+        disabled: true,
+    },
 ]);
 
 /* Theme Switch */
