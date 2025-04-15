@@ -3,7 +3,7 @@
         <Menubar :model="items">
             <template #start>
                 <span
-                    class="text-primary-500 dark:text-primary-400 text-3xl permanent-marker-regular px-3">YDay.com</span>
+                    class="text-primary-500 dark:text-primary-400 text-2xl permanent-marker-regular px-3">YDay.com</span>
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
                 <router-link v-if="item.route" v-slot="{ href, navigate, isActive, isExactActive }" :to="item.route"
@@ -28,22 +28,23 @@
                 <div class="flex items-center gap-2">
                     <Button :icon="ydAppDark ? 'pi pi-moon' : 'pi pi-sun'" variant="outlined" severity="secondary"
                         aria-label="Theme" @click="toggleDarkMode()" />
-                    <div class="lang-selector p-menubar-item">
-                        <div class="dropdown p-menubar-item-content" @click="toggleDropdown">
+                    <div class="yd-language-switch-container">
+                        <Button type="button" class="yd-language-switch-button p-button-icon-only" variant="outlined"
+                            severity="secondary" @click="toggleLanguageSwitchDropdownMenu">
                             <span :class="`flag-icon flag-icon-${flagMap[language]}`"></span>
-                            <div v-if="isOpen" class="dropdown-menu">
+                            <div v-if="isOpen" class="yd-language-switch-dropdown-menu">
                                 <div v-ripple v-for="(lang, code) in languages" :key="code"
                                     @click.stop="selectLanguage(code)">
                                     <span :class="`flag-icon flag-icon-${flagMap[code]}`"></span>
                                 </div>
                             </div>
-                        </div>
+                        </Button>
                     </div>
-
                     <Button icon="pi pi-user" type="button" variant="outlined" severity="secondary" aria-haspopup="true"
-                        aria-controls="overlay_menu" @click="toggleAccountMenu">
+                        aria-controls="user_account_overlay_dropdown_menu" @click="toggleUserAccountDropdownMenu">
                     </Button>
-                    <Menu ref="accountMenu" id="overlay_menu" :model="accountMenuItems" :popup="true" />
+                    <Menu ref="userAccountDropdownMenu" id="user_account_overlay_dropdown_menu"
+                        :model="userAccountDropdownMenuItems" :popup="true" />
                 </div>
             </template>
         </Menubar>
@@ -79,36 +80,42 @@ function toggleDarkMode() {
     ydAppDark.value = !ydAppDark.value;
 }
 
-/* Language Switch */
+/* Language switch */
 const { translations, language } = inject('language');
+
 const languages = {
     en: 'English',
     ka: 'ქართული',
     ru: 'русский',
 };
+
 const flagMap = {
     en: 'gb',
     ka: 'ge',
     ru: 'ru',
 };
+
 const isOpen = ref(false);
-const toggleDropdown = () => {
+
+const toggleLanguageSwitchDropdownMenu = () => {
     isOpen.value = !isOpen.value;
 };
+
 const selectLanguage = (code) => {
     language.value = code;
     isOpen.value = false;
 };
 
-/* Account menu */
-const accountMenu = ref();
-const accountMenuItems = ref([
+/* User account dropdown menu */
+const userAccountDropdownMenu = ref();
+
+const userAccountDropdownMenuItems = ref([
     {
         label: 'nikoloz.u@gmail.com',
         items: [
             {
-                label: 'Active orders',
-                icon: 'pi pi-file-check'
+                label: 'Order history',
+                icon: 'pi pi-history'
             },
             {
                 label: 'Sign out',
@@ -118,8 +125,8 @@ const accountMenuItems = ref([
     }
 ]);
 
-const toggleAccountMenu = (event) => {
-    accountMenu.value.toggle(event);
+const toggleUserAccountDropdownMenu = (event) => {
+    userAccountDropdownMenu.value.toggle(event);
 };
 </script>
 
@@ -139,49 +146,39 @@ const toggleAccountMenu = (event) => {
     border-radius: var(--p-menubar-base-item-border-radius);
 }
 
-.dropdown {
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    padding: var(--p-menubar-item-padding);
-    gap: var(--p-menubar-item-gap);
-    user-select: none;
-    outline: 0 none;
-    filter: grayscale(20%);
-}
+.yd-language-switch-container {
+    & .yd-language-switch-button {
+        filter: grayscale(20%);
+        overflow: visible !important;
 
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-    padding: var(--p-menubar-submenu-padding);
-    background: var(--p-menubar-submenu-background);
-    border: 1px solid var(--p-menubar-submenu-border-color);
-    box-shadow: var(--p-menubar-submenu-shadow);
-    border-radius: var(--p-menubar-submenu-border-radius);
-    gap: var(--p-menubar-submenu-gap);
-}
+        & .yd-language-switch-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+            padding: var(--p-menubar-submenu-padding);
+            background: var(--p-menubar-submenu-background);
+            border: 1px solid var(--p-menubar-submenu-border-color);
+            box-shadow: var(--p-menubar-submenu-shadow);
+            border-radius: var(--p-menubar-submenu-border-radius);
+            gap: var(--p-menubar-submenu-gap);
 
-.dropdown-menu div {
-    padding: var(--p-menubar-item-padding);
-    border-radius: var(--p-menubar-base-item-border-radius);
-}
+            & div {
+                padding: var(--p-button-padding-y) var(--p-button-padding-x);
+                border-radius: var(--p-menubar-base-item-border-radius);
 
-.dropdown-menu div:hover {
-    color: var(--p-menubar-item-focus-color);
-    background: var(--p-menubar-item-focus-background);
-}
+                &:hover {
+                    color: var(--p-menubar-item-focus-color);
+                    background: var(--p-menubar-item-focus-background);
+                }
+            }
+        }
+    }
 
-.flag-icon {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    vertical-align: middle;
+    & .flag-icon {
+        line-height: inherit;
+    }
 }
 </style>
