@@ -83,7 +83,7 @@ const items = ref([
 ]);
 
 /* Theme Switch */
-const ydAppDark = ref(false);
+const ydAppDark = ref(true);
 
 function toggleDarkMode() {
     document.documentElement.classList.toggle('yd-app-dark');
