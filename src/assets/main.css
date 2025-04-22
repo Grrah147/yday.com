@@ -93,7 +93,7 @@ body {
     filter: grayscale(25%);
   }
 }
-/* Order */
+/* Configurator */
 #order {
   width: 100%;
 
@@ -107,9 +107,37 @@ body {
 
   & .card {
     width: 100%;
+
+    & .p-button-icon-only.p-button-rounded {
+      border-radius: var(--p-button-border-radius);
+    }
   }
 
   & #configurator-scene-container {
     height: 500px;
+  }
+
+  & .configurator-options-container {
+    &#colors {
+      & div {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &#materials {
+      & div {
+        padding: var(--p-button-padding-y) var(--p-button-padding-x);
+      }
+    }
+
+    & div {
+      cursor: pointer;
+    }
+
+    & div.disabled {
+      opacity: 0.25;
+      cursor: not-allowed;
+    }
   }
 }
