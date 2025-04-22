@@ -19,10 +19,14 @@ import Button from 'primevue/button'
 import Badge from 'primevue/badge'
 // import OverlayBadge from 'primevue/overlaybadge'
 import Avatar from 'primevue/avatar'
-
 import Fluid from 'primevue/fluid'
-
 import Ripple from 'primevue/ripple'
+import Carousel from 'primevue/carousel'
+
+import Fieldset from 'primevue/fieldset'
+import Panel from 'primevue/panel'
+
+import SelectButton from 'primevue/selectbutton'
 
 import 'primeicons/primeicons.css'
 
@@ -78,6 +82,10 @@ app
   .component('Fluid', Fluid)
   .component('Avatar', Avatar)
   .component('Menu', Menu)
+  .component('Carousel', Carousel)
+  .component('Fieldset', Fieldset)
+  .component('Panel', Panel)
+  .component('SelectButton', SelectButton)
 
 app.directive('ripple', Ripple)
 

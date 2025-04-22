@@ -93,3 +93,23 @@ body {
     filter: grayscale(25%);
   }
 }
+/* Order */
+#order {
+  width: 100%;
+
+  & .p-stepitem .p-steppanel-content {
+    overflow: hidden;
+
+    & .p-carousel {
+      width: 100%;
+    }
+  }
+
+  & .card {
+    width: 100%;
+  }
+
+  & #configurator-scene-container {
+    height: 500px;
+  }
+}
