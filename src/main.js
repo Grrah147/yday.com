@@ -28,6 +28,8 @@ import Panel from 'primevue/panel'
 
 import Tag from 'primevue/tag'
 
+import Message from 'primevue/message'
+
 import SelectButton from 'primevue/selectbutton'
 
 import 'primeicons/primeicons.css'
@@ -89,6 +91,7 @@ app
   .component('Panel', Panel)
   .component('SelectButton', SelectButton)
   .component('Tag', Tag)
+  .component('Message', Message)
 
 app.directive('ripple', Ripple)
 

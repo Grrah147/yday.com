@@ -19,14 +19,15 @@
                 </template>
                 <template #icons>
                     <!-- <div class="card flex justify-center"> -->
-                    <SelectButton v-model="sceneTypeValue" :options="sceneTypeOptions" />
+                    <!-- <SelectButton v-model="sceneTypeValue" :options="sceneTypeOptions" /> -->
                     <!-- </div> -->
-                    <Button icon="pi pi-save" severity="secondary" text></Button>
+                    <!-- <Button icon="pi pi-shopping-cart" severity="secondary" text></Button> -->
                     <Button icon="pi pi-cog" severity="secondary" text @click="toggleConfiguratorSettingsMenu" />
                     <Menu ref="configuratorSettingsMenu" id="config_menu" :model="configuratorSettingsMenuItems"
                         popup />
                 </template>
                 <div id="configurator-scene-container" class="bg-surface-100 dark:bg-surface-950">
+                    <Message severity="error" hidden>Error Message</Message>
                 </div>
                 <Fieldset :legend="translations[language].material">
                     <div id="materials" class="configurator-options-container flex flex-row flex-wrap gap-2">
@@ -40,7 +41,7 @@
                 <Fieldset :legend="translations[language].color">
                     <div id="colors" class="configurator-options-container flex flex-row flex-wrap gap-2">
                         <div v-for="color in colors" @click.stop="" :style="`background-color: ${color.code};`"
-                            class="border-surface-200 dark:border-surface-700 border rounded"
+                            class="border-surface-200 dark:border-surface-700 border"
                             :class="{ disabled: !color.availability }">
                         </div>
                     </div>
@@ -90,10 +91,10 @@ const colors = [
     { name: 'brown', code: '#a8a29e', availability: true },
     { name: 'yellow', code: '#facc15', availability: true },
     { name: 'red', code: '#f87171', availability: true },
-    { name: 'purple', code: '#a78bfa', availability: false },
+    { name: 'purple', code: '#a78bfa', availability: true },
     { name: 'blue', code: '#60a5fa;', availability: true },
     { name: 'green', code: '#4ade80;', availability: true },
-    { name: 'black', code: '#111827;', availability: true },
+    { name: 'black', code: '#030712;', availability: true },
 ];
 </script>
 

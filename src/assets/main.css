@@ -155,16 +155,28 @@ body {
       &#materials {
         & div {
           padding: var(--p-button-padding-y) var(--p-button-padding-x);
+
+          &.active,
+          &:hover {
+            background: var(--p-menubar-item-focus-background);
+            border-radius: var(--p-menubar-base-item-border-radius);
+          }
         }
       }
 
       & div {
         cursor: pointer;
-      }
+        opacity: 0.9;
 
-      & div.disabled {
-        opacity: 0.25;
-        cursor: not-allowed;
+        &.disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+
+        &.active,
+        &:hover:not(.disabled) {
+          opacity: 1;
+        }
       }
     }
   }

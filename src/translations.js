@@ -7,13 +7,13 @@ export default {
 
     welcome: 'Online shelf store,',
     intro:
-      'We offer a wide range of high-quality shelves with different functions and purposes,\nyou can buy a shelf that is exactly tailored to your needs, space, and style for your home or office.',
+      'We offer a wide range of high-quality shelves with different functions and purposes.\nYou will be able to purchase a shelf that will be exactly tailored to your needs, space, and style, for your home or office.',
     ydAdv1: 'Innovative configurator',
     ydAdv1Desc:
       'With our innovative online configurator, you will be able to create your ideal shelf.',
     ydAdv2: 'Online ordering and payment',
     ydAdv2Desc:
-      'You will be able to place an order without leaving your home through our website.',
+      'You will be able to order the shelf you want without leaving your home, through our website.',
     ydAdv3: 'Quick manufacturing',
     ydAdv3Desc:
       'Your order will be processed and manufactured as soon as possible.',
@@ -46,6 +46,7 @@ export default {
     simple: 'Simple',
     standard: 'Standard',
     large: 'Large',
+    stylish: 'Stylish',
     advanced: 'Advanced',
 
     configurator: 'Configurator',
@@ -91,13 +92,13 @@ export default {
 
     welcome: 'თაროების ონლაინ მაღაზია,',
     intro:
-      'ჩვენ გთავაზობთ მაღალი ხარისხის, სხვადასხვა ფუნქციისა და დანიშნულების მქონე, მრავალფეროვან თაროებს,\nთქვენ შეძლებთ შეიძინოთ თარო, რომელიც ზუსტად იქნება მორგებული თქვენს საჭიროებაზე, სივრცეზე, და სტილზე, თქვენი სახლისა თუ ოფისისთვის.',
+      'ჩვენ გთავაზობთ მაღალი ხარისხის, სხვადასხვა ფუნქციისა და დანიშნულების მქონე მრავალფეროვან თაროებს.\nთქვენ შეძლებთ შეიძინოთ თარო, რომელიც ზუსტად იქნება მორგებული თქვენს საჭიროებაზე, სივრცესა, და სტილზე, თქვენი სახლისა თუ ოფისისთვის.',
     ydAdv1: 'ინოვაციური კონფიგურატორი',
     ydAdv1Desc:
       'ჩვენი ინოვაციური ონლაინ კონფიგურატორის მეშვეობით თქვენ შეძლებთ შექმნათ თქვენი იდეალური თარო.',
     ydAdv2: 'ონლაინ შეკვეთა და გადახდა',
     ydAdv2Desc:
-      'თქვენ შეძლებთ სახლიდან გაუსვლელად, ჩვენი ვებ-საიტის მეშვეობით გააკეთოთ შეკვეთა.',
+      'თქვენ შეძლებთ სახლიდან გაუსვლელად, ჩვენი ვებ-საიტის მეშვეობით შეუკვეთოთ თქვენთვის სასურველი თარო.',
     ydAdv3: 'სწრაფი დამზადება',
     ydAdv3Desc:
       'უმოკლეს ვადებში მოხდება თქვენი შეკვეთის დამუშავება და დამზადება.',
@@ -130,6 +131,7 @@ export default {
     simple: 'მარტივი',
     standard: 'სტანდარტული',
     large: 'მოზრდილი',
+    stylish: 'დახვეწილი',
     advanced: 'მოწინავე',
 
     configurator: 'კონფიგურატორი',
@@ -175,12 +177,13 @@ export default {
 
     welcome: 'Интернет-магазин полок,',
     intro:
-      'Мы предлагаем широкий ассортимент высококачественных полок с различными функциями и назначениями,\nВы сможете приобрести полку, которая будет точно соответствовать вашим потребностям, пространству и стилю вашего дома или офиса.',
+      'Мы предлагаем широкий ассортимент высококачественных полок с различными функциями и назначениями.\nВы сможете приобрести полку, которая будет точно соответствовать вашим потребностям, пространству и стилю для вашего дома или офиса.',
     ydAdv1: 'Инновационный конфигуратор',
     ydAdv1Desc:
       'С помощью нашего инновационного онлайн-конфигуратора вы сможете создать свою идеальную полку.',
     ydAdv2: 'Онлайн-заказ и оплата',
-    ydAdv2Desc: 'Вы сможете оформить заказ, не выходя из дома, через наш сайт.',
+    ydAdv2Desc:
+      'Вы сможете заказать желаемую полку не выходя из дома через наш сайт.',
     ydAdv3: 'Быстрое приготовление',
     ydAdv3Desc: 'Ваш заказ будет обработан и изготовлен в кратчайшие сроки.',
     ydAdv4: 'Бесплатная доставка и установка',
@@ -212,6 +215,7 @@ export default {
     simple: 'Простой',
     standard: 'Стандартный',
     large: 'большой',
+    stylish: 'стильный',
     advanced: 'Расширенный',
 
     configurator: 'конфигуратор',
