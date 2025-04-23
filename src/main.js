@@ -30,7 +30,11 @@ import Tag from 'primevue/tag'
 
 import Message from 'primevue/message'
 
+import Checkbox from 'primevue/checkbox'
+
 import SelectButton from 'primevue/selectbutton'
+
+import RadioButton from 'primevue/radiobutton'
 
 import 'primeicons/primeicons.css'
 
@@ -92,6 +96,8 @@ app
   .component('SelectButton', SelectButton)
   .component('Tag', Tag)
   .component('Message', Message)
+  .component('Checkbox', Checkbox)
+  .component('RadioButton', RadioButton)
 
 app.directive('ripple', Ripple)
 

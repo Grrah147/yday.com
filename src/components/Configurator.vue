@@ -26,13 +26,13 @@
                     <Menu ref="configuratorSettingsMenu" id="config_menu" :model="configuratorSettingsMenuItems"
                         popup />
                 </template>
-                <div id="configurator-scene-container" class="bg-surface-100 dark:bg-surface-950">
+                <div id="configurator-scene-container" class="bg-surface-100 dark:bg-surface-950 p-4 mt-2">
                     <Message severity="error" hidden>Error Message</Message>
                 </div>
                 <Fieldset :legend="translations[language].material">
                     <div id="materials" class="configurator-options-container flex flex-row flex-wrap gap-2">
                         <div v-for="material in materials" @click.stop=""
-                            class="border-surface-200 dark:border-surface-700 border rounded"
+                            class="param border-surface-200 dark:border-surface-700 border rounded"
                             :class="{ disabled: !material.availability }">
                             {{ translations[language][material.name] }}
                         </div>
@@ -41,8 +41,33 @@
                 <Fieldset :legend="translations[language].color">
                     <div id="colors" class="configurator-options-container flex flex-row flex-wrap gap-2">
                         <div v-for="color in colors" @click.stop="" :style="`background-color: ${color.code};`"
-                            class="border-surface-200 dark:border-surface-700 border"
+                            class="param border-surface-200 dark:border-surface-700 border"
                             :class="{ disabled: !color.availability }">
+                        </div>
+                    </div>
+                </Fieldset>
+                <Fieldset :legend="translations[language].otherOptions">
+                    <div id="finish" class="configurator-options-container flex flex-col flex-wrap gap-4">
+                        <div class="flex items-center gap-2">
+                            <Checkbox v-model="finish.backboard" binary inputId="backboard" name="backboard"
+                                @change="onBackboardChange" />
+                            <label for="backboard"> {{ translations[language].backboard }} </label>
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <span> {{ translations[language].edgeFinish }} </span>
+                            <div class="flex-wrap flex gap-4">
+                                <div class="flex items-center gap-2">
+                                    <RadioButton v-model="finish.edge" inputId="singleEdge" name="edge" :value="1"
+                                        @change="onEdgeChange" />
+                                    <label for="singleEdge"> {{ translations[language].singleEdge }} </label>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <RadioButton v-model="finish.edge" inputId="doubleEdge" name="edge" :value="2"
+                                        @change="onEdgeChange" />
+                                    <label for="doubleEdge"> {{ translations[language].doubleEdge }} </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </Fieldset>
@@ -96,6 +121,28 @@ const colors = [
     { name: 'green', code: '#4ade80;', availability: true },
     { name: 'black', code: '#030712;', availability: true },
 ];
+/* Finish */
+const finish = ref(
+    {
+        backboard: false,
+        edge: 1
+    }
+);
+
+const onBackboardChange = () => {
+    if (finish.value.backboard) {
+        finish.value.edge = 1;
+    }
+    console.log(finish.value);
+};
+
+const onEdgeChange = () => {
+    if (finish.value.edge === 2) {
+        finish.value.backboard = false;
+    }
+    console.log(finish.value);
+};
+
 </script>
 
 <style scoped></style>

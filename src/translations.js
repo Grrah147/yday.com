@@ -70,6 +70,15 @@ export default {
     green2: 'Dark Forest Green',
     black: 'Black',
 
+    Other: 'Other',
+    otherOptions: 'Other options',
+    finish: 'Finish',
+    backboard: 'Backboard',
+    edges: 'Edges',
+    edgeFinish: 'Edge finish',
+    singleEdge: 'Single side',
+    doubleEdge: 'Double side',
+
     dimensions: 'Dimensions',
     width: 'Width (cm)',
     height: 'Height (cm)',
@@ -155,6 +164,15 @@ export default {
     green2: 'მუქი ტყის მწვანე',
     black: 'შავი',
 
+    other: 'სხვა',
+    otherOptions: 'სხვა პარამეტრები',
+    finish: 'დამუშავება',
+    backboard: 'უკანა დაფა',
+    edges: 'კიდეები',
+    edgeFinish: 'კიდეების დამუშავება',
+    singleEdge: 'ცალი მხარე',
+    doubleEdge: 'ორივე მხარე',
+
     dimensions: 'განზომილებები',
     width: 'სიგანე (სმ)',
     height: 'სიმაღლე (სმ)',
@@ -238,6 +256,15 @@ export default {
     green1: 'Светло-зеленый лес',
     green2: 'Темно-зеленый лес',
     black: 'Черный',
+
+    other: 'Другое',
+    otherOptions: 'другие параметры',
+    finish: 'Отделка',
+    backboard: 'Задняя панель',
+    edges: 'Край',
+    edgeFinish: 'отделка края',
+    singleEdge: 'Односторонний',
+    doubleEdge: 'Двухсторонний',
 
     dimensions: 'Размеры',
     width: 'Ширина (см)',
