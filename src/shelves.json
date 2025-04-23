@@ -1,0 +1,63 @@
+{
+  "shelves": [
+    {
+      "id": "0",
+      "code": "0",
+      "name": "scratch",
+      "description": "",
+      "image": "scratch-image-placeholder.png",
+      "highlight": "",
+      "material": "wood",
+      "price": null
+    },
+    {
+      "id": "1",
+      "code": "",
+      "name": "minimum",
+      "description": "Most basic, minimal shelf",
+      "image": "template-image-placeholder.png",
+      "highlight": "",
+      "material": "wood",
+      "price": 65
+    },
+    {
+      "id": "2",
+      "code": "",
+      "name": "simple",
+      "description": "Basic simple shelf",
+      "image": "template-image-placeholder.png",
+      "highlight": "",
+      "material": "wood",
+      "price": 165
+    },
+    {
+      "id": "3",
+      "code": "",
+      "name": "standard",
+      "description": "Standard simple shelf",
+      "image": "template-image-placeholder.png",
+      "highlight": "",
+      "material": "wood",
+      "price": 265
+    },
+    {
+      "id": "4",
+      "code": "",
+      "name": "large",
+      "description": "Large simple shelf",
+      "image": "template-image-placeholder.png",
+      "highlight": "",
+      "price": 365
+    },
+    {
+      "id": "5",
+      "code": "",
+      "name": "advanced",
+      "description": "Large advanced shelf",
+      "image": "template-image-placeholder.png",
+      "highlight": "",
+      "material": "wood",
+      "price": 465
+    }
+  ]
+}

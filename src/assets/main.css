@@ -97,47 +97,75 @@ body {
 #order {
   width: 100%;
 
-  & .p-stepitem .p-steppanel-content {
-    overflow: hidden;
-
-    & .p-carousel {
-      width: 100%;
-    }
-  }
-
   & .card {
     width: 100%;
+
+    & .p-panel-title,
+    & .p-fieldset-legend-label {
+      font-weight: 500;
+    }
 
     & .p-button-icon-only.p-button-rounded {
       border-radius: var(--p-button-border-radius);
     }
   }
 
-  & #configurator-scene-container {
-    height: 500px;
+  & .p-stepitem {
+    & .p-step-title {
+      font-weight: 600;
+    }
+    & .p-steppanel {
+      background: none;
+
+      & .p-steppanel-content {
+        overflow: hidden;
+      }
+    }
   }
 
-  & .configurator-options-container {
-    &#colors {
-      & div {
-        width: 24px;
-        height: 24px;
-      }
-    }
+  & .p-carousel {
+    width: 100%;
 
-    &#materials {
-      & div {
-        padding: var(--p-button-padding-y) var(--p-button-padding-x);
-      }
-    }
-
-    & div {
+    & .shelf-template {
       cursor: pointer;
+      opacity: 0.9;
+
+      &.active,
+      &:hover {
+        background: var(--p-menubar-item-focus-background);
+        border-radius: var(--p-menubar-base-item-border-radius);
+        opacity: 1;
+      }
+    }
+  }
+
+  & #configurator-container {
+    & #configurator-scene-container {
+      height: 500px;
     }
 
-    & div.disabled {
-      opacity: 0.25;
-      cursor: not-allowed;
+    & .configurator-options-container {
+      &#colors {
+        & div {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &#materials {
+        & div {
+          padding: var(--p-button-padding-y) var(--p-button-padding-x);
+        }
+      }
+
+      & div {
+        cursor: pointer;
+      }
+
+      & div.disabled {
+        opacity: 0.25;
+        cursor: not-allowed;
+      }
     }
   }
 }

@@ -26,6 +26,8 @@ import Carousel from 'primevue/carousel'
 import Fieldset from 'primevue/fieldset'
 import Panel from 'primevue/panel'
 
+import Tag from 'primevue/tag'
+
 import SelectButton from 'primevue/selectbutton'
 
 import 'primeicons/primeicons.css'
@@ -86,6 +88,7 @@ app
   .component('Fieldset', Fieldset)
   .component('Panel', Panel)
   .component('SelectButton', SelectButton)
+  .component('Tag', Tag)
 
 app.directive('ripple', Ripple)
 
