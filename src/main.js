@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import i18n from './i18n'
 
 import PrimeVue from 'primevue/config'
 import { definePreset } from '@primeuix/themes'
-// import primevue components
 import Aura from '@primeuix/themes/aura'
 import Card from 'primevue/card'
 import Menubar from 'primevue/menubar'
@@ -17,23 +17,15 @@ import Step from 'primevue/step'
 import StepPanel from 'primevue/steppanel'
 import Button from 'primevue/button'
 import Badge from 'primevue/badge'
-// import OverlayBadge from 'primevue/overlaybadge'
-import Avatar from 'primevue/avatar'
 import Fluid from 'primevue/fluid'
 import Ripple from 'primevue/ripple'
 import Carousel from 'primevue/carousel'
-
 import Fieldset from 'primevue/fieldset'
 import Panel from 'primevue/panel'
-
 import Tag from 'primevue/tag'
-
 import Message from 'primevue/message'
-
 import Checkbox from 'primevue/checkbox'
-
 import SelectButton from 'primevue/selectbutton'
-
 import RadioButton from 'primevue/radiobutton'
 
 import 'primeicons/primeicons.css'
@@ -75,6 +67,7 @@ app.use(PrimeVue, {
   },
   ripple: true,
 })
+app.use(i18n)
 
 app
   .component('Button', Button)
@@ -88,7 +81,6 @@ app
   .component('Step', Step)
   .component('StepPanel', StepPanel)
   .component('Fluid', Fluid)
-  .component('Avatar', Avatar)
   .component('Menu', Menu)
   .component('Carousel', Carousel)
   .component('Fieldset', Fieldset)

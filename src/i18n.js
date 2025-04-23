@@ -1,10 +1,11 @@
-export default {
+import { createI18n } from 'vue-i18n'
+
+const messages = {
   en: {
     home: 'Home',
     order: 'Order',
     contact: 'Contact',
     vacancy: 'Vacancy',
-
     welcome: 'Online shelf store,',
     intro:
       'We offer a wide range of high-quality shelves with different functions and purposes.\nYou will be able to purchase a shelf that will be exactly tailored to your needs, space, and style, for your home or office.',
@@ -28,18 +29,16 @@ export default {
     address: 'Anoratorius street. 47',
     email: 'info@yday.com',
     instagram: '@yday.com',
-
     notFoundTitle: '404 Not Found',
     notFoundContent: 'This page does not exist',
     goBack: 'Go back',
-
-    // configure: 'Configure',
     configureShelf: 'Configure Your Shelf',
-
     orderDetails: 'Order details',
     payment: 'Payment',
-
-    // chooseTemplate: 'Choose Template',
+    addToCart: 'Add to cart',
+    orderIt: 'Order',
+    back: 'Back',
+    next: 'Next',
     template: 'Template',
     scratch: 'From scratch',
     minimum: 'Minimum',
@@ -48,16 +47,14 @@ export default {
     large: 'Large',
     stylish: 'Stylish',
     advanced: 'Advanced',
-
     configurator: 'Configurator',
-
+    refresh: 'Refresh',
     material: 'Material',
     wood: 'Wood',
     mdf: 'MDF',
     plywood: 'Plywood',
     metal: 'Metal',
     glass: 'Glass',
-
     color: 'Color',
     white: 'White',
     gray: 'Gray',
@@ -69,7 +66,6 @@ export default {
     green1: 'Light Forest Green',
     green2: 'Dark Forest Green',
     black: 'Black',
-
     Other: 'Other',
     otherOptions: 'Other options',
     finish: 'Finish',
@@ -78,7 +74,6 @@ export default {
     edgeFinish: 'Edge finish',
     singleEdge: 'Single side',
     doubleEdge: 'Double side',
-
     dimensions: 'Dimensions',
     width: 'Width (cm)',
     height: 'Height (cm)',
@@ -98,7 +93,6 @@ export default {
     order: 'შეკვეთა',
     contact: 'კონტაქტი',
     vacancy: 'ვაკანსია',
-
     welcome: 'თაროების ონლაინ მაღაზია,',
     intro:
       'ჩვენ გთავაზობთ მაღალი ხარისხის, სხვადასხვა ფუნქციისა და დანიშნულების მქონე მრავალფეროვან თაროებს.\nთქვენ შეძლებთ შეიძინოთ თარო, რომელიც ზუსტად იქნება მორგებული თქვენს საჭიროებაზე, სივრცესა, და სტილზე, თქვენი სახლისა თუ ოფისისთვის.',
@@ -122,18 +116,16 @@ export default {
     address: 'ანორატორიუსის ქ. 47',
     email: 'info@yday.com',
     instagram: '@yday.com',
-
     notFoundTitle: '404 არ მოიძებნა',
     notFoundContent: 'ეს გვერდი არ არსებობს',
     goBack: 'დაბრუნდი',
-
-    // configure: 'დააკონფიგურე',
     configureShelf: 'დააკონფიგურე შენი თარო',
-
     orderDetails: 'შეკვეთის დეტალები',
     payment: 'გადახდა',
-
-    // chooseTemplate: 'აირჩიე შაბლონი',
+    addToCart: 'კალათაში დამატება',
+    orderIt: 'შეკვეთა',
+    back: 'უკან',
+    next: 'შემდეგი',
     template: 'შაბლონი',
     scratch: 'ნულიდან',
     minimum: 'მინიმალური',
@@ -142,16 +134,14 @@ export default {
     large: 'მოზრდილი',
     stylish: 'დახვეწილი',
     advanced: 'მოწინავე',
-
     configurator: 'კონფიგურატორი',
-
+    refresh: 'განახლება',
     material: 'მასალა',
     wood: 'ხე',
     mdf: 'MDF',
     plywood: 'ფანერა',
     metal: 'მეტალი',
     glass: 'მინა',
-
     color: 'ფერი',
     white: 'თეთრი',
     gray: 'ნაცრისფერი',
@@ -163,7 +153,6 @@ export default {
     green1: 'ღია ტყის მწვანე',
     green2: 'მუქი ტყის მწვანე',
     black: 'შავი',
-
     other: 'სხვა',
     otherOptions: 'სხვა პარამეტრები',
     finish: 'დამუშავება',
@@ -171,8 +160,7 @@ export default {
     edges: 'კიდეები',
     edgeFinish: 'კიდეების დამუშავება',
     singleEdge: 'ცალი მხარე',
-    doubleEdge: 'ორივე მხარე',
-
+    doubleEdge: 'ორმაგი მხარე',
     dimensions: 'განზომილებები',
     width: 'სიგანე (სმ)',
     height: 'სიმაღლე (სმ)',
@@ -191,8 +179,7 @@ export default {
     home: 'Главная',
     order: 'Заказ',
     contact: 'Контакты',
-    vacancy: 'вакансия',
-
+    vacancy: 'Вакансия',
     welcome: 'Интернет-магазин полок,',
     intro:
       'Мы предлагаем широкий ассортимент высококачественных полок с различными функциями и назначениями.\nВы сможете приобрести полку, которая будет точно соответствовать вашим потребностям, пространству и стилю для вашего дома или офиса.',
@@ -202,7 +189,7 @@ export default {
     ydAdv2: 'Онлайн-заказ и оплата',
     ydAdv2Desc:
       'Вы сможете заказать желаемую полку не выходя из дома через наш сайт.',
-    ydAdv3: 'Быстрое приготовление',
+    ydAdv3: 'Быстрое производство',
     ydAdv3Desc: 'Ваш заказ будет обработан и изготовлен в кратчайшие сроки.',
     ydAdv4: 'Бесплатная доставка и установка',
     ydAdv4Desc:
@@ -215,36 +202,32 @@ export default {
     address: 'ул. Анораториус, 47',
     email: 'info@yday.com',
     instagram: '@yday.com',
-
     notFoundTitle: '404 Не найдено',
     notFoundContent: 'Эта страница не существует',
-    goBack: 'возвращаться',
-
-    // configure: 'настроить',
-    configureShelf: 'настройте свою полку',
-
-    orderDetails: 'детали заказа',
+    goBack: 'Вернуться',
+    configureShelf: 'Настройте свою полку',
+    orderDetails: 'Детали заказа',
     payment: 'Оплата',
-
-    // chooseTemplate: 'Выбрать шаблон',
+    addToCart: 'Добавить в корзину',
+    orderIt: 'Заказать',
+    back: 'Назад',
+    next: 'Следующий',
     template: 'Шаблон',
-    scratch: 'с нуля',
-    minimum: 'Минимум',
+    scratch: 'С нуля',
+    minimum: 'Минимальный',
     simple: 'Простой',
     standard: 'Стандартный',
-    large: 'большой',
-    stylish: 'стильный',
+    large: 'Большой',
+    stylish: 'Стильный',
     advanced: 'Расширенный',
-
-    configurator: 'конфигуратор',
-
+    configurator: 'Конфигуратор',
+    refresh: 'Обновить',
     material: 'Материал',
-    wood: 'древесина',
-    mdf: 'MDF',
-    plywood: 'фанера',
-    metal: 'металл',
-    glass: 'стекло',
-
+    wood: 'Древесина',
+    mdf: 'МДФ',
+    plywood: 'Фанера',
+    metal: 'Металл',
+    glass: 'Стекло',
     color: 'Цвет',
     white: 'Белый',
     gray: 'Серый',
@@ -256,16 +239,14 @@ export default {
     green1: 'Светло-зеленый лес',
     green2: 'Темно-зеленый лес',
     black: 'Черный',
-
     other: 'Другое',
-    otherOptions: 'другие параметры',
+    otherOptions: 'Другие параметры',
     finish: 'Отделка',
     backboard: 'Задняя панель',
-    edges: 'Край',
-    edgeFinish: 'отделка края',
+    edges: 'Края',
+    edgeFinish: 'Отделка края',
     singleEdge: 'Односторонний',
-    doubleEdge: 'Двухсторонний',
-
+    doubleEdge: 'Двусторонний',
     dimensions: 'Размеры',
     width: 'Ширина (см)',
     height: 'Высота (см)',
@@ -281,3 +262,12 @@ export default {
     middleShelves: 'Средние полки',
   },
 }
+
+const i18n = createI18n({
+  legacy: false,
+  locale: 'ka', // Default locale
+  fallbackLocale: 'en', // Fallback if key is missing
+  messages,
+})
+
+export default i18n

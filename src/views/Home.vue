@@ -5,11 +5,11 @@
         <div class="flex flex-col gap-6 md:gap-10 lg:gap-10">
           <div class="flex flex-col items-center gap-4">
             <div class="font-bold text-3xl leading-tight">
-              <span class="text-surface-900 dark:text-surface-0"> {{ translations[language].welcome }} </span>
+              <span class="text-surface-900 dark:text-surface-0"> {{ $t('welcome') }} </span>
               <span class="text-primary-500 dark:text-primary-400 permanent-marker-regular"> YDay.com</span>
             </div>
             <div class="text-surface-500 dark:text-surface-400 text-lg leading-tight whitespace-pre-wrap"> {{
-              translations[language].intro }}
+              $t('intro') }}
             </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -20,11 +20,11 @@
               </span>
               <div class="flex flex-col gap-1">
                 <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight"> {{
-                  translations[language].ydAdv1 }}
+                  $t('ydAdv1') }}
                 </div>
                 <p class="text-surface-500 dark:text-surface-400 text-lg leading-normal"> {{
-                  translations[language].ydAdv1Desc
-                  }} </p>
+                  $t('ydAdv1Desc')
+                }} </p>
               </div>
             </div>
             <div class="w-full rounded-md p-4">
@@ -34,11 +34,11 @@
               </span>
               <div class="flex flex-col gap-1">
                 <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight"> {{
-                  translations[language].ydAdv2 }}
+                  $t('ydAdv2') }}
                 </div>
                 <p class="text-surface-500 dark:text-surface-400 text-lg leading-normal"> {{
-                  translations[language].ydAdv2Desc
-                  }} </p>
+                  $t('ydAdv2Desc')
+                }} </p>
               </div>
             </div>
             <div class="w-full rounded-md p-4">
@@ -48,11 +48,11 @@
               </span>
               <div class="flex flex-col gap-1">
                 <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight"> {{
-                  translations[language].ydAdv3 }}
+                  $t('ydAdv3') }}
                 </div>
                 <p class="text-surface-500 dark:text-surface-400 text-lg leading-normal"> {{
-                  translations[language].ydAdv3Desc
-                }} </p>
+                  $t('ydAdv3Desc')
+                  }} </p>
               </div>
             </div>
             <div class="w-full rounded-md p-4">
@@ -62,11 +62,11 @@
               </span>
               <div class="flex flex-col gap-1">
                 <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight"> {{
-                  translations[language].ydAdv4 }}
+                  $t('ydAdv4') }}
                 </div>
                 <p class="text-surface-500 dark:text-surface-400 text-lg leading-normal"> {{
-                  translations[language].ydAdv4Desc
-                  }} </p>
+                  $t('ydAdv4Desc')
+                }} </p>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@
             <Button asChild v-slot="slotProps" raised>
               <RouterLink to="/order" :class="slotProps.class" class="yd-home-order-button p-button-lg">
                 <span class="p-button-icon pi pi-shopping-bag"></span>
-                <span class="p-button-label"> {{ translations[language].order }} </span>
+                <span class="p-button-label"> {{ $t('order') }} </span>
               </RouterLink>
             </Button>
           </div>
@@ -84,15 +84,7 @@
   </card>
 </template>
 
-<script>
-import { inject } from 'vue';
-
-export default {
-  setup() {
-    const { translations, language } = inject('language');
-    return { translations, language };
-  },
-};
+<script setup>
 </script>
 
 <style scoped></style>

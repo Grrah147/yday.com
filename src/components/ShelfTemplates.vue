@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <Panel :header="translations[language].template" toggleable collapsed>
+        <Panel :header="$t('template')" toggleable collapsed>
             <Carousel :value="state.shelves" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions">
                 <template #item="slotProps">
                     <div :id="slotProps.data.id"
@@ -14,7 +14,7 @@
                                     style="left:5px; top: 5px" />
                             </div>
                         </div>
-                        <div class="font-medium">{{ translations[language][slotProps.data.name] }}</div>
+                        <div class="font-medium">{{ $t(slotProps.data.name) }}</div>
                         <div class="flex justify-between items-center">
                             <!-- <div class="mt-0 font-semibold text-surface-500 dark:text-surface-400">{{
                         slotProps.data.price }} GEL</div> -->
@@ -30,10 +30,8 @@
     </div>
 </template>
 <script setup>
-import { reactive, ref, onMounted, inject } from "vue";
+import { reactive, ref, onMounted } from "vue";
 import axios from 'axios';
-
-const { translations, language } = inject('language');
 
 /* --- */
 
