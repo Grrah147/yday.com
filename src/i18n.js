@@ -6,6 +6,7 @@ const messages = {
     order: 'Order',
     contact: 'Contact',
     vacancy: 'Vacancy',
+
     welcome: 'Online shelf store,',
     intro:
       'We offer a wide range of high-quality shelves with different functions and purposes.\nYou will be able to purchase a shelf that will be exactly tailored to your needs, space, and style, for your home or office.',
@@ -21,17 +22,17 @@ const messages = {
     ydAdv4: 'Free delivery and installation',
     ydAdv4Desc:
       'You will be able to take advantage of free delivery and installation services in the fastest possible time.',
-    about: 'About YDay.com',
-    aboutText:
-      'We’re a local Georgian business dedicated to creating functional, stylish shelves for your home or office. With our easy-to-use website, you can design and order custom shelves tailored to your needs.',
+
     contactUs: 'Contact us',
     phone: '+995 598 282 060',
     address: 'Anoratorius street. 47',
     email: 'info@yday.com',
     instagram: '@yday.com',
+
     notFoundTitle: '404 Not Found',
     notFoundContent: 'This page does not exist',
     goBack: 'Go back',
+
     configureShelf: 'Configure Your Shelf',
     orderDetails: 'Order details',
     payment: 'Payment',
@@ -39,6 +40,7 @@ const messages = {
     orderIt: 'Order',
     back: 'Back',
     next: 'Next',
+
     template: 'Template',
     scratch: 'From scratch',
     minimum: 'Minimum',
@@ -47,14 +49,19 @@ const messages = {
     large: 'Large',
     stylish: 'Stylish',
     advanced: 'Advanced',
+
     configurator: 'Configurator',
     refresh: 'Refresh',
+    quantity: 'Quantity',
+    price: 'Price',
+
     material: 'Material',
     wood: 'Wood',
     mdf: 'MDF',
     plywood: 'Plywood',
     metal: 'Metal',
     glass: 'Glass',
+
     color: 'Color',
     white: 'White',
     gray: 'Gray',
@@ -66,6 +73,7 @@ const messages = {
     green1: 'Light Forest Green',
     green2: 'Dark Forest Green',
     black: 'Black',
+
     Other: 'Other',
     otherOptions: 'Other options',
     finish: 'Finish',
@@ -74,25 +82,19 @@ const messages = {
     edgeFinish: 'Edge finish',
     singleEdge: 'Single side',
     doubleEdge: 'Double side',
-    dimensions: 'Dimensions',
-    width: 'Width (cm)',
-    height: 'Height (cm)',
-    depth: 'Depth (cm)',
-    totalShelves: 'Total Shelves',
-    shelfHeights: 'Shelf Heights',
+
     shelf: 'Shelf',
-    quantity: 'Quantity',
-    price: 'Price',
-    order: 'Order',
-    view3D: 'View in 3D',
-    editDesign: 'Edit Design',
-    middleShelves: 'Middle shelves',
+    dimensions: 'Dimensions',
+    width: 'Width',
+    height: 'Height',
+    depth: 'Depth',
   },
   ka: {
     home: 'მთავარი',
     order: 'შეკვეთა',
     contact: 'კონტაქტი',
     vacancy: 'ვაკანსია',
+
     welcome: 'თაროების ონლაინ მაღაზია,',
     intro:
       'ჩვენ გთავაზობთ მაღალი ხარისხის, სხვადასხვა ფუნქციისა და დანიშნულების მქონე მრავალფეროვან თაროებს.\nთქვენ შეძლებთ შეიძინოთ თარო, რომელიც ზუსტად იქნება მორგებული თქვენს საჭიროებაზე, სივრცესა, და სტილზე, თქვენი სახლისა თუ ოფისისთვის.',
@@ -108,17 +110,17 @@ const messages = {
     ydAdv4: 'უფასო მიტანა და მონტაჟი',
     ydAdv4Desc:
       'თქვენ შეძლებთ ისარგებლოთ უფასო მიტანისა და მონტაჟის სერვისით, უსწრაფეს ვადებში.',
-    about: 'YDay.com-ის შესახებ',
-    aboutText:
-      'ჩვენ ვართ ადგილობრივი ქართული ბიზნესი, რომელიც ქმნის ფუნქციურ, ელეგანტურ თაროებს თქვენი სახლისა თუ ოფისისთვის. ჩვენი მარტივი გამოსაყენებელი ვებსაიტით შეგიძლიათ შექმნათ და შეუკვეთოთ თქვენს საჭიროებებზე მორგებული თაროები.',
+
     contactUs: 'დაგვიკავშირდით',
     phone: '+995 598 282 060',
     address: 'ანორატორიუსის ქ. 47',
     email: 'info@yday.com',
     instagram: '@yday.com',
+
     notFoundTitle: '404 არ მოიძებნა',
     notFoundContent: 'ეს გვერდი არ არსებობს',
     goBack: 'დაბრუნდი',
+
     configureShelf: 'დააკონფიგურე შენი თარო',
     orderDetails: 'შეკვეთის დეტალები',
     payment: 'გადახდა',
@@ -126,6 +128,7 @@ const messages = {
     orderIt: 'შეკვეთა',
     back: 'უკან',
     next: 'შემდეგი',
+
     template: 'შაბლონი',
     scratch: 'ნულიდან',
     minimum: 'მინიმალური',
@@ -134,14 +137,19 @@ const messages = {
     large: 'მოზრდილი',
     stylish: 'დახვეწილი',
     advanced: 'მოწინავე',
+
     configurator: 'კონფიგურატორი',
     refresh: 'განახლება',
+    quantity: 'რაოდენობა',
+    price: 'ფასი',
+
     material: 'მასალა',
     wood: 'ხე',
     mdf: 'MDF',
     plywood: 'ფანერა',
     metal: 'მეტალი',
     glass: 'მინა',
+
     color: 'ფერი',
     white: 'თეთრი',
     gray: 'ნაცრისფერი',
@@ -153,6 +161,7 @@ const messages = {
     green1: 'ღია ტყის მწვანე',
     green2: 'მუქი ტყის მწვანე',
     black: 'შავი',
+
     other: 'სხვა',
     otherOptions: 'სხვა პარამეტრები',
     finish: 'დამუშავება',
@@ -161,25 +170,19 @@ const messages = {
     edgeFinish: 'კიდეების დამუშავება',
     singleEdge: 'ცალი მხარე',
     doubleEdge: 'ორმაგი მხარე',
-    dimensions: 'განზომილებები',
-    width: 'სიგანე (სმ)',
-    height: 'სიმაღლე (სმ)',
-    depth: 'სიღრმე (სმ)',
-    totalShelves: 'თაროების რაოდენობა',
-    shelfHeights: 'თაროების სიმაღლე',
+
     shelf: 'თარო',
-    quantity: 'რაოდენობა',
-    price: 'ფასი',
-    order: 'შეკვეთა',
-    view3D: 'ნახვა 3D-ში',
-    editDesign: 'დიზაინის რედაქტირება',
-    middleShelves: 'შუა თაროები',
+    dimensions: 'განზომილებები',
+    width: 'სიგანე',
+    height: 'სიმაღლე',
+    depth: 'სიღრმე',
   },
   ru: {
     home: 'Главная',
     order: 'Заказ',
     contact: 'Контакты',
     vacancy: 'Вакансия',
+
     welcome: 'Интернет-магазин полок,',
     intro:
       'Мы предлагаем широкий ассортимент высококачественных полок с различными функциями и назначениями.\nВы сможете приобрести полку, которая будет точно соответствовать вашим потребностям, пространству и стилю для вашего дома или офиса.',
@@ -194,9 +197,7 @@ const messages = {
     ydAdv4: 'Бесплатная доставка и установка',
     ydAdv4Desc:
       'Вы сможете воспользоваться бесплатными услугами доставки и установки в кратчайшие сроки.',
-    about: 'О YDay.com',
-    aboutText:
-      'Мы местный грузинский бизнес, создающий функциональные и стильные полки для вашего дома или офиса. С помощью нашего удобного сайта вы можете спроектировать и заказать полки, адаптированные под ваши потребности.',
+
     contactUs: 'Свяжитесь с нами',
     phone: '+995 598 282 060',
     address: 'ул. Анораториус, 47',
@@ -205,6 +206,7 @@ const messages = {
     notFoundTitle: '404 Не найдено',
     notFoundContent: 'Эта страница не существует',
     goBack: 'Вернуться',
+
     configureShelf: 'Настройте свою полку',
     orderDetails: 'Детали заказа',
     payment: 'Оплата',
@@ -212,6 +214,7 @@ const messages = {
     orderIt: 'Заказать',
     back: 'Назад',
     next: 'Следующий',
+
     template: 'Шаблон',
     scratch: 'С нуля',
     minimum: 'Минимальный',
@@ -220,14 +223,19 @@ const messages = {
     large: 'Большой',
     stylish: 'Стильный',
     advanced: 'Расширенный',
+
     configurator: 'Конфигуратор',
     refresh: 'Обновить',
+    quantity: 'Количество',
+    price: 'Цена',
+
     material: 'Материал',
     wood: 'Древесина',
     mdf: 'МДФ',
     plywood: 'Фанера',
     metal: 'Металл',
     glass: 'Стекло',
+
     color: 'Цвет',
     white: 'Белый',
     gray: 'Серый',
@@ -239,6 +247,7 @@ const messages = {
     green1: 'Светло-зеленый лес',
     green2: 'Темно-зеленый лес',
     black: 'Черный',
+
     other: 'Другое',
     otherOptions: 'Другие параметры',
     finish: 'Отделка',
@@ -247,26 +256,19 @@ const messages = {
     edgeFinish: 'Отделка края',
     singleEdge: 'Односторонний',
     doubleEdge: 'Двусторонний',
-    dimensions: 'Размеры',
-    width: 'Ширина (см)',
-    height: 'Высота (см)',
-    depth: 'Глубина (см)',
-    totalShelves: 'Количество полок',
-    shelfHeights: 'Высота полок',
+
     shelf: 'Полка',
-    quantity: 'Количество',
-    price: 'Цена',
-    order: 'Заказать',
-    view3D: 'Посмотреть в 3D',
-    editDesign: 'Редактировать дизайн',
-    middleShelves: 'Средние полки',
+    dimensions: 'Размеры',
+    width: 'Ширина',
+    height: 'Высота',
+    depth: 'Глубина',
   },
 }
 
 const i18n = createI18n({
   legacy: false,
-  locale: 'ka', // Default locale
-  fallbackLocale: 'en', // Fallback if key is missing
+  locale: 'ka',
+  fallbackLocale: 'en',
   messages,
 })
 
