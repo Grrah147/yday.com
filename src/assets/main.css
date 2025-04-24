@@ -138,10 +138,9 @@ body {
   & #configurator-container {
     & #configurator-scene-container {
       height: 500px;
-
-      & .p-toolbar {
-        padding: 0.5rem;
-      }
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
     }
 
     & .configurator-options-container {

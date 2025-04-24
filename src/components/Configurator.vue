@@ -9,40 +9,24 @@
                         <span> {{ $t('configurator') }} </span>
                     </div>
                 </template>
-                <template #footer>
-                    <div class="flex flex-wrap items-center justify-between gap-4">
-                        <div class="flex items-center gap-2">
-                            <!-- <Button icon="pi pi-bookmark" severity="secondary" rounded text></Button> -->
-                        </div>
-                        <span class="text-surface-500 dark:text-surface-400">ფასი: 345 ლარი</span>
-                    </div>
-                </template>
                 <template #icons>
                 </template>
                 <div id="configurator-scene-container" class="bg-surface-100 dark:bg-surface-950 p-4 mt-2 rounded">
                     <div class="card">
-                        <Toolbar>
-                            <template #start>
-                                <Button icon="pi pi-cog" severity="secondary" text
-                                    @click="toggleConfiguratorSettingsMenu" />
-                                <Menu ref="configuratorSettingsMenu" id="config_menu"
-                                    :model="configuratorSettingsMenuItems" popup />
-                                <Button icon="pi pi-minus" class="mr-2" severity="secondary" text />
-                                <Button icon="pi pi-lightbulb" class="mr-2" severity="secondary" text />
-
-                            </template>
-
-                            <template #center>
-                            </template>
-
-                            <template #end>
-                                <div class="flex flex-wrap gap-2">
-                                    <Button icon="pi pi-box" label="3D View" severity="primary" />
-                                    <Button icon="pi pi-info-circle" label="" severity="secondary" />
-                                    <!-- <SplitButton label="Save" :model="configuratorSceneToolbarItems"></SplitButton> -->
-                                </div>
-                            </template>
-                        </Toolbar>
+                        <div class="flex flex-row justify-start p-2 gap-2">
+                            <Button icon="pi pi-minus" severity="secondary" />
+                            <Button icon="pi pi-lightbulb" severity="secondary" />
+                            <Button icon="pi pi-cog" severity="secondary" @click="toggleConfiguratorSettingsMenu"
+                                class="ml-auto" />
+                            <Menu ref="configuratorSettingsMenu" id="config_menu" :model="configuratorSettingsMenuItems"
+                                popup />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="flex flex-row justify-between p-2 gap-2">
+                            <Button icon="pi pi-box" label="3D View" severity="primary" />
+                            <Button icon="pi pi-info-circle" label="" severity="secondary" />
+                        </div>
                     </div>
                     <Message severity="error" hidden>Error Message</Message>
                 </div>
@@ -88,6 +72,14 @@
                         </div>
                     </div>
                 </Fieldset>
+                <template #footer>
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex items-center gap-2">
+                            <!-- <Button icon="pi pi-bookmark" severity="secondary" rounded text></Button> -->
+                        </div>
+                        <span class="text-surface-500 dark:text-surface-400">ფასი: 345 ლარი</span>
+                    </div>
+                </template>
             </Panel>
         </div>
     </div>
