@@ -27,6 +27,10 @@ import Message from 'primevue/message'
 import Checkbox from 'primevue/checkbox'
 import SelectButton from 'primevue/selectbutton'
 import RadioButton from 'primevue/radiobutton'
+import Toast from 'primevue/toast'
+import ToastService from 'primevue/toastservice'
+
+import Drawer from 'primevue/drawer'
 
 import 'primeicons/primeicons.css'
 
@@ -68,6 +72,7 @@ app.use(PrimeVue, {
   ripple: true,
 })
 app.use(i18n)
+app.use(ToastService)
 
 app
   .component('Button', Button)
@@ -90,6 +95,8 @@ app
   .component('Message', Message)
   .component('Checkbox', Checkbox)
   .component('RadioButton', RadioButton)
+  .component('Drawer', Drawer)
+  .component('Toast', Toast)
 
 app.directive('ripple', Ripple)
 

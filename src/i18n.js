@@ -52,8 +52,17 @@ const messages = {
 
     configurator: 'Configurator',
     refresh: 'Refresh',
+    tdv: '3D view',
+    shelfDetails: 'Shelf details',
     quantity: 'Quantity',
     price: 'Price',
+    gel: 'GEL',
+    wrongFormat: 'Unacceptable shelf format',
+    wrongFormatMessage1: 'Your configured shelf is below minimum allowed size.',
+    wrongFormatMessage2:
+      'Each shelf board must have at least two points of contact.',
+    wrongFormatMessage3: 'Invalid material selected.',
+    unknownError: 'An unknown error occurred. Please try again.',
 
     material: 'Material',
     wood: 'Wood',
@@ -140,8 +149,18 @@ const messages = {
 
     configurator: 'კონფიგურატორი',
     refresh: 'განახლება',
+    tdv: '3D ხედი',
+    shelfDetails: 'თაროს დეტალები',
     quantity: 'რაოდენობა',
     price: 'ფასი',
+    gel: 'ლარი',
+    wrongFormat: 'მიუღებელი თაროს ფორმატი',
+    wrongFormatMessage1:
+      'თქვენი კონფიგურირებული თარო მინიმალურ დასაშვებ ზომაზე პატარაა.',
+    wrongFormatMessage2:
+      'თითოეულ თაროს დაფას უნდა ჰქონდეს მინიმუმ ორი შეხების წერტილი.',
+    wrongFormatMessage3: 'არასწორი მასალაა არჩეული.',
+    unknownError: 'უცნობი შეცდომა მოხდა. გთხოვთ, სცადოთ ხელახლა.',
 
     material: 'მასალა',
     wood: 'ხე',
@@ -227,8 +246,18 @@ const messages = {
 
     configurator: 'Конфигуратор',
     refresh: 'Обновить',
+    tdv: '3D вид',
+    shelfDetails: 'Детали полки',
     quantity: 'Количество',
     price: 'Цена',
+    gel: 'лари',
+    wrongFormat: 'Неприемлемый формат полки',
+    wrongFormatMessage1:
+      'Ваша настроенная полка меньше минимально допустимого размера.',
+    wrongFormatMessage2:
+      'Каждая доска полки должна иметь не менее двух точек соприкосновения.',
+    wrongFormatMessage3: 'Выбран недопустимый материал.',
+    unknownError: 'Произошла неизвестная ошибка. Пожалуйста, попробуйте снова.',
 
     material: 'Материал',
     wood: 'Древесина',

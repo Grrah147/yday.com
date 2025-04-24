@@ -182,3 +182,7 @@ body {
     }
   }
 }
+
+& .p-toast-message-icon {
+  margin-top: 0.15rem;
+}
