@@ -9,6 +9,7 @@ import Aura from '@primeuix/themes/aura'
 import Card from 'primevue/card'
 import Menubar from 'primevue/menubar'
 import Menu from 'primevue/menu'
+import Toolbar from 'primevue/toolbar'
 import Stepper from 'primevue/stepper'
 import StepList from 'primevue/steplist'
 import StepPanels from 'primevue/steppanels'
@@ -16,6 +17,8 @@ import StepItem from 'primevue/stepitem'
 import Step from 'primevue/step'
 import StepPanel from 'primevue/steppanel'
 import Button from 'primevue/button'
+import ToggleButton from 'primevue/togglebutton'
+import SplitButton from 'primevue/splitbutton'
 import Badge from 'primevue/badge'
 import Fluid from 'primevue/fluid'
 import Ripple from 'primevue/ripple'
@@ -90,6 +93,9 @@ app
   .component('Message', Message)
   .component('Checkbox', Checkbox)
   .component('RadioButton', RadioButton)
+  .component('Toolbar', Toolbar)
+  .component('SplitButton', SplitButton)
+  .component('ToggleButton', ToggleButton)
 
 app.directive('ripple', Ripple)
 

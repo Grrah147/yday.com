@@ -104,10 +104,6 @@ body {
     & .p-fieldset-legend-label {
       font-weight: 500;
     }
-
-    & .p-button-icon-only.p-button-rounded {
-      border-radius: var(--p-button-border-radius);
-    }
   }
 
   & .p-stepitem {
@@ -142,6 +138,10 @@ body {
   & #configurator-container {
     & #configurator-scene-container {
       height: 500px;
+
+      & .p-toolbar {
+        padding: 0.5rem;
+      }
     }
 
     & .configurator-options-container {

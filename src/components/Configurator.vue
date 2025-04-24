@@ -18,15 +18,32 @@
                     </div>
                 </template>
                 <template #icons>
-                    <!-- <div class="card flex justify-center"> -->
-                    <!-- <SelectButton v-model="sceneTypeValue" :options="sceneTypeOptions" /> -->
-                    <!-- </div> -->
-                    <!-- <Button icon="pi pi-shopping-cart" severity="secondary" text></Button> -->
-                    <Button icon="pi pi-cog" severity="secondary" text @click="toggleConfiguratorSettingsMenu" />
-                    <Menu ref="configuratorSettingsMenu" id="config_menu" :model="configuratorSettingsMenuItems"
-                        popup />
                 </template>
-                <div id="configurator-scene-container" class="bg-surface-100 dark:bg-surface-950 p-4 mt-2">
+                <div id="configurator-scene-container" class="bg-surface-100 dark:bg-surface-950 p-4 mt-2 rounded">
+                    <div class="card">
+                        <Toolbar>
+                            <template #start>
+                                <Button icon="pi pi-cog" severity="secondary" text
+                                    @click="toggleConfiguratorSettingsMenu" />
+                                <Menu ref="configuratorSettingsMenu" id="config_menu"
+                                    :model="configuratorSettingsMenuItems" popup />
+                                <Button icon="pi pi-minus" class="mr-2" severity="secondary" text />
+                                <Button icon="pi pi-lightbulb" class="mr-2" severity="secondary" text />
+
+                            </template>
+
+                            <template #center>
+                            </template>
+
+                            <template #end>
+                                <div class="flex flex-wrap gap-2">
+                                    <Button icon="pi pi-box" label="3D View" severity="primary" />
+                                    <Button icon="pi pi-info-circle" label="" severity="secondary" />
+                                    <!-- <SplitButton label="Save" :model="configuratorSceneToolbarItems"></SplitButton> -->
+                                </div>
+                            </template>
+                        </Toolbar>
+                    </div>
                     <Message severity="error" hidden>Error Message</Message>
                 </div>
                 <Fieldset :legend="$t('material')">
@@ -41,7 +58,7 @@
                 <Fieldset :legend="$t('color')">
                     <div id="colors" class="configurator-options-container flex flex-row flex-wrap gap-2">
                         <div v-for="color in colors" @click.stop="" :style="`background-color: ${color.code};`"
-                            class="param border-surface-200 dark:border-surface-700 border"
+                            class="param border-surface-200 dark:border-surface-700 border rounded"
                             :class="{ disabled: !color.availability }">
                         </div>
                     </div>
@@ -94,13 +111,23 @@ const configuratorSettingsMenuItems = computed(() => [
     },
 ]);
 
-/* Scene view */
-const sceneTypeValue = ref('2D');
-const sceneTypeOptions = ref(['2D', '3D']);
+/* Scene toolbar */
+const configuratorSceneView = ref(false);
 
 const toggleConfiguratorSettingsMenu = (event) => {
     configuratorSettingsMenu.value.toggle(event);
 };
+
+const configuratorSceneToolbarItems = ref([
+    {
+        label: 'Update',
+        icon: 'pi pi-refresh'
+    },
+    {
+        label: 'Delete',
+        icon: 'pi pi-times'
+    }
+])
 
 /* Config */
 /* Materials */
