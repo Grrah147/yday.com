@@ -26,8 +26,8 @@ const messages = {
     contactUs: 'Contact us',
     phone: '+995 598 282 060',
     address: 'Anoratorius street. 47',
-    email: 'info@yday.com',
-    instagram: '@yday.com',
+    email: "{'info@yday.com'}",
+    instagram: "{'@yday.com'}",
 
     notFoundTitle: '404 Not Found',
     notFoundContent: 'This page does not exist',
@@ -114,8 +114,8 @@ const messages = {
     contactUs: 'დაგვიკავშირდით',
     phone: '+995 598 282 060',
     address: 'ანორატორიუსის ქ. 47',
-    email: 'info@yday.com',
-    instagram: '@yday.com',
+    email: "{'info@yday.com'}",
+    instagram: "{'@yday.com'}",
 
     notFoundTitle: '404 არ მოიძებნა',
     notFoundContent: 'ეს გვერდი არ არსებობს',
@@ -201,8 +201,9 @@ const messages = {
     contactUs: 'Свяжитесь с нами',
     phone: '+995 598 282 060',
     address: 'ул. Анораториус, 47',
-    email: 'info@yday.com',
-    instagram: '@yday.com',
+    email: "{'info@yday.com'}",
+    instagram: "{'@yday.com'}",
+
     notFoundTitle: '404 Не найдено',
     notFoundContent: 'Эта страница не существует',
     goBack: 'Вернуться',
