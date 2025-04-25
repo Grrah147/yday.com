@@ -2,8 +2,10 @@
     <div id="navbar" class="card">
         <Menubar :model="items">
             <template #start>
-                <span
-                    class="text-primary-500 dark:text-primary-400 text-2xl permanent-marker-regular px-3">YDay.com</span>
+                <router-link to="/" activeClass="" exactActiveClass="">
+                    <span
+                        class="text-primary-500 dark:text-primary-400 text-2xl permanent-marker-regular px-3">YDay.com</span>
+                </router-link>
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
                 <router-link v-if="item.route" v-slot="{ href, navigate, isActive, isExactActive }" :to="item.route"
@@ -26,12 +28,12 @@
             </template>
             <template #end>
                 <div class="flex items-center gap-2">
-                    <Button type="button" variant="outlined" id="yd_language_switch_button" class="p-button-icon-only"
-                        severity="secondary" aria-haspopup="true" aria-controls="yd_language_switch_dropdown_menu"
+                    <Button type="button" variant="outlined" id="language_switch_button" class="p-button-icon-only"
+                        severity="secondary" aria-haspopup="true" aria-controls="language_switch_dropdown_menu"
                         @click="toggleLanguageSwitchDropdownMenu">
                         <span :class="`flag-icon flag-icon-${flagMap[locale]}`"></span>
                     </Button>
-                    <Menu ref="languageSwitchDropdownMenu" id="yd_language_switch_dropdown_menu"
+                    <Menu ref="languageSwitchDropdownMenu" id="language_switch_dropdown_menu"
                         :model="languageSwitchDropdownMenuItems" :popup="true">
                         <template #item="{ item }">
                             <span :class="item.icon" />
