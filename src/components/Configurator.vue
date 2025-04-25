@@ -11,68 +11,78 @@
                 </template>
                 <template #icons></template>
                 <div id="configurator-scene-container" class="bg-surface-200 dark:bg-surface-950 p-2 mt-2 rounded">
-                    <div class="card">
-                        <div class="flex flex-row justify-start p-2 gap-2">
-                            <Button icon="pi pi-minus" severity="secondary" />
-                            <Button icon="pi pi-lightbulb" severity="secondary" />
-                            <Button icon="pi pi-cog" severity="secondary" @click="toggleConfiguratorSettingsMenu"
-                                class="ml-auto" />
-                            <Menu ref="configuratorSettingsMenu" id="config_menu" :model="configuratorSettingsMenuItems"
-                                popup />
+                    <div id="configurator-toolbar" class="card flex flex-row justify-between">
+                        <div class="flex flex-col md:flex-row justify-start p-2 gap-2">
+                            <!-- <Button icon="pi pi-minus" severity="secondary" /> -->
+                            <Button id="frame_component" icon="pi pi-expand" severity="secondary" />
+                            <Button id="plank_h_component" icon="pi pi-arrows-h" severity="secondary" />
+                            <Button id="plank_v_component" icon="pi pi-arrows-v" severity="secondary" />
+                            <Button id="plank_any_component" icon="pi pi-arrow-up-right-and-arrow-down-left-from-center"
+                                severity="secondary" />
+                            <Button id="wine_slot_component" icon="pi pi-hourglass" severity="secondary" />
+                            <Button id="led_component" icon="pi pi-lightbulb" severity="secondary" />
+                        </div>
+                        <div class="flex flex-row p-2 self-start gap-2">
+                            <Button id="configurator_refresh" icon="pi pi-cog" severity="secondary"
+                                @click="toggleConfiguratorSettingsMenu" />
+                            <Menu ref="configuratorSettingsMenu" id="configurator_menu"
+                                :model="configuratorSettingsMenuItems" popup />
                         </div>
                     </div>
                     <div class="card">
-                        <div class="flex flex-row justify-between p-2 gap-2">
+                        <div class="flex flex-row justify-end p-2 gap-2">
                             <Button icon="pi pi-box" :label="$t('tdv')" severity="primary" />
-                            <Button icon="pi pi-info-circle" label="" severity="secondary"
-                                @click="configuratorInfoPanel = true" />
                         </div>
                     </div>
                 </div>
-                <Fieldset :legend="$t('material')">
-                    <div id="materials" class="configurator-options-container flex flex-row flex-wrap gap-2">
-                        <div v-for="material in materials" @click.stop=""
-                            class="param border-surface-200 dark:border-surface-700 border rounded"
-                            :class="{ disabled: !material.availability }">
-                            {{ $t(material.name) }}
+                <div id="configurator-options-container">
+                    <Fieldset :legend="$t('material')">
+                        <div id="materials" class="configurator-options-container flex flex-row flex-wrap gap-2">
+                            <div v-for="material in materials" @click.stop=""
+                                class="param border-surface-200 dark:border-surface-700 border rounded"
+                                :class="{ disabled: !material.availability }">
+                                {{ $t(material.name) }}
+                            </div>
                         </div>
-                    </div>
-                </Fieldset>
-                <Fieldset :legend="$t('color')">
-                    <div id="colors" class="configurator-options-container flex flex-row flex-wrap gap-2">
-                        <div v-for="color in colors" @click.stop="" :style="`background-color: ${color.code};`"
-                            class="param border-surface-200 dark:border-surface-700 border rounded"
-                            :class="{ disabled: !color.availability }"></div>
-                    </div>
-                </Fieldset>
-                <Fieldset :legend="$t('otherOptions')">
-                    <div id="finish" class="configurator-options-container flex flex-col flex-wrap gap-4">
-                        <div class="flex items-center gap-2">
-                            <Checkbox v-model="finish.backboard" binary inputId="backboard" name="backboard"
-                                @change="onBackboardChange" />
-                            <label for="backboard">{{ $t('backboard') }}</label>
+                    </Fieldset>
+                    <Fieldset :legend="$t('color')">
+                        <div id="colors" class="configurator-options-container flex flex-row flex-wrap gap-2">
+                            <div v-for="color in colors" @click.stop="" :style="`background-color: ${color.code};`"
+                                class="param border-surface-200 dark:border-surface-700 border rounded"
+                                :class="{ disabled: !color.availability }"></div>
                         </div>
-
-                        <div class="flex flex-col gap-2">
-                            <span>{{ $t('edgeFinish') }}</span>
-                            <div class="flex-wrap flex gap-4">
-                                <div class="flex items-center gap-2">
-                                    <RadioButton v-model="finish.edge" inputId="singleEdge" name="edge" :value="1"
-                                        @change="onEdgeChange" />
-                                    <label for="singleEdge">{{ $t('singleEdge') }}</label>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <RadioButton v-model="finish.edge" inputId="doubleEdge" name="edge" :value="2"
-                                        @change="onEdgeChange" />
-                                    <label for="doubleEdge">{{ $t('doubleEdge') }}</label>
+                    </Fieldset>
+                    <Fieldset :legend="$t('otherOptions')">
+                        <div id="other-options" class="configurator-options-container flex flex-col flex-wrap gap-4">
+                            <div class="flex items-center gap-2">
+                                <Checkbox v-model="otherOptions.backboard" binary inputId="backboard" name="backboard"
+                                    @change="onBackboardChange" />
+                                <label for="backboard">{{ $t('backboard') }}</label>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <span>{{ $t('edgeFinish') }}</span>
+                                <div class="flex-wrap flex gap-4">
+                                    <div class="flex items-center gap-2">
+                                        <RadioButton v-model="otherOptions.edge" inputId="single_edge" name="edge"
+                                            :value="1" @change="onEdgeChange" />
+                                        <label for="single_edge">{{ $t('singleEdge') }}</label>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <RadioButton v-model="otherOptions.edge" inputId="double_edge" name="edge"
+                                            :value="2" @change="onEdgeChange" />
+                                        <label for="double_edge">{{ $t('doubleEdge') }}</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </Fieldset>
+                    </Fieldset>
+                </div>
                 <template #footer>
                     <div class="flex flex-wrap items-center justify-between gap-4">
-                        <div class="flex items-center gap-2"></div>
+                        <div class="flex items-center gap-2">
+                            <Button icon="pi pi-info-circle" label="" severity="secondary"
+                                @click="configuratorInfoPanel = true" />
+                        </div>
                         <span class="text-surface-500 dark:text-surface-400">{{ $t('price') + ' ' + '345' + ' ' +
                             $t('gel') }}
                         </span>
@@ -204,21 +214,21 @@ const colors = [
     { name: 'green', code: '#4ade80;', availability: true },
     { name: 'black', code: '#030712;', availability: true },
 ];
-/* Finish */
-const finish = ref({
+/* Other options */
+const otherOptions = ref({
     backboard: false,
     edge: 1,
 });
 
 const onBackboardChange = () => {
-    if (finish.value.backboard) {
-        finish.value.edge = 1;
+    if (otherOptions.value.backboard) {
+        otherOptions.value.edge = 1;
     }
 };
 
 const onEdgeChange = () => {
-    if (finish.value.edge === 2) {
-        finish.value.backboard = false;
+    if (otherOptions.value.edge === 2) {
+        otherOptions.value.backboard = false;
     }
 };
 </script>
