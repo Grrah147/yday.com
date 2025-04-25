@@ -129,18 +129,22 @@ const selectLanguage = (code) => {
 const userAccountDropdownMenu = ref();
 const userAccountDropdownMenuItems = ref([
     {
-        label: 'nikoloz.u@gmail.com',
+        label: 'nikoloz.u@gmail.com', // user email or phone number.
         items: [
             {
-                label: computed(() => t('Cart')), // Use computed for reactive translation
-                icon: 'pi pi-shopping-cart',
+                label: computed(() => t('account')),
+                icon: 'pi pi-user',
             },
             {
-                label: computed(() => t('Order history')),
+                label: computed(() => t('orderHistory')),
                 icon: 'pi pi-history',
             },
             {
-                label: computed(() => t('Sign out')),
+                label: computed(() => t('cart')),
+                icon: 'pi pi-shopping-cart',
+            },
+            {
+                label: computed(() => t('signOut')),
                 icon: 'pi pi-sign-out',
             },
         ],

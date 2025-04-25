@@ -33,6 +33,12 @@ const messages = {
     notFoundContent: 'This page does not exist',
     goBack: 'Go back',
 
+    account: 'Account',
+    orderHistory: 'Order history',
+    cart: 'Cart',
+    signIn: 'Sign in',
+    signOut: 'Sign out',
+
     configureShelf: 'Configure Your Shelf',
     orderDetails: 'Order details',
     payment: 'Payment',
@@ -130,6 +136,12 @@ const messages = {
     notFoundContent: 'ეს გვერდი არ არსებობს',
     goBack: 'დაბრუნდი',
 
+    account: 'ანგარიში',
+    orderHistory: 'შეკვეთების ისტორია',
+    cart: 'კალათა',
+    signIn: 'შესვლა',
+    signOut: 'გასვლა',
+
     configureShelf: 'დააკონფიგურე შენი თარო',
     orderDetails: 'შეკვეთის დეტალები',
     payment: 'გადახდა',
@@ -226,6 +238,12 @@ const messages = {
     notFoundTitle: '404 Не найдено',
     notFoundContent: 'Эта страница не существует',
     goBack: 'Вернуться',
+
+    account: 'Учетная запись',
+    orderHistory: 'История заказов',
+    cart: 'Корзина',
+    signIn: 'Войти',
+    signOut: 'Выйти',
 
     configureShelf: 'Настройте свою полку',
     orderDetails: 'Детали заказа',

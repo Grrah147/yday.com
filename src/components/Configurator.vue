@@ -23,7 +23,7 @@
                             <Button id="led_component" icon="pi pi-lightbulb" severity="secondary" text />
                         </div>
                         <div class="flex flex-row self-start">
-                            <Button id="configurator_refresh" icon="pi pi-cog" severity="secondary"
+                            <Button id="configurator_refresh" icon="pi pi-cog" severity="secondary" text
                                 @click="toggleConfiguratorSettingsMenu" />
                             <Menu ref="configuratorSettingsMenu" id="configurator_menu"
                                 :model="configuratorSettingsMenuItems" popup />
