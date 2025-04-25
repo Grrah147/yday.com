@@ -10,19 +10,19 @@
                     </div>
                 </template>
                 <template #icons></template>
-                <div id="configurator-scene-container" class="bg-surface-200 dark:bg-surface-950 p-2 mt-2 rounded">
+                <div id="configurator-scene-container" class="bg-surface-300 dark:bg-surface-950 p-4 mt-2 rounded">
                     <div id="configurator-toolbar" class="card flex flex-row justify-between">
-                        <div class="flex flex-col md:flex-row justify-start p-2 gap-2">
+                        <div id="toolbar-2d-components" class="flex flex-col md:flex-row justify-start p-1 gap-1">
                             <!-- <Button icon="pi pi-minus" severity="secondary" /> -->
-                            <Button id="frame_component" icon="pi pi-expand" severity="secondary" />
-                            <Button id="plank_h_component" icon="pi pi-arrows-h" severity="secondary" />
-                            <Button id="plank_v_component" icon="pi pi-arrows-v" severity="secondary" />
+                            <Button id="frame_component" icon="pi pi-expand" severity="secondary" text />
+                            <Button id="plank_h_component" icon="pi pi-arrows-h" severity="secondary" text />
+                            <Button id="plank_v_component" icon="pi pi-arrows-v" severity="secondary" text />
                             <Button id="plank_any_component" icon="pi pi-arrow-up-right-and-arrow-down-left-from-center"
-                                severity="secondary" />
-                            <Button id="wine_slot_component" icon="pi pi-hourglass" severity="secondary" />
-                            <Button id="led_component" icon="pi pi-lightbulb" severity="secondary" />
+                                severity="secondary" text />
+                            <Button id="wine_slot_component" icon="pi pi-hourglass" severity="secondary" text />
+                            <Button id="led_component" icon="pi pi-lightbulb" severity="secondary" text />
                         </div>
-                        <div class="flex flex-row p-2 self-start gap-2">
+                        <div class="flex flex-row self-start">
                             <Button id="configurator_refresh" icon="pi pi-cog" severity="secondary"
                                 @click="toggleConfiguratorSettingsMenu" />
                             <Menu ref="configuratorSettingsMenu" id="configurator_menu"
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="flex flex-row justify-end p-2 gap-2">
+                        <div class="flex flex-row justify-end">
                             <Button icon="pi pi-box" :label="$t('tdv')" severity="primary" />
                         </div>
                     </div>
