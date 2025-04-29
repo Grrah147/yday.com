@@ -14,12 +14,13 @@
                     <div id="configurator-toolbar" class="card flex flex-row justify-between">
                         <div id="toolbar-2d-components" class="flex flex-col md:flex-row justify-start p-1 gap-1">
                             <!-- <Button icon="pi pi-minus" severity="secondary" /> -->
+                            <Button id="default_cursor_component" icon="pi pi-file-edit" severity="secondary" text />
                             <Button id="frame_component" icon="pi pi-expand" severity="secondary" text />
                             <Button id="plank_h_component" icon="pi pi-arrows-h" severity="secondary" text />
                             <Button id="plank_v_component" icon="pi pi-arrows-v" severity="secondary" text />
                             <Button id="plank_any_component" icon="pi pi-arrow-up-right-and-arrow-down-left-from-center"
                                 severity="secondary" text />
-                            <Button id="wine_slot_component" icon="pi pi-hourglass" severity="secondary" text />
+                            <Button id="wine_rack_component" icon="pi pi-hourglass" severity="secondary" text />
                             <Button id="led_component" icon="pi pi-lightbulb" severity="secondary" text />
                         </div>
                         <div class="flex flex-row self-start">
@@ -30,7 +31,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="flex flex-row justify-end">
+                        <div id="scene-view-btn-container" class="flex flex-row justify-end">
                             <Button icon="pi pi-box" :label="$t('tdv')" severity="primary" />
                         </div>
                     </div>
@@ -80,10 +81,11 @@
                 <template #footer>
                     <div class="flex flex-wrap items-center justify-between gap-4">
                         <div class="flex items-center gap-2">
-                            <Button icon="pi pi-info-circle" label="" severity="secondary"
-                                @click="configuratorInfoPanel = true" />
+                            <Button id="shelf-information-panel-btn" icon="pi pi-info-circle" label=""
+                                severity="secondary" @click="configuratorInfoPanel = true" />
                         </div>
-                        <span class="text-surface-500 dark:text-surface-400">{{ $t('price') + ' ' + '345' + ' ' +
+                        <span class="shelf-price text-surface-500 dark:text-surface-400">{{ $t('price') + ' ' + '345' +
+                            ' ' +
                             $t('gel') }}
                         </span>
                     </div>

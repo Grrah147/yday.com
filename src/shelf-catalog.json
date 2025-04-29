@@ -1,0 +1,781 @@
+{
+  "shelves": [
+    {
+      "id": "",
+      "name": "scratch",
+      "description": "",
+      "totalMaterialArea": 0,
+      "totalPlankCount": 0,
+      "price": 0,
+      "image": {
+        "2d": "",
+        "3d": "scratch-image-placeholder.png"
+      },
+      "planks": {
+        "frame": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "divider": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "shelf": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ]
+      },
+      "options": [
+        {
+          "material": {
+            "code": "",
+            "type": ""
+          },
+          "color": {
+            "code": "",
+            "name": ""
+          },
+          "backboard": false,
+          "edgeFinish": "single",
+          "lights": [
+            {
+              "code": "",
+              "type": "",
+              "subtype": "",
+              "size": "",
+              "color": "",
+              "colorCode": "",
+              "quantity": 1,
+              "customLength": null
+            }
+          ],
+          "wineRacks": [
+            {
+              "corners": [
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 }
+              ],
+              "depth": 37,
+              "material": {
+                "code": "",
+                "name": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "minimum",
+      "description": "Most basic, minimal shelf",
+      "totalMaterialArea": 0,
+      "totalPlankCount": 0,
+      "price": 0,
+      "image": {
+        "2d": "",
+        "3d": "template-image-placeholder.png"
+      },
+      "planks": {
+        "frame": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "divider": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "shelf": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ]
+      },
+      "options": [
+        {
+          "material": {
+            "code": "",
+            "type": ""
+          },
+          "color": {
+            "code": "",
+            "name": ""
+          },
+          "backboard": false,
+          "edgeFinish": "single",
+          "lights": [
+            {
+              "code": "",
+              "type": "",
+              "subtype": "",
+              "size": "",
+              "color": "",
+              "colorCode": "",
+              "quantity": 1,
+              "customLength": null
+            }
+          ],
+          "wineRacks": [
+            {
+              "corners": [
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 }
+              ],
+              "depth": 37,
+              "material": {
+                "code": "",
+                "name": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "simple",
+      "description": "Basic simple shelf",
+      "totalMaterialArea": 0,
+      "totalPlankCount": 0,
+      "price": 0,
+      "image": {
+        "2d": "",
+        "3d": "template-image-placeholder.png"
+      },
+      "planks": {
+        "frame": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "divider": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "shelf": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ]
+      },
+      "options": [
+        {
+          "material": {
+            "code": "",
+            "type": ""
+          },
+          "color": {
+            "code": "",
+            "name": ""
+          },
+          "backboard": false,
+          "edgeFinish": "single",
+          "lights": [
+            {
+              "code": "",
+              "type": "",
+              "subtype": "",
+              "size": "",
+              "color": "",
+              "colorCode": "",
+              "quantity": 1,
+              "customLength": null
+            }
+          ],
+          "wineRacks": [
+            {
+              "corners": [
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 }
+              ],
+              "depth": 37,
+              "material": {
+                "code": "",
+                "name": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "standard",
+      "description": "Standard simple shelf",
+      "totalMaterialArea": 0,
+      "totalPlankCount": 0,
+      "price": 0,
+      "image": {
+        "2d": "",
+        "3d": "template-image-placeholder.png"
+      },
+      "planks": {
+        "frame": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "divider": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "shelf": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ]
+      },
+      "options": [
+        {
+          "material": {
+            "code": "",
+            "type": ""
+          },
+          "color": {
+            "code": "",
+            "name": ""
+          },
+          "backboard": false,
+          "edgeFinish": "single",
+          "lights": [
+            {
+              "code": "",
+              "type": "",
+              "subtype": "",
+              "size": "",
+              "color": "",
+              "colorCode": "",
+              "quantity": 1,
+              "customLength": null
+            }
+          ],
+          "wineRacks": [
+            {
+              "corners": [
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 }
+              ],
+              "depth": 37,
+              "material": {
+                "code": "",
+                "name": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "large",
+      "description": "Large simple shelf",
+      "totalMaterialArea": 0,
+      "totalPlankCount": 0,
+      "price": 0,
+      "image": {
+        "2d": "",
+        "3d": "template-image-placeholder.png"
+      },
+      "planks": {
+        "frame": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "divider": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "shelf": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ]
+      },
+      "options": [
+        {
+          "material": {
+            "code": "",
+            "type": ""
+          },
+          "color": {
+            "code": "",
+            "name": ""
+          },
+          "backboard": false,
+          "edgeFinish": "single",
+          "lights": [
+            {
+              "code": "",
+              "type": "",
+              "subtype": "",
+              "size": "",
+              "color": "",
+              "colorCode": "",
+              "quantity": 1,
+              "customLength": null
+            }
+          ],
+          "wineRacks": [
+            {
+              "corners": [
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 }
+              ],
+              "depth": 37,
+              "material": {
+                "code": "",
+                "name": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "stylish",
+      "description": "Stylish medium shelf",
+      "totalMaterialArea": 0,
+      "totalPlankCount": 0,
+      "price": 0,
+      "image": {
+        "2d": "",
+        "3d": "template-image-placeholder.png"
+      },
+      "planks": {
+        "frame": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "divider": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "shelf": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ]
+      },
+      "options": [
+        {
+          "material": {
+            "code": "",
+            "type": ""
+          },
+          "color": {
+            "code": "",
+            "name": ""
+          },
+          "backboard": false,
+          "edgeFinish": "single",
+          "lights": [
+            {
+              "code": "",
+              "type": "",
+              "subtype": "",
+              "size": "",
+              "color": "",
+              "colorCode": "",
+              "quantity": 1,
+              "customLength": null
+            }
+          ],
+          "wineRacks": [
+            {
+              "corners": [
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 }
+              ],
+              "depth": 37,
+              "material": {
+                "code": "",
+                "name": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "advanced",
+      "description": "Large advanced shelf",
+      "totalMaterialArea": 0,
+      "totalPlankCount": 0,
+      "price": 0,
+      "image": {
+        "2d": "",
+        "3d": "template-image-placeholder.png"
+      },
+      "planks": {
+        "frame": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "divider": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ],
+        "shelf": [
+          {
+            "type": "",
+            "name": "",
+            "material": {
+              "code": "",
+              "type": ""
+            },
+            "color": {
+              "code": "",
+              "name": ""
+            },
+            "depth": "",
+            "length": "",
+            "degree": "",
+            "posX": "",
+            "posY": ""
+          }
+        ]
+      },
+      "options": [
+        {
+          "material": {
+            "code": "",
+            "type": ""
+          },
+          "color": {
+            "code": "",
+            "name": ""
+          },
+          "backboard": false,
+          "edgeFinish": "single",
+          "lights": [
+            {
+              "code": "",
+              "type": "",
+              "subtype": "",
+              "size": "",
+              "color": "",
+              "colorCode": "",
+              "quantity": 1,
+              "customLength": null
+            }
+          ],
+          "wineRacks": [
+            {
+              "corners": [
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 },
+                { "x": 0, "y": 0 }
+              ],
+              "depth": 37,
+              "material": {
+                "code": "",
+                "name": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "options": [
+    {
+      "materials": [
+        {
+          "code": "",
+          "type": "wood",
+          "price": 0,
+          "availability": true
+        },
+        {
+          "code": "",
+          "type": "mdf",
+          "price": 0,
+          "availability": true
+        },
+        {
+          "code": "",
+          "type": "plywood",
+          "price": 0,
+          "availability": true
+        },
+        {
+          "code": "",
+          "type": "metal",
+          "price": 0,
+          "availability": false
+        },
+        {
+          "code": "",
+          "type": "glass",
+          "price": 0,
+          "availability": false
+        }
+      ],
+      "colors": [
+        {
+          "code": "#f8fafc",
+          "name": "white",
+          "price": 0,
+          "availability": true
+        },
+        {
+          "code": "#e5e7eb",
+          "name": "gray",
+          "price": 0,
+          "availability": true
+        },
+        {
+          "code": "#a8a29e",
+          "name": "brown",
+          "price": 0,
+          "availability": true
+        },
+        {
+          "code": "#facc15",
+          "name": "yellow",
+          "price": 0,
+          "availability": true
+        },
+        {
+          "code": "#f87171",
+          "name": "red",
+          "price": 0,
+          "availability": true
+        },
+        {
+          "code": "#a78bfa",
+          "name": "purple",
+          "price": 0,
+          "availability": true
+        },
+        {
+          "code": "#60a5fa",
+          "name": "blue",
+          "price": 0,
+          "availability": true
+        },
+        {
+          "code": "#4ade80",
+          "name": "green",
+          "price": 0,
+          "availability": true
+        },
+        {
+          "code": "#030712",
+          "name": "black",
+          "price": 0,
+          "availability": true
+        }
+      ],
+      "lights": [
+        {
+          "code": "",
+          "type": "LED",
+          "variant": "strip",
+          "size": "10mm",
+          "color": "Warm white",
+          "colorCode": "",
+          "price": 0,
+          "availability": true
+        }
+      ]
+    }
+  ]
+}

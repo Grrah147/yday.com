@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "local-server": "json-server --watch src/shelves.json --port 5000"
+    "local-server": "json-server --watch src/shelf-templates.json --port 5000"
   },
   "dependencies": {
     "@primeuix/themes": "^1.0.3",
