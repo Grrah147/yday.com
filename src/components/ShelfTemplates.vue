@@ -7,7 +7,7 @@
                         class="shelf-template border border-surface-200 dark:border-surface-700 m-2 p-4 rounded">
                         <div class="mb-4 flex">
                             <div class="relative mx-auto">
-                                <img :src="'http://localhost:5173/src/assets/images/' + slotProps.data.image['3d']"
+                                <img :src="'http://localhost:5173/src/assets/images/' + slotProps.data.image.customer3d"
                                     :alt="slotProps.data.name" class="rounded" />
                                 <Tag v-if="slotProps.data.highlight" :value="slotProps.data.highlight"
                                     :severity="getHighlightColor(slotProps.data.highlight)" class="absolute"

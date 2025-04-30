@@ -8,8 +8,10 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "2d": "",
-        "3d": "scratch-image-placeholder.png"
+        "customer2d": "",
+        "customer3d": "scratch-image-placeholder.png",
+        "factory2d": "",
+        "factory3d": ""
       },
       "planks": {
         "frame": [
@@ -80,6 +82,7 @@
             "code": "",
             "name": ""
           },
+          "multiColor": false,
           "backboard": false,
           "edgeFinish": "single",
           "lights": [
@@ -119,8 +122,10 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "2d": "",
-        "3d": "template-image-placeholder.png"
+        "customer2d": "",
+        "customer3d": "template-image-placeholder.png",
+        "factory2d": "",
+        "factory3d": ""
       },
       "planks": {
         "frame": [
@@ -191,6 +196,7 @@
             "code": "",
             "name": ""
           },
+          "multiColor": false,
           "backboard": false,
           "edgeFinish": "single",
           "lights": [
@@ -230,8 +236,10 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "2d": "",
-        "3d": "template-image-placeholder.png"
+        "customer2d": "",
+        "customer3d": "template-image-placeholder.png",
+        "factory2d": "",
+        "factory3d": ""
       },
       "planks": {
         "frame": [
@@ -302,6 +310,7 @@
             "code": "",
             "name": ""
           },
+          "multiColor": false,
           "backboard": false,
           "edgeFinish": "single",
           "lights": [
@@ -341,8 +350,10 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "2d": "",
-        "3d": "template-image-placeholder.png"
+        "customer2d": "",
+        "customer3d": "template-image-placeholder.png",
+        "factory2d": "",
+        "factory3d": ""
       },
       "planks": {
         "frame": [
@@ -413,6 +424,7 @@
             "code": "",
             "name": ""
           },
+          "multiColor": false,
           "backboard": false,
           "edgeFinish": "single",
           "lights": [
@@ -452,8 +464,10 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "2d": "",
-        "3d": "template-image-placeholder.png"
+        "customer2d": "",
+        "customer3d": "template-image-placeholder.png",
+        "factory2d": "",
+        "factory3d": ""
       },
       "planks": {
         "frame": [
@@ -524,6 +538,7 @@
             "code": "",
             "name": ""
           },
+          "multiColor": false,
           "backboard": false,
           "edgeFinish": "single",
           "lights": [
@@ -563,8 +578,10 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "2d": "",
-        "3d": "template-image-placeholder.png"
+        "customer2d": "",
+        "customer3d": "template-image-placeholder.png",
+        "factory2d": "",
+        "factory3d": ""
       },
       "planks": {
         "frame": [
@@ -635,6 +652,7 @@
             "code": "",
             "name": ""
           },
+          "multiColor": false,
           "backboard": false,
           "edgeFinish": "single",
           "lights": [
@@ -674,8 +692,10 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "2d": "",
-        "3d": "template-image-placeholder.png"
+        "customer2d": "",
+        "customer3d": "template-image-placeholder.png",
+        "factory2d": "",
+        "factory3d": ""
       },
       "planks": {
         "frame": [
@@ -746,6 +766,7 @@
             "code": "",
             "name": ""
           },
+          "multiColor": false,
           "backboard": false,
           "edgeFinish": "single",
           "lights": [

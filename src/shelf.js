@@ -6,8 +6,10 @@ const shelf = {
   totalPlankCount: 0,
   price: 0,
   image: {
-    '2d': '',
-    '3d': '',
+    customer2d: '',
+    customer3d: '',
+    factory2d: '',
+    factory3d: '',
   },
   planks: {
     frame: [
@@ -78,6 +80,7 @@ const shelf = {
         code: '',
         name: '',
       },
+      multiColor: false,
       backboard: false,
       edgeFinish: 'single',
       lights: [

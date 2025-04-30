@@ -6,29 +6,34 @@
           "code": "",
           "type": "wood",
           "price": 0,
+          "thickness": 18,
           "availability": true
         },
         {
           "code": "",
           "type": "mdf",
           "price": 0,
+          "thickness": 18,
           "availability": true
         },
         {
           "code": "",
           "type": "plywood",
+          "thickness": 18,
           "price": 0,
           "availability": true
         },
         {
           "code": "",
           "type": "metal",
+          "thickness": 18,
           "price": 0,
           "availability": false
         },
         {
           "code": "",
           "type": "glass",
+          "thickness": 18,
           "price": 0,
           "availability": false
         }
