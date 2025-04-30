@@ -28,6 +28,7 @@ const messages = {
     address: 'Anoratorius street. 47',
     email: "{'info@yday.com'}",
     instagram: "{'@yday.com'}",
+    twitter: "{'@yday.com'}",
 
     notFoundTitle: '404 Not Found',
     notFoundContent: 'This page does not exist',
@@ -131,6 +132,7 @@ const messages = {
     address: 'ანორატორიუსის ქ. 47',
     email: "{'info@yday.com'}",
     instagram: "{'@yday.com'}",
+    twitter: "{'@yday.com'}",
 
     notFoundTitle: '404 არ მოიძებნა',
     notFoundContent: 'ეს გვერდი არ არსებობს',
@@ -234,6 +236,7 @@ const messages = {
     address: 'ул. Анораториус, 47',
     email: "{'info@yday.com'}",
     instagram: "{'@yday.com'}",
+    twitter: "{'@yday.com'}",
 
     notFoundTitle: '404 Не найдено',
     notFoundContent: 'Эта страница не существует',

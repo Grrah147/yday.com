@@ -28,6 +28,10 @@
               <span>{{ $t('email') }}</span>
             </div>
             <div class="flex flex-row items-center gap-4">
+              <i class="pi pi-twitter" style="font-size: 1.5rem"></i>
+              <span>{{ $t('twitter') }}</span>
+            </div>
+            <div class="flex flex-row items-center gap-4">
               <i class="pi pi-instagram" style="font-size: 1.5rem"></i>
               <span>{{ $t('instagram') }}</span>
             </div>
