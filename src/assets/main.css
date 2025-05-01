@@ -173,7 +173,8 @@ body {
         }
       }
 
-      &#materials {
+      &#materials,
+      &#lighting-colors {
         & div {
           padding: var(--p-button-padding-y) var(--p-button-padding-x);
 
@@ -190,7 +191,8 @@ body {
         cursor: pointer;
         opacity: 0.9;
 
-        &.disabled {
+        &.disabled,
+        &:disabled {
           opacity: 0.3;
           cursor: not-allowed;
         }

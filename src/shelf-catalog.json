@@ -8,10 +8,12 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "customer2d": "",
-        "customer3d": "scratch-image-placeholder.png",
+        "2d": "",
+        "3d": "scratch-image-placeholder.png",
         "factory2d": "",
-        "factory3d": ""
+        "factory3d": "",
+        "assembly2d": "",
+        "assembly3d": ""
       },
       "planks": {
         "frame": [
@@ -20,11 +22,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -39,11 +42,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -58,11 +62,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -76,11 +81,12 @@
         {
           "material": {
             "code": "",
-            "type": ""
-          },
-          "color": {
-            "code": "",
-            "name": ""
+            "type": "",
+            "color": {
+              "code": "",
+              "colorCode": "",
+              "name": ""
+            }
           },
           "multiColor": false,
           "backboard": false,
@@ -93,7 +99,7 @@
               "size": "",
               "color": "",
               "colorCode": "",
-              "quantity": 1,
+              "quantity": null,
               "customLength": null
             }
           ],
@@ -107,7 +113,12 @@
               "depth": 37,
               "material": {
                 "code": "",
-                "name": ""
+                "type": "",
+                "color": {
+                  "code": "",
+                  "colorCode": "",
+                  "name": ""
+                }
               }
             }
           ]
@@ -122,10 +133,12 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "customer2d": "",
-        "customer3d": "template-image-placeholder.png",
+        "2d": "",
+        "3d": "template-image-placeholder.png",
         "factory2d": "",
-        "factory3d": ""
+        "factory3d": "",
+        "assembly2d": "",
+        "assembly3d": ""
       },
       "planks": {
         "frame": [
@@ -134,11 +147,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -153,11 +167,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -172,11 +187,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -190,11 +206,12 @@
         {
           "material": {
             "code": "",
-            "type": ""
-          },
-          "color": {
-            "code": "",
-            "name": ""
+            "type": "",
+            "color": {
+              "code": "",
+              "colorCode": "",
+              "name": ""
+            }
           },
           "multiColor": false,
           "backboard": false,
@@ -207,7 +224,7 @@
               "size": "",
               "color": "",
               "colorCode": "",
-              "quantity": 1,
+              "quantity": null,
               "customLength": null
             }
           ],
@@ -221,7 +238,12 @@
               "depth": 37,
               "material": {
                 "code": "",
-                "name": ""
+                "type": "",
+                "color": {
+                  "code": "",
+                  "colorCode": "",
+                  "name": ""
+                }
               }
             }
           ]
@@ -236,10 +258,12 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "customer2d": "",
-        "customer3d": "template-image-placeholder.png",
+        "2d": "",
+        "3d": "template-image-placeholder.png",
         "factory2d": "",
-        "factory3d": ""
+        "factory3d": "",
+        "assembly2d": "",
+        "assembly3d": ""
       },
       "planks": {
         "frame": [
@@ -248,11 +272,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -267,11 +292,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -286,11 +312,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -304,11 +331,12 @@
         {
           "material": {
             "code": "",
-            "type": ""
-          },
-          "color": {
-            "code": "",
-            "name": ""
+            "type": "",
+            "color": {
+              "code": "",
+              "colorCode": "",
+              "name": ""
+            }
           },
           "multiColor": false,
           "backboard": false,
@@ -321,7 +349,7 @@
               "size": "",
               "color": "",
               "colorCode": "",
-              "quantity": 1,
+              "quantity": null,
               "customLength": null
             }
           ],
@@ -335,7 +363,12 @@
               "depth": 37,
               "material": {
                 "code": "",
-                "name": ""
+                "type": "",
+                "color": {
+                  "code": "",
+                  "colorCode": "",
+                  "name": ""
+                }
               }
             }
           ]
@@ -350,10 +383,12 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "customer2d": "",
-        "customer3d": "template-image-placeholder.png",
+        "2d": "",
+        "3d": "template-image-placeholder.png",
         "factory2d": "",
-        "factory3d": ""
+        "factory3d": "",
+        "assembly2d": "",
+        "assembly3d": ""
       },
       "planks": {
         "frame": [
@@ -362,11 +397,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -381,11 +417,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -400,11 +437,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -418,11 +456,12 @@
         {
           "material": {
             "code": "",
-            "type": ""
-          },
-          "color": {
-            "code": "",
-            "name": ""
+            "type": "",
+            "color": {
+              "code": "",
+              "colorCode": "",
+              "name": ""
+            }
           },
           "multiColor": false,
           "backboard": false,
@@ -435,7 +474,7 @@
               "size": "",
               "color": "",
               "colorCode": "",
-              "quantity": 1,
+              "quantity": null,
               "customLength": null
             }
           ],
@@ -449,7 +488,12 @@
               "depth": 37,
               "material": {
                 "code": "",
-                "name": ""
+                "type": "",
+                "color": {
+                  "code": "",
+                  "colorCode": "",
+                  "name": ""
+                }
               }
             }
           ]
@@ -464,10 +508,12 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "customer2d": "",
-        "customer3d": "template-image-placeholder.png",
+        "2d": "",
+        "3d": "template-image-placeholder.png",
         "factory2d": "",
-        "factory3d": ""
+        "factory3d": "",
+        "assembly2d": "",
+        "assembly3d": ""
       },
       "planks": {
         "frame": [
@@ -476,11 +522,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -495,11 +542,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -514,11 +562,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -532,11 +581,12 @@
         {
           "material": {
             "code": "",
-            "type": ""
-          },
-          "color": {
-            "code": "",
-            "name": ""
+            "type": "",
+            "color": {
+              "code": "",
+              "colorCode": "",
+              "name": ""
+            }
           },
           "multiColor": false,
           "backboard": false,
@@ -549,7 +599,7 @@
               "size": "",
               "color": "",
               "colorCode": "",
-              "quantity": 1,
+              "quantity": null,
               "customLength": null
             }
           ],
@@ -563,7 +613,12 @@
               "depth": 37,
               "material": {
                 "code": "",
-                "name": ""
+                "type": "",
+                "color": {
+                  "code": "",
+                  "colorCode": "",
+                  "name": ""
+                }
               }
             }
           ]
@@ -578,10 +633,12 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "customer2d": "",
-        "customer3d": "template-image-placeholder.png",
+        "2d": "",
+        "3d": "template-image-placeholder.png",
         "factory2d": "",
-        "factory3d": ""
+        "factory3d": "",
+        "assembly2d": "",
+        "assembly3d": ""
       },
       "planks": {
         "frame": [
@@ -590,11 +647,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -609,11 +667,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -628,11 +687,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -646,11 +706,12 @@
         {
           "material": {
             "code": "",
-            "type": ""
-          },
-          "color": {
-            "code": "",
-            "name": ""
+            "type": "",
+            "color": {
+              "code": "",
+              "colorCode": "",
+              "name": ""
+            }
           },
           "multiColor": false,
           "backboard": false,
@@ -663,7 +724,7 @@
               "size": "",
               "color": "",
               "colorCode": "",
-              "quantity": 1,
+              "quantity": null,
               "customLength": null
             }
           ],
@@ -677,7 +738,12 @@
               "depth": 37,
               "material": {
                 "code": "",
-                "name": ""
+                "type": "",
+                "color": {
+                  "code": "",
+                  "colorCode": "",
+                  "name": ""
+                }
               }
             }
           ]
@@ -692,10 +758,12 @@
       "totalPlankCount": 0,
       "price": 0,
       "image": {
-        "customer2d": "",
-        "customer3d": "template-image-placeholder.png",
+        "2d": "",
+        "3d": "template-image-placeholder.png",
         "factory2d": "",
-        "factory3d": ""
+        "factory3d": "",
+        "assembly2d": "",
+        "assembly3d": ""
       },
       "planks": {
         "frame": [
@@ -704,11 +772,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -723,11 +792,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -742,11 +812,12 @@
             "name": "",
             "material": {
               "code": "",
-              "type": ""
-            },
-            "color": {
-              "code": "",
-              "name": ""
+              "type": "",
+              "color": {
+                "code": "",
+                "colorCode": "",
+                "name": ""
+              }
             },
             "depth": "",
             "length": "",
@@ -760,11 +831,12 @@
         {
           "material": {
             "code": "",
-            "type": ""
-          },
-          "color": {
-            "code": "",
-            "name": ""
+            "type": "",
+            "color": {
+              "code": "",
+              "colorCode": "",
+              "name": ""
+            }
           },
           "multiColor": false,
           "backboard": false,
@@ -777,7 +849,7 @@
               "size": "",
               "color": "",
               "colorCode": "",
-              "quantity": 1,
+              "quantity": null,
               "customLength": null
             }
           ],
@@ -791,7 +863,12 @@
               "depth": 37,
               "material": {
                 "code": "",
-                "name": ""
+                "type": "",
+                "color": {
+                  "code": "",
+                  "colorCode": "",
+                  "name": ""
+                }
               }
             }
           ]

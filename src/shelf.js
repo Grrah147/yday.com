@@ -6,10 +6,12 @@ const shelf = {
   totalPlankCount: 0,
   price: 0,
   image: {
-    customer2d: '',
-    customer3d: '',
+    '2d': '',
+    '3d': '',
     factory2d: '',
     factory3d: '',
+    assembly2d: '',
+    assembly3d: '',
   },
   planks: {
     frame: [
@@ -19,10 +21,11 @@ const shelf = {
         material: {
           code: '',
           type: '',
-        },
-        color: {
-          code: '',
-          name: '',
+          color: {
+            code: '',
+            colorCode: '',
+            name: '',
+          },
         },
         depth: '',
         length: '',
@@ -38,10 +41,11 @@ const shelf = {
         material: {
           code: '',
           type: '',
-        },
-        color: {
-          code: '',
-          name: '',
+          color: {
+            code: '',
+            colorCode: '',
+            name: '',
+          },
         },
         depth: '',
         length: '',
@@ -57,10 +61,11 @@ const shelf = {
         material: {
           code: '',
           type: '',
-        },
-        color: {
-          code: '',
-          name: '',
+          color: {
+            code: '',
+            colorCode: '',
+            name: '',
+          },
         },
         depth: '',
         length: '',
@@ -75,10 +80,11 @@ const shelf = {
       material: {
         code: '',
         type: '',
-      },
-      color: {
-        code: '',
-        name: '',
+        color: {
+          code: '',
+          colorCode: '',
+          name: '',
+        },
       },
       multiColor: false,
       backboard: false,
@@ -91,7 +97,7 @@ const shelf = {
           size: '',
           color: '',
           colorCode: '',
-          quantity: 1,
+          quantity: null,
           customLength: null,
         },
       ],
@@ -105,7 +111,12 @@ const shelf = {
           depth: 37,
           material: {
             code: '',
-            name: '',
+            type: '',
+            color: {
+              code: '',
+              colorCode: '',
+              name: '',
+            },
           },
         },
       ],

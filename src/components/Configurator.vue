@@ -38,24 +38,32 @@
                 </div>
                 <div id="configurator-options-container">
                     <Fieldset :legend="$t('material')">
-                        <div id="materials" class="configurator-options-container flex flex-row flex-wrap gap-2">
-                            <div v-for="material in materials" @click.stop=""
-                                class="param border-surface-200 dark:border-surface-700 border rounded"
-                                :class="{ disabled: !material.availability }">
-                                {{ $t(material.name) }}
+                        <div class="flex flex-col gap-4">
+                            <div class="flex flex-col gap-2">
+                                <span>{{ $t('materialType') }}</span>
+                                <div id="materials"
+                                    class="configurator-options-container flex flex-row flex-wrap gap-2">
+                                    <div v-for="material in materials" @click.stop=""
+                                        class="param border-surface-200 dark:border-surface-700 border rounded-md"
+                                        :class="{ disabled: !material.availability }">
+                                        {{ $t(material.name) }}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </Fieldset>
-                    <Fieldset :legend="$t('color')">
-                        <div id="colors" class="configurator-options-container flex flex-row flex-wrap gap-2">
-                            <div v-for="color in colors" @click.stop="" :style="`background-color: ${color.code};`"
-                                class="param border-surface-200 dark:border-surface-700 border rounded"
-                                :class="{ disabled: !color.availability }"></div>
+                            <div class="flex flex-col gap-2">
+                                <span>{{ $t('color') }}</span>
+                                <div id="colors" class="configurator-options-container flex flex-row flex-wrap gap-2">
+                                    <div v-for="color in colors" @click.stop=""
+                                        :style="`background-color: ${color.code};`"
+                                        class="param border-surface-200 dark:border-surface-700 border rounded-md"
+                                        :class="{ disabled: !color.availability }"></div>
+                                </div>
+                            </div>
                         </div>
                     </Fieldset>
                     <Fieldset :legend="$t('otherOptions')">
                         <div id="other-options" class="configurator-options-container flex flex-col flex-wrap gap-4">
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2 param">
                                 <Checkbox v-model="otherOptions.backboard" binary inputId="backboard" name="backboard"
                                     @change="onBackboardChange" />
                                 <label for="backboard">{{ $t('backboard') }}</label>
@@ -63,16 +71,71 @@
                             <div class="flex flex-col gap-2">
                                 <span>{{ $t('edgeFinish') }}</span>
                                 <div class="flex-wrap flex gap-4">
-                                    <div class="flex items-center gap-2">
+                                    <div class="flex items-center gap-2 param">
                                         <RadioButton v-model="otherOptions.edge" inputId="single_edge" name="edge"
                                             :value="1" @change="onEdgeChange" />
                                         <label for="single_edge">{{ $t('singleEdge') }}</label>
                                     </div>
-                                    <div class="flex items-center gap-2">
+                                    <div class="flex items-center gap-2 param">
                                         <RadioButton v-model="otherOptions.edge" inputId="double_edge" name="edge"
                                             :value="2" @change="onEdgeChange" />
                                         <label for="double_edge">{{ $t('doubleEdge') }}</label>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Fieldset>
+                    <Fieldset>
+                        <template #legend>
+                            <div class="flex items-center gap-1.5">
+                                <span>{{ $t('lighting') }}</span>
+                                <i class="pi pi-info-circle cursor-pointer"
+                                    style="font-size: 1rem; color: var(--p-surface-300)"></i>
+                            </div>
+                        </template>
+                        <div id="lighting-options" class="configurator-options-container flex flex-col flex-wrap gap-4">
+                            <div class="flex flex-col gap-2">
+                                <span>{{ $t('lightingType') }}</span>
+                                <div class="flex-wrap flex gap-4">
+                                    <div class="flex items-center gap-2 param">
+                                        <RadioButton v-model="otherOptions.lighting" inputId="no_lighting" name="light"
+                                            :value="0" @change="" />
+                                        <label for="no_lighting">{{ $t('noLighting') }}</label>
+                                    </div>
+                                    <div class="flex items-center gap-2 param">
+                                        <RadioButton v-model="otherOptions.lighting" inputId="led_strip" name="light"
+                                            :value="1" @change="" />
+                                        <label for="led_strip">{{ $t('ledStrip') }}</label>
+                                    </div>
+                                    <div class="flex items-center gap-2 param disabled">
+                                        <RadioButton v-model="otherOptions.lighting" inputId="led_bar" name="light"
+                                            :value="2" @change="" disabled />
+                                        <label for="led_bar">{{ $t('ledBar') }}</label>
+                                    </div>
+                                    <div class="flex items-center gap-2 param disabled">
+                                        <RadioButton v-model="otherOptions.lighting" inputId="led_channel" name="light"
+                                            :value="3" @change="" disabled />
+                                        <label for="led_channel">{{ $t('ledChannel') }}</label>
+                                    </div>
+                                    <div class="flex items-center gap-2 param disabled">
+                                        <RadioButton v-model="otherOptions.lighting" inputId="various_lighting"
+                                            name="light" :value="4" @change="" disabled />
+                                        <label for="various_lighting">{{ $t('various') }}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <span>{{ $t('lightingColor') }}</span>
+                                <div id="lighting-colors"
+                                    class="configurator-options-container flex flex-row flex-wrap gap-2">
+                                    <div v-for="light in lightingColors" @click.stop=""
+                                        class="param border-surface-200 dark:border-surface-700 border rounded-md"
+                                        :class="{ disabled: !light.availability }">
+                                        {{ $t(light.name) }}
+                                    </div>
+                                    <div @click.stop=""
+                                        class="param border-surface-200 dark:border-surface-700 border rounded-md disabled">
+                                        {{ $t('various') }} </div>
                                 </div>
                             </div>
                         </div>
@@ -216,10 +279,21 @@ const colors = [
     { name: 'green', code: '#4ade80;', availability: true },
     { name: 'black', code: '#030712;', availability: true },
 ];
+/* Lighting colors */
+const lightingColors = [
+    { name: 'warm', code: '', availability: true },
+    { name: 'cold', code: '', availability: true },
+    { name: 'neutral', code: '', availability: true },
+    { name: 'blue', code: '', availability: true },
+    { name: 'red', code: '', availability: true },
+    { name: 'green', code: '', availability: false },
+    { name: 'RGB', code: '', availability: true },
+];
 /* Other options */
 const otherOptions = ref({
     backboard: false,
     edge: 1,
+    lighting: 0
 });
 
 const onBackboardChange = () => {

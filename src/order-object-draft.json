@@ -1,0 +1,109 @@
+{
+  "orderId": "",
+  "userId": "",
+  "status": "processing",
+
+  "datetime": "",
+  "estimatedDeliveryDate": "",
+  "actualDeliveryDate": null,
+
+  "shelf": {},
+
+  "price": {
+    "subtotal": null,
+    "tax": null,
+    "shipping": null,
+    "total": null,
+    "currency": ""
+  },
+
+  "paymentInfo": {
+    "method": "",
+    "provider": "",
+    "transactionId": "",
+    "status": "",
+    "paidAt": ""
+  },
+
+  "invoiceUrl": "",
+
+  "customer": {
+    "fullName": "",
+    "email": "",
+    "phone": ""
+  },
+
+  "shipping": {
+    "addressLine1": "",
+    "addressLine2": "",
+    "city": "",
+    "region": "",
+    "postalCode": "",
+    "country": "",
+    "notes": ""
+  },
+
+  "delivery": {
+    "companyName": "",
+    "contactPerson": "",
+    "contactPhone": "+",
+    "trackingNumber": "",
+    "trackingUrl": "",
+    "status": "",
+    "deliveryDate": null
+  },
+
+  "factory": {
+    "factoryId": "",
+    "name": "",
+    "contactPerson": "",
+    "phone": "",
+    "email": "",
+    "address": {
+      "line1": "",
+      "city": "",
+      "country": ""
+    }
+  },
+
+  "website": {
+    "shopDomain": "",
+    "contactEmail": "",
+    "contactPhone": ""
+  },
+
+  "review": {
+    "rating": null,
+    "comment": "",
+    "submittedAt": ""
+  },
+
+  "supportTickets": [
+    {
+      "ticketId": "",
+      "subject": "",
+      "status": ""
+    },
+    {
+      "ticketId": "",
+      "subject": "",
+      "status": ""
+    }
+  ],
+
+  "cancellationReason": null,
+
+  "adminNotes": "",
+  "customerNotes": "",
+
+  "history": [
+    {
+      "status": "",
+      "datetime": ""
+    },
+    {
+      "status": "",
+      "datetime": ""
+    }
+  ]
+}
