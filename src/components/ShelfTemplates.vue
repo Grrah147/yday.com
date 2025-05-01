@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <Panel :header="$t('template')" toggleable collapsed>
+        <Panel :header="$t('template')" toggleable>
             <Carousel :value="state.shelves" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions">
                 <template #item="slotProps">
                     <div :id="slotProps.data.id"
