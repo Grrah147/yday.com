@@ -144,7 +144,7 @@
                 <template #footer>
                     <div class="flex flex-wrap items-center justify-between gap-4">
                         <div class="flex items-center gap-2">
-                            <Button id="shelf-information-panel-btn" icon="pi pi-info-circle" label=""
+                            <Button id="shelf-information-panel-btn" icon="pi pi-info-circle" :label="$t('fullDetails')"
                                 severity="secondary" @click="configuratorInfoPanel = true" />
                         </div>
                         <span class="shelf-price text-surface-500 dark:text-surface-400">{{ $t('price') + ' ' + '345' +

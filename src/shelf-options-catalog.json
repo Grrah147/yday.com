@@ -9,6 +9,9 @@
           "depth": null,
           "minDepth": 10,
           "maxDepth": 55,
+          "length": null,
+          "minLength": 10,
+          "maxLength": 360,
           "availability": true,
           "colors": [
             {
@@ -79,12 +82,30 @@
         {
           "code": "",
           "type": "mdf",
-          "thickness": 18,
+          "thickness": 20,
           "depth": null,
           "minDepth": 12,
           "maxDepth": 55,
+          "length": null,
+          "minLength": 10,
+          "maxLength": 360,
           "availability": true,
-          "colors": [{}]
+          "colors": [
+            {
+              "code": "",
+              "colorCode": "#f8fafc",
+              "name": "white",
+              "price": 0,
+              "availability": true
+            },
+            {
+              "code": "",
+              "colorCode": "#e5e7eb",
+              "name": "gray",
+              "price": 0,
+              "availability": true
+            }
+          ]
         },
         {
           "code": "",
@@ -93,6 +114,9 @@
           "depth": null,
           "minDepth": null,
           "maxDepth": null,
+          "length": null,
+          "minLength": null,
+          "maxLength": null,
           "availability": true,
           "colors": [{}]
         },
@@ -103,6 +127,9 @@
           "depth": null,
           "minDepth": null,
           "maxDepth": null,
+          "length": null,
+          "minLength": null,
+          "maxLength": null,
           "availability": false,
           "colors": [{}]
         },
@@ -113,6 +140,9 @@
           "depth": null,
           "minDepth": null,
           "maxDepth": null,
+          "length": null,
+          "minLength": null,
+          "maxLength": null,
           "price": 0,
           "availability": false
         }
