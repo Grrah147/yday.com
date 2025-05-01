@@ -12,6 +12,14 @@
           "length": null,
           "minLength": 10,
           "maxLength": 360,
+          "backboard": {
+            "available": true,
+            "price": 0
+          },
+          "edgeFinish": {
+            "available": true,
+            "price": 1.5
+          },
           "availability": true,
           "colors": [
             {
@@ -89,6 +97,14 @@
           "length": null,
           "minLength": 10,
           "maxLength": 360,
+          "backboard": {
+            "available": true,
+            "price": 0
+          },
+          "edgeFinish": {
+            "available": true,
+            "price": 2
+          },
           "availability": true,
           "colors": [
             {
@@ -117,6 +133,14 @@
           "length": null,
           "minLength": null,
           "maxLength": null,
+          "backboard": {
+            "available": true,
+            "price": 0
+          },
+          "edgeFinish": {
+            "available": false,
+            "price": null
+          },
           "availability": true,
           "colors": [{}]
         },
@@ -130,6 +154,14 @@
           "length": null,
           "minLength": null,
           "maxLength": null,
+          "backboard": {
+            "available": false,
+            "price": null
+          },
+          "edgeFinish": {
+            "available": false,
+            "price": null
+          },
           "availability": false,
           "colors": [{}]
         },
@@ -143,6 +175,14 @@
           "length": null,
           "minLength": null,
           "maxLength": null,
+          "backboard": {
+            "available": false,
+            "price": null
+          },
+          "edgeFinish": {
+            "available": false,
+            "price": null
+          },
           "price": 0,
           "availability": false
         }
