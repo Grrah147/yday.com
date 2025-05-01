@@ -30,6 +30,7 @@ import RadioButton from 'primevue/radiobutton'
 import Toast from 'primevue/toast'
 import ToastService from 'primevue/toastservice'
 import Tooltip from 'primevue/tooltip'
+// import Divider from 'primevue/divider'
 
 import Drawer from 'primevue/drawer'
 
@@ -98,6 +99,7 @@ app
   .component('RadioButton', RadioButton)
   .component('Drawer', Drawer)
   .component('Toast', Toast)
+// .component('Divider', Divider)
 
 app.directive('ripple', Ripple).directive('tooltip', Tooltip)
 

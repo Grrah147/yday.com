@@ -5,7 +5,10 @@
         {
           "code": "",
           "type": "wood",
-          "thickness": 18,
+          "thickness": 1.8,
+          "depth": null,
+          "minDepth": 10,
+          "maxDepth": 55,
           "availability": true,
           "colors": [
             {
@@ -77,6 +80,9 @@
           "code": "",
           "type": "mdf",
           "thickness": 18,
+          "depth": null,
+          "minDepth": 12,
+          "maxDepth": 55,
           "availability": true,
           "colors": [{}]
         },
@@ -84,6 +90,9 @@
           "code": "",
           "type": "plywood",
           "thickness": 18,
+          "depth": null,
+          "minDepth": null,
+          "maxDepth": null,
           "availability": true,
           "colors": [{}]
         },
@@ -91,6 +100,9 @@
           "code": "",
           "type": "metal",
           "thickness": null,
+          "depth": null,
+          "minDepth": null,
+          "maxDepth": null,
           "availability": false,
           "colors": [{}]
         },
@@ -98,6 +110,9 @@
           "code": "",
           "type": "glass",
           "thickness": null,
+          "depth": null,
+          "minDepth": null,
+          "maxDepth": null,
           "price": 0,
           "availability": false
         }
