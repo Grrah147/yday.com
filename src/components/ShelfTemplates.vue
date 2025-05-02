@@ -1,7 +1,8 @@
 <template>
     <div class="card">
         <Panel :header="$t('template')" toggleable>
-            <Carousel :value="state.shelves" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions">
+            <Carousel :value="state.shelves" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions"
+                circular :autoplayInterval="3000">
                 <template #item="slotProps">
                     <div :id="slotProps.data.id"
                         class="shelf-template border border-surface-200 dark:border-surface-700 m-2 p-4 rounded">
