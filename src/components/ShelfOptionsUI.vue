@@ -163,25 +163,4 @@ const onEdgeChange = () => {
 };
 
 </script>
-<style>
-& #configurator-options-ui-container {
-    & #material-color-options {
-        & button {
-            width: 24px;
-            height: 24px;
-        }
-    }
-
-    & .param,
-    & input {
-        color: var(--p-button-outlined-secondary-color);
-
-        &.selected,
-        &.active,
-        &.checked,
-        &:hover:not(.disabled) {
-            color: var(--p-fieldset-color);
-        }
-    }
-}
-</style>
+<style></style>

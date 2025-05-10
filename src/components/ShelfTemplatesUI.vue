@@ -4,8 +4,8 @@
             <Carousel :value="state.shelves" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions">
                 <template #item="slotProps">
                     <div :id="slotProps.data.id"
-                        class="shelf-template border border-surface-200 dark:border-surface-700 m-2 p-4 rounded">
-                        <div class="mb-4 flex">
+                        class="shelf-template border border-surface-200 dark:border-surface-700 m-1 p-3 rounded">
+                        <div class="mb-2 flex">
                             <div class="relative mx-auto">
                                 <img :src="'http://localhost:5173/src/css/img/' + slotProps.data.image['3d']"
                                     :alt="slotProps.data.name" class="rounded" />
@@ -16,8 +16,8 @@
                         </div>
                         <div class="font-medium">{{ $t(slotProps.data.name) }}</div>
                         <div class="flex justify-between items-center">
-                            <!-- <div class="mt-0 font-semibold text-surface-500 dark:text-surface-400">{{
-                        slotProps.data.price }} GEL</div> -->
+                            <div class="mt-0 font-semibold text-surface-500 dark:text-surface-400">{{
+                                slotProps.data.price }} GEL</div>
                             <!-- <span>
                         <Button icon="pi pi-heart" severity="secondary" outlined />
                         <Button icon="pi pi-shopping-cart" class="ml-2" />
@@ -111,29 +111,4 @@ const responsiveOptions = ref([
 ]);
 
 </script>
-<style scoped>
-& #shelf-templates-ui-container {
-    & .p-carousel {
-        width: 100%;
-
-        & .shelf-template {
-            cursor: pointer;
-            opacity: 0.9;
-
-            &.active,
-            &:hover {
-                background: var(--p-surface-200);
-                border-color: var(--p-surface-200);
-                color: var(--p-fieldset-color);
-                opacity: 1;
-            }
-
-            .yd-app-dark &.active,
-            .yd-app-dark &:hover {
-                background: var(--p-surface-700);
-                border-color: var(--p-surface-700);
-            }
-        }
-    }
-}
-</style>
+<style></style>

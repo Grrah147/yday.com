@@ -11,7 +11,7 @@
                 </template>
                 <template #icons></template>
                 <div id="configurator-scene-container"
-                    class="w-full h-[500px] relative mt-2 p-4 bg-surface-200 dark:bg-surface-950 rounded">
+                    class="w-full h-[500px] relative p-4 bg-surface-200 dark:bg-surface-950 rounded-md">
                     <ThreeScene v-if="threeScene" />
                     <FabricScene v-else />
                     <div class="absolute bottom-4 right-4">
@@ -115,4 +115,4 @@ watch(
 );
 </script>
 
-<style scoped></style>
+<style></style>

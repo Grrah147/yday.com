@@ -100,18 +100,85 @@ const proceed = (action, activateCallback) => {
 <style>
 #order {
   width: 100%;
+}
 
-  & .p-stepitem {
-    & .p-step-title {
-      font-weight: 600;
+& .p-stepitem {
+  & .p-step-title {
+    font-weight: 600;
+  }
+
+  & .p-steppanel {
+    background: none;
+
+    & .p-steppanel-content {
+      overflow: hidden;
+    }
+  }
+}
+
+#shelf-templates-ui-container {
+  & .p-carousel {
+    width: 100%;
+
+    & .shelf-template {
+      cursor: pointer;
+      opacity: 0.9;
+
+      &.active,
+      &:hover {
+        background: var(--p-surface-200);
+        border-color: var(--p-surface-200);
+        color: var(--p-fieldset-color);
+        opacity: 1;
+      }
+
+      .yd-app-dark &.active,
+      .yd-app-dark &:hover {
+        background: var(--p-surface-700);
+        border-color: var(--p-surface-700);
+      }
+    }
+  }
+}
+
+& #fabric-scene-container {
+  & #fabric-toolbar {
+    & #tools {
+      background: var(--p-content-background);
+      border: 1px solid var(--p-content-border-color);
+      color: var(--p-content-color);
+      /* border-radius: var(--p-content-border-radius); */
     }
 
-    & .p-steppanel {
-      background: none;
+    & button {
+      border-radius: 0.25rem;
+    }
+  }
+}
 
-      & .p-steppanel-content {
-        overflow: hidden;
-      }
+& #configurator-options-ui-container {
+  & #material-color-options {
+    & button {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  & .options-container {
+    & button {
+      border-radius: 0.25rem;
+    }
+  }
+
+  & .param,
+  & input {
+    color: var(--p-button-outlined-secondary-color);
+
+    &.selected,
+    &.active,
+    &.checked,
+    &:hover:not(.disabled) {
+      color: var(--p-fieldset-color);
     }
   }
 }
