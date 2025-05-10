@@ -1,14 +1,13 @@
 <template>
-    <div class="card">
+    <div id="shelf-templates-ui-container" class="card w-full select-none">
         <Panel :header="$t('template')" toggleable>
-            <Carousel :value="state.shelves" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions"
-                circular :autoplayInterval="3000">
+            <Carousel :value="state.shelves" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions">
                 <template #item="slotProps">
                     <div :id="slotProps.data.id"
                         class="shelf-template border border-surface-200 dark:border-surface-700 m-2 p-4 rounded">
                         <div class="mb-4 flex">
                             <div class="relative mx-auto">
-                                <img :src="'http://localhost:5173/src/assets/img/' + slotProps.data.image['3d']"
+                                <img :src="'http://localhost:5173/src/css/img/' + slotProps.data.image['3d']"
                                     :alt="slotProps.data.name" class="rounded" />
                                 <Tag v-if="slotProps.data.highlight" :value="slotProps.data.highlight"
                                     :severity="getHighlightColor(slotProps.data.highlight)" class="absolute"
@@ -34,8 +33,6 @@
 import { reactive, ref, onMounted } from "vue";
 import axios from 'axios';
 
-/* --- */
-
 const state = reactive({
     shelves: [],
     isLoading: true
@@ -51,8 +48,6 @@ onMounted(async () => {
         state.isLoading = false;
     }
 })
-
-/* --- */
 
 // const getHighlightColor = (highlight) => {
 //     switch (highlight) {
@@ -116,4 +111,29 @@ const responsiveOptions = ref([
 ]);
 
 </script>
-<style scoped></style>
+<style scoped>
+& #shelf-templates-ui-container {
+    & .p-carousel {
+        width: 100%;
+
+        & .shelf-template {
+            cursor: pointer;
+            opacity: 0.9;
+
+            &.active,
+            &:hover {
+                background: var(--p-surface-200);
+                border-color: var(--p-surface-200);
+                color: var(--p-fieldset-color);
+                opacity: 1;
+            }
+
+            .yd-app-dark &.active,
+            .yd-app-dark &:hover {
+                background: var(--p-surface-700);
+                border-color: var(--p-surface-700);
+            }
+        }
+    }
+}
+</style>

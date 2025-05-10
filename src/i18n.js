@@ -59,7 +59,8 @@ const messages = {
 
     configurator: 'Configurator',
     refresh: 'Refresh',
-    tdv: '3D view',
+    threeDV: '3D view',
+    twoDV: '2D view',
     fullDetails: 'Full details',
     shelfDetails: 'Shelf details',
     quantity: 'Quantity',
@@ -183,7 +184,8 @@ const messages = {
 
     configurator: 'კონფიგურატორი',
     refresh: 'განახლება',
-    tdv: '3D ხედი',
+    threeDV: '3D ხედი',
+    twoDV: '2D ხედი',
     fullDetails: 'სრულად',
     shelfDetails: 'თაროს დეტალები',
     quantity: 'რაოდენობა',
@@ -307,7 +309,8 @@ const messages = {
 
     configurator: 'Конфигуратор',
     refresh: 'Обновить',
-    tdv: '3D вид',
+    threeDV: '3D вид',
+    twoDV: '2D вид',
     fullDetails: 'Полностью',
     shelfDetails: 'Детали полки',
     quantity: 'Количество',

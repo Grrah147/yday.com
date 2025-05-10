@@ -45,7 +45,7 @@
         </StepPanel>
       </StepItem>
     </Stepper>
-    <div class="configurator-warning-message-container card flex justify-center">
+    <div class="configurator-warning-message-container flex justify-center">
       <Toast position="bottom-center" />
     </div>
   </div>
@@ -97,4 +97,22 @@ const proceed = (action, activateCallback) => {
 };
 </script>
 
-<style scoped></style>
+<style>
+#order {
+  width: 100%;
+
+  & .p-stepitem {
+    & .p-step-title {
+      font-weight: 600;
+    }
+
+    & .p-steppanel {
+      background: none;
+
+      & .p-steppanel-content {
+        overflow: hidden;
+      }
+    }
+  }
+}
+</style>
