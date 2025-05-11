@@ -128,6 +128,29 @@ const proceed = (action, activateCallback) => {
     & .shelf-template {
       cursor: pointer;
       opacity: 0.9;
+      height: 208px;
+      min-height: 208px;
+      max-height: min-content;
+      align-content: center;
+
+      & .shelf-image-container {
+
+        & img,
+        & svg {
+          width: 120px;
+          height: 120px;
+        }
+      }
+
+      &.scratch #scratch-svg path {
+        fill: var(--p-surface-500);
+        transition: fill 0.3s ease;
+      }
+
+      &.scratch:hover #scratch-svg path {
+        fill: var(--p-green-400);
+      }
+
 
       &.active,
       &:hover {

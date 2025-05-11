@@ -6,10 +6,10 @@
       "description": "",
       "totalMaterialArea": 0,
       "totalPlankCount": 0,
-      "price": 0,
+      "price": null,
       "image": {
         "2d": "",
-        "3d": "scratch-image-placeholder.png",
+        "3d": "",
         "factory2d": "",
         "factory3d": "",
         "assembly2d": "",
@@ -134,7 +134,7 @@
       "price": 0,
       "image": {
         "2d": "",
-        "3d": "template-image-placeholder.png",
+        "3d": "http://localhost:5173/src/css/img/shelf-template-default-image.png",
         "factory2d": "",
         "factory3d": "",
         "assembly2d": "",
@@ -259,7 +259,7 @@
       "price": 0,
       "image": {
         "2d": "",
-        "3d": "template-image-placeholder.png",
+        "3d": "http://localhost:5173/src/css/img/shelf-template-default-image.png",
         "factory2d": "",
         "factory3d": "",
         "assembly2d": "",
@@ -384,7 +384,7 @@
       "price": 0,
       "image": {
         "2d": "",
-        "3d": "template-image-placeholder.png",
+        "3d": "http://localhost:5173/src/css/img/shelf-template-default-image.png",
         "factory2d": "",
         "factory3d": "",
         "assembly2d": "",
@@ -509,7 +509,7 @@
       "price": 0,
       "image": {
         "2d": "",
-        "3d": "template-image-placeholder.png",
+        "3d": "http://localhost:5173/src/css/img/shelf-template-default-image.png",
         "factory2d": "",
         "factory3d": "",
         "assembly2d": "",
@@ -634,7 +634,7 @@
       "price": 0,
       "image": {
         "2d": "",
-        "3d": "template-image-placeholder.png",
+        "3d": "http://localhost:5173/src/css/img/shelf-template-default-image.png",
         "factory2d": "",
         "factory3d": "",
         "assembly2d": "",
@@ -759,7 +759,7 @@
       "price": 0,
       "image": {
         "2d": "",
-        "3d": "template-image-placeholder.png",
+        "3d": "http://localhost:5173/src/css/img/shelf-template-default-image.png",
         "factory2d": "",
         "factory3d": "",
         "assembly2d": "",
