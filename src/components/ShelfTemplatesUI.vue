@@ -5,7 +5,8 @@
                 <template #item="slotProps">
                     <div :id="slotProps.data.id"
                         class="shelf-template border border-surface-200 dark:border-surface-700 m-1 p-3 rounded"
-                        :class="{ scratch: slotProps.data.name === 'scratch' }">
+                        :class="{ 'shelf-template-selected': slotProps.data.name === 'scratch' }">
+                        <i class="check pi pi-check-square absolute top-4 right-4 invisible"></i>
                         <div class="mb-2 flex">
                             <div class="relative shelf-image-container mx-auto">
                                 <svg v-if="slotProps.data.name === 'scratch'" width="205" height="205"

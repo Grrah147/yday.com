@@ -46,6 +46,7 @@ body {
 #contact,
 #order {
   flex: 1;
+  border-radius: var(--p-border-radius-md);
 }
 /* Fonts */
 .open-sans-regular {
@@ -68,10 +69,15 @@ body {
 
   & .p-menubar-item-link {
     border-radius: var(--p-menubar-base-item-border-radius);
+    opacity: 0.9;
+    &:hover {
+      opacity: 1;
+    }
   }
 
   & .router-link-active,
   & .router-link-exact-active {
+    opacity: 1;
     color: var(--p-menubar-item-focus-color);
     background: var(--p-menubar-item-focus-background);
     border-radius: var(--p-menubar-base-item-border-radius);

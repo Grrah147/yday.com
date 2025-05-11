@@ -12,7 +12,7 @@
               $t('intro') }}
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
             <div class="w-full rounded-md p-4">
               <span
                 class="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-surface-0 dark:bg-surface-800 shadow mx-auto">
@@ -85,6 +85,7 @@
 </template>
 
 <script setup>
+
 </script>
 
 <style scoped></style>

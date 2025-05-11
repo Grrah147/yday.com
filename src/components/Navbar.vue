@@ -11,7 +11,7 @@
                 <router-link v-if="item.route" v-slot="{ href, navigate, isActive, isExactActive }" :to="item.route"
                     custom>
                     <a v-ripple :href="href" v-bind="props.action" @click="navigate" :active="isActive"
-                        :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active', item.disabled && 'disabled']">
+                        :class="[isActive && 'router-link-active', isExactActive && 'router-link-exact-active', item.disabled && 'disabled', 'border', 'border-surface-200', 'dark:border-surface-700']">
                         <span :class="item.icon" />
                         <span>{{ $t(item.label) }}</span>
                     </a>

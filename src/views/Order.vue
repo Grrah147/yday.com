@@ -98,9 +98,9 @@ const proceed = (action, activateCallback) => {
 </script>
 
 <style>
+/* Order.vue */
 #order {
   width: 100%;
-  /* padding: 0 .75rem .75rem .75rem; */
 }
 
 & .p-stepitem {
@@ -121,54 +121,65 @@ const proceed = (action, activateCallback) => {
   }
 }
 
+/* ShelfTemplatesUI.vue */
 #shelf-templates-ui-container {
   & .p-carousel {
     width: 100%;
+  }
 
-    & .shelf-template {
-      cursor: pointer;
-      opacity: 0.9;
-      height: 208px;
-      min-height: 208px;
-      max-height: min-content;
-      align-content: center;
+  & .shelf-template {
+    cursor: pointer;
+    opacity: 0.9;
+    height: 208px;
+    min-height: 208px;
+    max-height: min-content;
+    align-content: center;
+    position: relative;
 
-      & .shelf-image-container {
+    &:hover {
+      opacity: 1;
+    }
 
-        & img,
-        & svg {
-          width: 120px;
-          height: 120px;
-        }
+    & .shelf-image-container {
+
+      & img,
+      & svg {
+        width: 120px;
+        height: 120px;
       }
+    }
+  }
 
-      &.scratch #scratch-svg path {
-        fill: var(--p-surface-500);
-        transition: fill 0.3s ease;
-      }
+  .shelf-template-selected {
+    background: var(--p-surface-100);
+    opacity: 1;
 
-      &.scratch:hover #scratch-svg path {
-        fill: var(--p-green-400);
-      }
+    & i.check {
+      color: var(--p-green-500);
+      font-size: 1.5rem;
+      visibility: visible;
+    }
 
+    & #scratch-svg path {
+      fill: var(--p-surface-700);
+      transition: fill 0.3s ease;
+    }
+  }
 
-      &.active,
-      &:hover {
-        background: var(--p-surface-200);
-        border-color: var(--p-surface-200);
-        color: var(--p-fieldset-color);
-        opacity: 1;
-      }
+  .yd-app-dark & .shelf-template-selected {
+    background: var(--p-surface-800);
 
-      .yd-app-dark &.active,
-      .yd-app-dark &:hover {
-        background: var(--p-surface-700);
-        border-color: var(--p-surface-700);
-      }
+    i.check {
+      color: var(--p-green-400);
+    }
+
+    & #scratch-svg path {
+      fill: var(--p-surface-100);
     }
   }
 }
 
+/* FabricScene.vue */
 & #fabric-scene-container {
   & #fabric-toolbar {
     & #tools {
@@ -184,6 +195,7 @@ const proceed = (action, activateCallback) => {
   }
 }
 
+/* ShelfOptionsUI.vue */
 & #configurator-options-ui-container {
   & #material-color-options {
     & button {
