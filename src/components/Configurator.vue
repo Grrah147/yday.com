@@ -1,6 +1,6 @@
 <template>
     <div id="configurator-container"
-        class="flex-auto flex flex-col justify-center items-start gap-2 py-2 font-medium rounded">
+        class="flex-auto flex flex-col justify-center items-start gap-2 font-medium rounded">
         <ShelfTemplatesUI />
         <div class="card w-full">
             <Panel toggleable>
