@@ -6,9 +6,6 @@ const shelf = {
   highlight: null,
   show: false,
 
-  totalMaterialArea: 0,
-  totalPlankCount: 0,
-  price: 0,
   image: {
     '2d': '',
     '3d': '',
@@ -17,55 +14,26 @@ const shelf = {
     assembly2d: '',
     assembly3d: '',
   },
+
+  totalMaterialArea: 0,
+  totalPlankCount: 0,
+  price: 0,
+
   planks: {
     frame: [
       {
         type: '',
         name: '',
-        material: {
-          code: '',
-          type: '',
-          variant: '',
-          name: '',
-          color: {
-            code: '',
-            colorCode: '',
-            name: '',
-          },
-        },
-        depth: '',
+
         length: '',
-        degree: '',
-        posX: '',
-        posY: '',
-      },
-    ],
-    divider: [
-      {
-        type: '',
-        name: '',
-        material: {
-          code: '',
-          type: '',
-          variant: '',
-          name: '',
-          color: {
-            code: '',
-            colorCode: '',
-            name: '',
-          },
-        },
         depth: '',
-        length: '',
         degree: '',
-        posX: '',
-        posY: '',
-      },
-    ],
-    shelf: [
-      {
-        type: '',
-        name: '',
+
+        placement: {
+          posx: '',
+          posy: '',
+        },
+
         material: {
           code: '',
           type: '',
@@ -77,14 +45,13 @@ const shelf = {
             name: '',
           },
         },
+
         lighting: [
           {
             code: '',
             lightSource: '',
             type: '',
             name: '',
-
-            customLength: null,
 
             variant: {
               code: '',
@@ -96,16 +63,132 @@ const shelf = {
                 name: '',
               },
             },
+
+            customLength: null,
+
+            placement: {
+              position: '',
+              alignmentZ: '',
+              alignmentX: '',
+            },
           },
         ],
+      },
+    ],
+
+    divider: [
+      {
+        type: '',
+        name: '',
+
         depth: '',
         length: '',
         degree: '',
-        posX: '',
-        posY: '',
+
+        placement: {
+          posx: '',
+          posy: '',
+        },
+
+        material: {
+          code: '',
+          type: '',
+          variant: '',
+          name: '',
+          color: {
+            code: '',
+            colorCode: '',
+            name: '',
+          },
+        },
+
+        lighting: [
+          {
+            code: '',
+            lightSource: '',
+            type: '',
+            name: '',
+
+            variant: {
+              code: '',
+              name: '',
+              color: {
+                code: '',
+                color: '',
+                colorCode: '',
+                name: '',
+              },
+            },
+
+            customLength: null,
+
+            placement: {
+              position: '',
+              alignmentZ: '',
+              alignmentX: '',
+            },
+          },
+        ],
+      },
+    ],
+
+    shelf: [
+      {
+        type: '',
+        name: '',
+
+        depth: '',
+        length: '',
+        degree: '',
+
+        placement: {
+          posx: '',
+          posy: '',
+        },
+
+        material: {
+          code: '',
+          type: '',
+          variant: '',
+          name: '',
+          color: {
+            code: '',
+            colorCode: '',
+            name: '',
+          },
+        },
+
+        lighting: [
+          {
+            code: '',
+            lightSource: '',
+            type: '',
+            name: '',
+
+            variant: {
+              code: '',
+              name: '',
+              color: {
+                code: '',
+                color: '',
+                colorCode: '',
+                name: '',
+              },
+            },
+
+            customLength: null,
+
+            placement: {
+              position: '',
+              alignmentZ: '',
+              alignmentX: '',
+            },
+          },
+        ],
       },
     ],
   },
+
   options: [
     {
       backboard: false,
@@ -125,27 +208,7 @@ const shelf = {
         },
       },
 
-      generalLighting: {
-        code: '',
-        lightSource: '',
-        type: '',
-        name: '',
-
-        variant: {
-          code: '',
-          name: '',
-          color: {
-            code: '',
-            color: 'warm',
-            colorCode: '',
-            name: 'warm',
-          },
-        },
-
-        quantity: null,
-        customLength: null,
-      },
-      wineRacks: [
+      wineRack: [
         {
           corners: [
             { x: 0, y: 0 },
@@ -156,8 +219,11 @@ const shelf = {
           material: {
             code: '',
             type: '',
+            variant: '',
+            name: '',
             color: {
               code: '',
+              color: '',
               colorCode: '',
               name: '',
             },
