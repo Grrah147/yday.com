@@ -102,9 +102,10 @@ const messages = {
     edgeFinish: 'Edge finish',
     singleEdge: 'Single side',
     doubleEdge: 'Double side',
+
     lighting: 'Lighting',
-    lightingType: 'Lighting type',
-    noLighting: 'No lighting',
+    lightingType: 'Type',
+    noLighting: 'Without lighting',
     ledStrip: 'LED strip',
     ledBar: 'LED bar',
     ledChannel: 'LED channel',
@@ -112,7 +113,10 @@ const messages = {
 
     various: 'Various',
 
-    lightingColor: 'Lighting color',
+    lightingSize: 'Size',
+    mm: 'mm',
+
+    lightingColor: 'Color',
     warm: 'Warm',
     cold: 'Cold',
     neutral: 'Neutral',
@@ -228,8 +232,9 @@ const messages = {
     edgeFinish: 'კიდეების დამუშავება',
     singleEdge: 'ცალი მხარე',
     doubleEdge: 'ორმაგი მხარე',
+
     lighting: 'განათება',
-    lightingType: 'განათების ტიპი',
+    lightingType: 'ტიპი',
     noLighting: 'განათების გარეშე',
     ledStrip: 'LED ლენტი',
     ledBar: 'LED პანელი',
@@ -238,7 +243,10 @@ const messages = {
 
     various: 'სხვადასხვა',
 
-    lightingColor: 'განათების ფერი',
+    lightingSize: 'ზომა',
+    mm: 'მმ',
+
+    lightingColor: 'ფერი',
     warm: 'თბილი',
     cold: 'ცივი',
     neutral: 'ნეიტრალური',
@@ -353,9 +361,10 @@ const messages = {
     edgeFinish: 'Отделка края',
     singleEdge: 'Односторонний',
     doubleEdge: 'Двусторонний',
+
     lighting: 'Освещение',
-    lightingType: 'Тип освещения',
-    noLighting: 'Нет освещения',
+    lightingType: 'Тип',
+    noLighting: 'Без освещения',
     ledStrip: 'Светодиодная лента',
     ledBar: 'Светодиодная панель',
     ledChannel: 'Светодиодный канал',
@@ -363,7 +372,10 @@ const messages = {
 
     various: 'Разнообразный',
 
-    lightingColor: 'Цвет освещения',
+    lightingSize: 'размер',
+    mm: 'мм',
+
+    lightingColor: 'Цвет',
     warm: 'Теплое',
     cold: 'Холодное',
     neutral: 'Нейтральное',

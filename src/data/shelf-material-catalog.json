@@ -9,7 +9,7 @@
       "description": "",
       "highlight": "",
       "price": 0,
-      "availability": true,
+      "available": true,
       "show": true,
 
       "parameters": {
@@ -40,7 +40,7 @@
             "name": "white",
 
             "price": 0,
-            "availability": true
+            "available": true
           },
           {
             "code": "",
@@ -48,7 +48,7 @@
             "name": "gray",
 
             "price": 0,
-            "availability": true
+            "available": true
           },
           {
             "code": "",
@@ -56,7 +56,7 @@
             "name": "brown",
 
             "price": 0,
-            "availability": true
+            "available": true
           },
           {
             "code": "",
@@ -64,7 +64,7 @@
             "name": "yellow",
 
             "price": 0,
-            "availability": true
+            "available": false
           },
           {
             "code": "",
@@ -72,7 +72,7 @@
             "name": "red",
 
             "price": 0,
-            "availability": true
+            "available": true
           },
           {
             "code": "",
@@ -80,7 +80,7 @@
             "name": "purple",
 
             "price": 0,
-            "availability": true
+            "available": true
           },
           {
             "code": "",
@@ -88,7 +88,7 @@
             "name": "blue",
 
             "price": 0,
-            "availability": true
+            "available": true
           },
           {
             "code": "",
@@ -96,7 +96,7 @@
             "name": "green",
 
             "price": 0,
-            "availability": true
+            "available": true
           },
           {
             "code": "",
@@ -104,7 +104,7 @@
             "name": "black",
 
             "price": 0,
-            "availability": true
+            "available": true
           }
         ]
       }
@@ -118,7 +118,7 @@
       "description": "",
       "highlight": "",
       "price": 0,
-      "availability": true,
+      "available": true,
       "show": true,
 
       "parameters": {
@@ -148,21 +148,21 @@
             "name": "white",
             "colorCode": "#f8fafc",
             "price": 0,
-            "availability": true
+            "available": true
           },
           {
             "code": "",
             "name": "gray",
             "colorCode": "#e5e7eb",
             "price": 0,
-            "availability": true
+            "available": true
           },
           {
             "code": "",
             "name": "brown",
             "colorCode": "#a8a29e",
             "price": 0,
-            "availability": true
+            "available": true
           }
         ]
       }
@@ -176,7 +176,7 @@
       "description": "",
       "highlight": "",
       "price": 0,
-      "availability": true,
+      "available": true,
       "show": true,
 
       "parameters": {
@@ -212,7 +212,7 @@
       "description": "",
       "highlight": "",
       "price": 0,
-      "availability": false,
+      "available": false,
       "show": true,
 
       "parameters": {
@@ -248,7 +248,7 @@
       "description": "",
       "highlight": "",
       "price": 0,
-      "availability": false,
+      "available": false,
       "show": true,
 
       "parameters": {

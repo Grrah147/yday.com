@@ -6,7 +6,7 @@
                     <span>{{ $t('materialType') }}</span>
                     <div id="material-options" class="options-container flex flex-row flex-wrap gap-2">
                         <button v-for="material in materials" @click.stop=""
-                            class="p-button p-component p-button-secondary p-button-outlined param"
+                            class=" selected p-button p-component p-button-secondary p-button-outlined param"
                             :class="{ disabled: !material.availability }" :disabled="!material.availability">
                             {{ $t(material.name) }}
                         </button>
@@ -56,60 +56,31 @@
                         style="font-size: 1rem; color: var(--p-surface-400)"></i>
                 </div>
             </template>
-            <div id="lighting-options" class="options-container flex flex-col flex-wrap gap-4">
-                <div class="flex flex-col gap-2">
-                    <span>{{ $t('lightingType') }}</span>
-                    <div class="flex-wrap flex gap-4">
-                        <div class="flex items-center gap-2 param" :class="{ 'selected': otherOptions.lighting === 0 }">
-                            <RadioButton v-model="otherOptions.lighting" inputId="no_lighting" name="light" :value="0"
-                                @change="" />
-                            <label for="no_lighting">{{ $t('noLighting') }}</label>
-                        </div>
-                        <div class="flex items-center gap-2 param" :class="{ 'selected': otherOptions.lighting === 1 }">
-                            <RadioButton v-model="otherOptions.lighting" inputId="led_strip" name="light" :value="1"
-                                @change="" />
-                            <label for="led_strip">{{ $t('ledStrip') }}</label>
-                        </div>
-                        <div class="flex items-center gap-2 param disabled"
-                            :class="{ 'selected': otherOptions.lighting === 2 }">
-                            <RadioButton v-model="otherOptions.lighting" inputId="led_bar" name="light" :value="2"
-                                @change="" disabled />
-                            <label for="led_bar">{{ $t('ledBar') }}</label>
-                        </div>
-                        <div class="flex items-center gap-2 param disabled"
-                            :class="{ 'selected': otherOptions.lighting === 3 }">
-                            <RadioButton v-model="otherOptions.lighting" inputId="led_channel" name="light" :value="3"
-                                @change="" disabled />
-                            <label for="led_channel">{{ $t('ledChannel') }}</label>
-                        </div>
-                        <div class="flex items-center gap-2 param disabled"
-                            :class="{ 'selected': otherOptions.lighting === 4 }">
-                            <RadioButton v-model="otherOptions.lighting" inputId="various_lighting" name="light"
-                                :value="4" @change="" disabled />
-                            <label for="various_lighting">{{ $t('various') }}</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <span>{{ $t('lightingColor') }}</span>
-                    <div id="lighting-colors" class="options-container flex flex-row flex-wrap gap-2">
-                        <button v-for="light in lightingColors" @click.stop=""
-                            class="p-button p-component p-button-secondary p-button-outlined param"
-                            :class="{ disabled: !light.availability }" :disabled="!light.availability">
-                            {{ $t(light.name) }}
-                        </button>
-                        <button @click.stop=""
-                            class="p-button p-component p-button-secondary p-button-outlined param disabled" disabled>
-                            {{ $t('various') }}
-                        </button>
-                    </div>
-                </div>
+            <div id="lighting-options" class="options-container flex flex-wrap justify-start items-stretch gap-2">
+                <FloatLabel class="w-full sm:w-56" variant="in">
+                    <Select v-model="lightingVal" showClear inputId="lighting" :options="lighting"
+                        optionDisabled="disabled" optionLabel="label" variant="filled" class="w-full text-sm py-0" />
+                    <label for="lighting">{{ $t('lightingType') }}</label>
+                </FloatLabel>
+                <FloatLabel class="w-full sm:w-56" variant="in">
+                    <Select v-model="lightingVariantVal" showClear inputId="lighting_variant"
+                        :options="lightingVariants" optionDisabled="disabled" optionLabel="label" variant="filled"
+                        class="w-full text-sm py-0" />
+                    <label for="lighting_variant">{{ $t('lightingSize') }}</label>
+                </FloatLabel>
+                <FloatLabel class="w-full sm:w-56" variant="in">
+                    <Select v-model="lightingColorVal" showClear inputId="lighting_color" :options="lightingColors"
+                        optionDisabled="disabled" optionLabel="label" variant="filled" class="w-full text-sm py-0" />
+                    <label for="lighting_color">{{ $t('lightingColor') }}</label>
+                </FloatLabel>
             </div>
         </Fieldset>
     </div>
 </template>
 <script setup>
-import { reactive, ref, onMounted } from "vue";
+import { reactive, ref, computed, onMounted } from "vue";
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 
 /* Temporary Shelf Options Catalog */
 /* Material options */
@@ -133,16 +104,7 @@ const materialColors = [
     { name: 'green', code: '#4ade80;', availability: false },
     { name: 'black', code: '#030712;', availability: true },
 ];
-/* Lighting colors */
-const lightingColors = [
-    { name: 'warm', code: '', availability: true },
-    { name: 'cold', code: '', availability: true },
-    { name: 'neutral', code: '', availability: true },
-    { name: 'blue', code: '', availability: true },
-    { name: 'red', code: '', availability: true },
-    { name: 'green', code: '', availability: false },
-    { name: 'RGB', code: '', availability: true },
-];
+
 /* Other options */
 const otherOptions = ref({
     backboard: false,
@@ -161,6 +123,39 @@ const onEdgeChange = () => {
         otherOptions.value.backboard = false;
     }
 };
+
+
+/* Lighting */
+const lighting = ref([
+    { name: 'ledStrip', label: computed(() => t('ledStrip')), available: true, disabled: false },
+    { name: 'ledBar', label: computed(() => t('ledBar')), available: true, disabled: false },
+    { name: 'ledChannel', label: computed(() => t('ledChannel')), available: true, disabled: false },
+    { name: 'various', label: computed(() => t('various')), available: false, disabled: true },
+]);
+
+/* Lighting sizes */
+const lightingVariants = ref([
+    { name: '', size: '8', label: computed(() => '8' + t('mm')), code: '', availability: true, disabled: false },
+    { name: '', size: '10', label: computed(() => '10' + t('mm')), code: '', availability: true, disabled: false },
+    { name: '', size: '12', label: computed(() => '12' + t('mm')), code: '', availability: false, disabled: true },
+    { name: 'various', label: computed(() => t('various')), available: false, disabled: true }
+]);
+
+/* Lighting colors */
+const lightingColors = ref([
+    { name: 'warm', label: computed(() => t('warm')), code: '', availability: true, disabled: false },
+    { name: 'cold', label: computed(() => t('cold')), code: '', availability: true, disabled: false },
+    { name: 'neutral', label: computed(() => t('neutral')), code: '', availability: true, disabled: false },
+    { name: 'blue', label: computed(() => t('blue')), code: '', availability: true, disabled: false },
+    { name: 'red', label: computed(() => t('red')), code: '', availability: true, disabled: false },
+    { name: 'green', label: computed(() => t('green')), code: '', availability: false, disabled: true },
+    { name: 'RGB', label: computed(() => t('RGB')), code: '', availability: true, disabled: false },
+    { name: 'various', label: computed(() => t('various')), available: false, disabled: true }
+]);
+
+const lightingColorVal = ref();
+const lightingVariantVal = ref();
+const lightingVal = ref();
 
 </script>
 <style></style>
