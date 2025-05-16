@@ -5,8 +5,10 @@
                 <template #item="slotProps">
                     <div :id="slotProps.data.id"
                         class="shelf-template border border-surface-200 dark:border-surface-700 m-1 p-3 rounded"
-                        :class="{ 'shelf-template-selected': slotProps.data.name === 'scratch' }">
-                        <i class="check pi pi-check-square absolute top-4 right-4 invisible"></i>
+                        :class="{ 'shelf-template-selected ring-1': slotProps.data.name === 'scratch' }">
+                        <i class="check pi pi-check absolute top-4 left-4 invisible"></i>
+                        <Tag v-if="slotProps.data.highlight" :value="slotProps.data.highlight"
+                            :severity="getHighlightColor(slotProps.data.highlight)" class="absolute right-2 top-2" />
                         <div class="mb-2 flex">
                             <div class="relative shelf-image-container mx-auto">
                                 <svg v-if="slotProps.data.name === 'scratch'" width="205" height="205"
@@ -18,9 +20,6 @@
                                 </svg>
                                 <img v-else :src="slotProps.data.image['3d']" :alt="slotProps.data.name"
                                     class="rounded" />
-                                <Tag v-if="slotProps.data.highlight" :value="slotProps.data.highlight"
-                                    :severity="getHighlightColor(slotProps.data.highlight)" class="absolute"
-                                    style="left:5px; top: 5px" />
                             </div>
                         </div>
                         <div class="font-medium">{{ $t(slotProps.data.name) }}</div>
@@ -58,33 +57,30 @@ onMounted(async () => {
     }
 })
 
-// const getHighlightColor = (highlight) => {
-//     switch (highlight) {
-//         case 'highlight1':
-//             return 'secondary';
+const getHighlightColor = (highlight) => {
+    switch (highlight) {
+        case 'NEW':
+            return 'secondary';
 
-//         case 'highlight2':
-//             return 'success';
+        case 'STANDARD':
+            return 'success';
 
-//         case 'highlight3':
-//             return 'info';
+        case 'GLASS':
+            return 'info';
 
-//         case 'highlight4':
-//             return 'warn';
+        case 'WITH LIGHTING':
+            return 'warn';
 
-//         case 'highlight5':
-//             return 'danger';
+        case 'METAL':
+            return 'danger';
 
-//         case 'highlight6':
-//             return 'contrast';
+        case 'highlight6':
+            return 'contrast';
 
-//         case 'highlight7':
-//             return 'danger';
-
-//         default:
-//             return null;
-//     }
-// };
+        default:
+            return null;
+    }
+};
 
 const responsiveOptions = ref([
     {

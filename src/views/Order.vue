@@ -148,6 +148,15 @@ const proceed = (action, activateCallback) => {
         height: 120px;
       }
     }
+
+    & #scratch-svg path {
+      fill: var(--p-surface-600);
+      transition: fill 0.3s ease;
+    }
+
+    .yd-app-dark & #scratch-svg path {
+      fill: var(--p-surface-300);
+    }
   }
 
   .shelf-template-selected {
@@ -155,14 +164,13 @@ const proceed = (action, activateCallback) => {
     opacity: 1;
 
     & i.check {
-      color: var(--p-green-500);
-      font-size: 1.5rem;
+      color: var(--p-green-400);
+      font-size: 3rem;
       visibility: visible;
     }
 
     & #scratch-svg path {
       fill: var(--p-surface-700);
-      transition: fill 0.3s ease;
     }
   }
 
