@@ -41,6 +41,8 @@
                     </Menu>
                     <Button :icon="ydAppDark ? 'pi pi-moon' : 'pi pi-sun'" variant="outlined" severity="secondary"
                         aria-label="Theme" @click="toggleDarkMode()" />
+                    <!-- <Button icon="pi pi-palette" variant="outlined" severity="secondary" aria-label="Theme"
+                        @click="toggleGrayScaleMode()" /> -->
                     <Button icon="pi pi-user" type="button" variant="outlined" severity="secondary" aria-haspopup="true"
                         aria-controls="user_account_overlay_dropdown_menu" @click="toggleUserAccountDropdownMenu" />
                     <Menu ref="userAccountDropdownMenu" id="user_account_overlay_dropdown_menu"
@@ -56,6 +58,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { updatePrimaryPalette } from '@primeuix/themes'
 
 const { t, locale } = useI18n();
 
@@ -93,6 +96,28 @@ function toggleDarkMode() {
     document.documentElement.classList.toggle('yd-app-dark');
     ydAppDark.value = !ydAppDark.value;
 }
+
+// const colorOptions = ['blue', 'violet', 'gray'];
+// let currentColorIndex = 0;
+// function toggleGrayScaleMode() {
+//     const currentColor = colorOptions[currentColorIndex];
+
+//     updatePrimaryPalette({
+//         50: `{${currentColor}.50}`,
+//         100: `{${currentColor}.100}`,
+//         200: `{${currentColor}.200}`,
+//         300: `{${currentColor}.300}`,
+//         400: `{${currentColor}.400}`,
+//         500: `{${currentColor}.500}`,
+//         600: `{${currentColor}.600}`,
+//         700: `{${currentColor}.700}`,
+//         800: `{${currentColor}.800}`,
+//         900: `{${currentColor}.900}`,
+//         950: `{${currentColor}.950}`
+//     });
+
+//     currentColorIndex = (currentColorIndex + 1) % colorOptions.length;
+// }
 
 // Language switch
 const flagMap = {

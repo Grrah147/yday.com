@@ -64,9 +64,6 @@ body {
 }
 /* Navbar */
 .p-menubar {
-  /* border-radius: 0 !important; */
-  padding: 0.75rem 1rem !important;
-
   & .p-menubar-item-link {
     border-radius: var(--p-menubar-base-item-border-radius);
     opacity: 0.9;

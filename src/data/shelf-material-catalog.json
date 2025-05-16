@@ -1,0 +1,279 @@
+{
+  "materials": [
+    {
+      "id": "",
+      "code": "",
+      "type": "wood",
+      "variant": "",
+      "name": "wood",
+      "description": "",
+      "highlight": "",
+      "price": 0,
+      "availability": true,
+      "show": true,
+
+      "parameters": {
+        "thickness": 1.8,
+        "depth": null,
+        "minDepth": 10,
+        "maxDepth": 55,
+        "length": null,
+        "minLength": 10,
+        "maxLength": 360
+      },
+
+      "options": {
+        "backboard": {
+          "available": true,
+          "price": null
+        },
+        "edgeFinish": {
+          "available": true,
+          "price": 1.5
+        },
+        "wineRack": true,
+        "lighting": ["110", "120", "130"],
+        "colors": [
+          {
+            "code": "",
+            "colorCode": "#f8fafc",
+            "name": "white",
+
+            "price": 0,
+            "availability": true
+          },
+          {
+            "code": "",
+            "colorCode": "#e5e7eb",
+            "name": "gray",
+
+            "price": 0,
+            "availability": true
+          },
+          {
+            "code": "",
+            "colorCode": "#a8a29e",
+            "name": "brown",
+
+            "price": 0,
+            "availability": true
+          },
+          {
+            "code": "",
+            "colorCode": "#facc15",
+            "name": "yellow",
+
+            "price": 0,
+            "availability": true
+          },
+          {
+            "code": "",
+            "colorCode": "#f87171",
+            "name": "red",
+
+            "price": 0,
+            "availability": true
+          },
+          {
+            "code": "",
+            "colorCode": "#a78bfa",
+            "name": "purple",
+
+            "price": 0,
+            "availability": true
+          },
+          {
+            "code": "",
+            "colorCode": "#60a5fa",
+            "name": "blue",
+
+            "price": 0,
+            "availability": true
+          },
+          {
+            "code": "",
+            "colorCode": "#4ade80",
+            "name": "green",
+
+            "price": 0,
+            "availability": true
+          },
+          {
+            "code": "",
+            "colorCode": "#030712",
+            "name": "black",
+
+            "price": 0,
+            "availability": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "",
+      "code": "",
+      "type": "mdf",
+      "variant": "",
+      "name": "mdf",
+      "description": "",
+      "highlight": "",
+      "price": 0,
+      "availability": true,
+      "show": true,
+
+      "parameters": {
+        "thickness": 2,
+        "depth": null,
+        "minDepth": 12,
+        "maxDepth": 55,
+        "length": null,
+        "minLength": 10,
+        "maxLength": 360
+      },
+
+      "options": {
+        "backboard": {
+          "available": true,
+          "price": null
+        },
+        "edgeFinish": {
+          "available": true,
+          "price": 2
+        },
+        "wineRack": true,
+        "lighting": ["110", "120"],
+        "colors": [
+          {
+            "code": "",
+            "name": "white",
+            "colorCode": "#f8fafc",
+            "price": 0,
+            "availability": true
+          },
+          {
+            "code": "",
+            "name": "gray",
+            "colorCode": "#e5e7eb",
+            "price": 0,
+            "availability": true
+          },
+          {
+            "code": "",
+            "name": "brown",
+            "colorCode": "#a8a29e",
+            "price": 0,
+            "availability": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "",
+      "code": "",
+      "type": "plywood",
+      "variant": "",
+      "name": "plywood",
+      "description": "",
+      "highlight": "",
+      "price": 0,
+      "availability": true,
+      "show": true,
+
+      "parameters": {
+        "thickness": 1.8,
+        "depth": null,
+        "minDepth": null,
+        "maxDepth": null,
+        "length": null,
+        "minLength": null,
+        "maxLength": null
+      },
+
+      "options": {
+        "backboard": {
+          "available": true,
+          "price": null
+        },
+        "edgeFinish": {
+          "available": false,
+          "price": null
+        },
+        "wineRack": true,
+        "lighting": [],
+        "colors": [{}]
+      }
+    },
+    {
+      "id": "",
+      "code": "",
+      "type": "metal",
+      "variant": "",
+      "name": "metal",
+      "description": "",
+      "highlight": "",
+      "price": 0,
+      "availability": false,
+      "show": true,
+
+      "parameters": {
+        "thickness": null,
+        "depth": null,
+        "minDepth": null,
+        "maxDepth": null,
+        "length": null,
+        "minLength": null,
+        "maxLength": null
+      },
+
+      "options": {
+        "backboard": {
+          "available": false,
+          "price": null
+        },
+        "edgeFinish": {
+          "available": false,
+          "price": null
+        },
+        "wineRack": false,
+        "lighting": [],
+        "colors": [{}]
+      }
+    },
+    {
+      "id": "",
+      "code": "",
+      "type": "glass",
+      "variant": "",
+      "name": "glass",
+      "description": "",
+      "highlight": "",
+      "price": 0,
+      "availability": false,
+      "show": true,
+
+      "parameters": {
+        "thickness": null,
+        "depth": null,
+        "minDepth": null,
+        "maxDepth": null,
+        "length": null,
+        "minLength": null,
+        "maxLength": null
+      },
+
+      "options": {
+        "backboard": {
+          "available": false,
+          "price": null
+        },
+        "edgeFinish": {
+          "available": false,
+          "price": null
+        },
+        "wineRack": false,
+        "lighting": [],
+        "colors": [{}]
+      }
+    }
+  ]
+}

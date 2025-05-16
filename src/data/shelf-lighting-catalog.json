@@ -1,0 +1,197 @@
+{
+  "lights": [
+    {
+      "id": "",
+      "code": "110",
+      "brand": "",
+      "lightSource": "LED",
+      "type": "strip",
+
+      "name": "ledStrip",
+      "description": "",
+      "highlight": "",
+      "available": true,
+      "show": true,
+      "price": 0,
+
+      "variants": [
+        {
+          "code": "",
+          "name": "8mm",
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "depth": ""
+          },
+          "power": "",
+          "available": true,
+          "show": true,
+          "price": 0,
+          "colors": [
+            {
+              "code": "",
+              "color": "warm",
+              "colorCode": "",
+              "name": "warm",
+              "quantity": 50,
+              "available": true,
+              "price": 0
+            },
+            {
+              "code": "",
+              "color": "cold",
+              "colorCode": "",
+              "name": "cold",
+              "quantity": 50,
+              "available": true,
+              "price": 0
+            },
+            {
+              "code": "",
+              "color": "neutral",
+              "colorCode": "",
+              "name": "neutral",
+              "quantity": 50,
+              "available": true,
+              "price": 0
+            },
+            {
+              "code": "",
+              "color": "blue",
+              "colorCode": "",
+              "name": "blue",
+              "quantity": 50,
+              "available": true,
+              "price": 0
+            },
+            {
+              "code": "",
+              "color": "red",
+              "colorCode": "",
+              "name": "red",
+              "quantity": 50,
+              "available": true,
+              "price": 0
+            },
+            {
+              "code": "",
+              "color": "green",
+              "colorCode": "",
+              "name": "green",
+              "quantity": 50,
+              "available": true,
+              "price": 0
+            },
+            {
+              "code": "",
+              "color": "rgb",
+              "colorCode": "",
+              "name": "rgb",
+              "quantity": 50,
+              "available": true,
+              "price": 0
+            }
+          ]
+        },
+        {
+          "code": "",
+          "name": "10mm",
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "depth": ""
+          },
+          "power": "",
+          "available": true,
+          "show": true,
+          "price": 0,
+          "colors": [
+            {
+              "code": "",
+              "color": "warm",
+              "colorCode": "",
+              "name": "warm",
+              "quantity": 50,
+              "available": true,
+              "price": 0
+            },
+            {
+              "code": "",
+              "color": "cold",
+              "colorCode": "",
+              "name": "cold",
+              "quantity": 50,
+              "available": true,
+              "price": 0
+            },
+            {
+              "code": "",
+              "color": "neutral",
+              "colorCode": "",
+              "name": "neutral",
+              "quantity": 50,
+              "available": true,
+              "price": 0
+            }
+          ]
+        },
+        {
+          "code": "",
+          "name": "12mm",
+          "dimensions": {
+            "length": "",
+            "width": "",
+            "depth": ""
+          },
+          "power": "",
+          "available": true,
+          "show": true,
+          "price": 0,
+          "colors": [
+            {
+              "code": "",
+              "color": "neutral",
+              "colorCode": "",
+              "name": "neutral",
+              "quantity": 50,
+              "available": true,
+              "price": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "",
+      "code": "120",
+      "brand": "",
+      "lightSource": "LED",
+      "type": "bar",
+
+      "name": "ledStrip",
+      "description": "",
+      "highlight": "",
+      "available": false,
+      "show": true,
+      "price": 0,
+
+      "variants": [{}]
+    },
+    {
+      "id": "",
+      "code": "130",
+      "brand": "",
+      "lightSource": "LED",
+      "type": "channel",
+
+      "name": "ledChannel",
+      "description": "",
+      "highlight": "",
+      "available": false,
+      "show": true,
+      "price": 0,
+
+      "variants": [{}]
+    }
+  ]
+}
