@@ -194,11 +194,6 @@ const proceed = (action, activateCallback) => {
       background: var(--p-content-background);
       border: 1px solid var(--p-content-border-color);
       color: var(--p-content-color);
-      /* border-radius: var(--p-content-border-radius); */
-    }
-
-    & button {
-      border-radius: 0.25rem;
     }
   }
 }

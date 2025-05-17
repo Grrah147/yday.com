@@ -5,7 +5,7 @@
                 <div id="material-options" class="flex flex-col gap-2">
                     <span class="pl-0.5">{{ $t('type') }}</span>
                     <Select v-model="materialVal" inputId="material" :options="materials" optionDisabled="disabled"
-                        optionLabel="label" class="w-full sm:w-56" />
+                        optionLabel="label" class="w-full sm:w-40 min-w-min" />
                 </div>
                 <div class="flex flex-col gap-2">
                     <span class="pl-0.5">{{ $t('color') }}</span>
@@ -36,7 +36,7 @@
                 <div id="edge-options" class="flex flex-col gap-2">
                     <span class="pl-0.5">{{ $t('edgeFinish') }}</span>
                     <Select v-model="otherOptions.edge" inputId="edge" :options="edgeFinishOptions" optionLabel="label"
-                        optionValue="value" placeholder="" class="w-full sm:w-56" @change="onEdgeChange" />
+                        optionValue="value" placeholder="" class="w-full sm:w-40 min-w-min" @change="onEdgeChange" />
                 </div>
             </div>
         </Fieldset>
@@ -51,13 +51,13 @@
             <div id="lighting-options" class="flex flex-wrap gap-2 pt-1">
                 <Select v-model="lightingTypeVal" :showClear="isClearButtonVisible" inputId="lighting_type"
                     :options="lightingOptions" optionLabel="label" optionDisabled="isDisabled"
-                    :placeholder="t('lightingType')" class="w-full sm:w-56" @change="handleLightingTypeChange" />
+                    :placeholder="t('lightingType')" class="min-w-min" @change="handleLightingTypeChange" />
                 <Select v-model="lightingVariantVal" inputId="lighting_variant" :options="lightingVariantOptions"
                     optionLabel="label" optionDisabled="isDisabled" :placeholder="t('lightingSize')"
-                    :disabled="isVariantSelectDisabled" class="w-full sm:w-56" />
+                    :disabled="isVariantSelectDisabled" class=" min-w-min" />
                 <Select v-model="lightingColorVal" inputId="lighting_color" :options="lightingColorOptions"
                     optionLabel="label" optionDisabled="isDisabled" :placeholder="t('lightingColor')"
-                    :disabled="isColorSelectDisabled" class="w-full sm:w-56" />
+                    :disabled="isColorSelectDisabled" class="min-w-min" />
             </div>
         </Fieldset>
     </div>
