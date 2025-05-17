@@ -11,6 +11,7 @@
       "price": 0,
       "available": true,
       "show": true,
+      "default": true,
 
       "parameters": {
         "thickness": 1.8,
@@ -25,11 +26,13 @@
       "options": {
         "backboard": {
           "available": true,
-          "price": null
+          "price": null,
+          "defaultValue": false
         },
         "edgeFinish": {
           "available": true,
-          "price": 1.5
+          "price": 1.5,
+          "defaultValue": false
         },
         "wineRack": true,
         "lighting": ["110", "120", "130"],
@@ -40,7 +43,8 @@
             "name": "white",
 
             "price": 0,
-            "available": true
+            "available": true,
+            "default": true
           },
           {
             "code": "",
@@ -48,7 +52,8 @@
             "name": "gray",
 
             "price": 0,
-            "available": true
+            "available": true,
+            "default": false
           },
           {
             "code": "",
@@ -56,7 +61,8 @@
             "name": "brown",
 
             "price": 0,
-            "available": true
+            "available": true,
+            "default": false
           },
           {
             "code": "",
@@ -64,7 +70,8 @@
             "name": "yellow",
 
             "price": 0,
-            "available": false
+            "available": false,
+            "default": false
           },
           {
             "code": "",
@@ -72,7 +79,8 @@
             "name": "red",
 
             "price": 0,
-            "available": true
+            "available": true,
+            "default": false
           },
           {
             "code": "",
@@ -80,7 +88,8 @@
             "name": "purple",
 
             "price": 0,
-            "available": true
+            "available": true,
+            "default": false
           },
           {
             "code": "",
@@ -88,7 +97,8 @@
             "name": "blue",
 
             "price": 0,
-            "available": true
+            "available": true,
+            "default": false
           },
           {
             "code": "",
@@ -96,7 +106,8 @@
             "name": "green",
 
             "price": 0,
-            "available": true
+            "available": true,
+            "default": false
           },
           {
             "code": "",
@@ -104,7 +115,8 @@
             "name": "black",
 
             "price": 0,
-            "available": true
+            "available": true,
+            "default": false
           }
         ]
       }
@@ -120,6 +132,7 @@
       "price": 0,
       "available": true,
       "show": true,
+      "default": false,
 
       "parameters": {
         "thickness": 2,
@@ -134,35 +147,43 @@
       "options": {
         "backboard": {
           "available": true,
-          "price": null
+          "price": null,
+          "defaultValue": false
         },
         "edgeFinish": {
           "available": true,
-          "price": 2
+          "price": 2,
+          "defaultValue": false
         },
         "wineRack": true,
         "lighting": ["110", "120"],
         "colors": [
           {
             "code": "",
-            "name": "white",
             "colorCode": "#f8fafc",
+            "name": "white",
+
             "price": 0,
-            "available": true
+            "available": true,
+            "default": true
           },
           {
             "code": "",
-            "name": "gray",
             "colorCode": "#e5e7eb",
+            "name": "gray",
+
             "price": 0,
-            "available": true
+            "available": true,
+            "default": false
           },
           {
             "code": "",
-            "name": "brown",
             "colorCode": "#a8a29e",
+            "name": "brown",
+
             "price": 0,
-            "available": true
+            "available": true,
+            "default": false
           }
         ]
       }
@@ -176,8 +197,9 @@
       "description": "",
       "highlight": "",
       "price": 0,
-      "available": true,
+      "available": false,
       "show": true,
+      "default": false,
 
       "parameters": {
         "thickness": 1.8,
@@ -192,11 +214,13 @@
       "options": {
         "backboard": {
           "available": true,
-          "price": null
+          "price": null,
+          "defaultValue": false
         },
         "edgeFinish": {
           "available": false,
-          "price": null
+          "price": null,
+          "defaultValue": false
         },
         "wineRack": true,
         "lighting": [],
@@ -214,6 +238,7 @@
       "price": 0,
       "available": false,
       "show": true,
+      "default": false,
 
       "parameters": {
         "thickness": null,
@@ -228,11 +253,13 @@
       "options": {
         "backboard": {
           "available": false,
-          "price": null
+          "price": null,
+          "defaultValue": false
         },
         "edgeFinish": {
           "available": false,
-          "price": null
+          "price": null,
+          "defaultValue": false
         },
         "wineRack": false,
         "lighting": [],
@@ -250,6 +277,7 @@
       "price": 0,
       "available": false,
       "show": true,
+      "default": false,
 
       "parameters": {
         "thickness": null,
@@ -264,11 +292,13 @@
       "options": {
         "backboard": {
           "available": false,
-          "price": null
+          "price": null,
+          "defaultValue": false
         },
         "edgeFinish": {
           "available": false,
-          "price": null
+          "price": null,
+          "defaultValue": false
         },
         "wineRack": false,
         "lighting": [],

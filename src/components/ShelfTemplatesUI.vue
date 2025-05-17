@@ -4,7 +4,7 @@
             <Carousel :value="state.shelves" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions">
                 <template #item="slotProps">
                     <div :id="slotProps.data.id"
-                        class="shelf-template border border-surface-200 dark:border-surface-700 m-1 p-3 rounded"
+                        class="shelf-template border border-surface-200 dark:border-surface-700 m-1 p-3 rounded-md"
                         :class="{ 'shelf-template-selected ring-1': slotProps.data.name === 'scratch' }">
                         <i class="check pi pi-check absolute top-4 left-4 invisible"></i>
                         <Tag v-if="slotProps.data.highlight" :value="slotProps.data.highlight"

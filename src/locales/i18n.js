@@ -75,6 +75,7 @@ const messages = {
     unknownError: 'An unknown error occurred. Please try again.',
 
     material: 'Material',
+    type: 'Type',
     materialType: 'Material type',
     wood: 'Wood',
     mdf: 'MDF',
@@ -100,6 +101,7 @@ const messages = {
     backboard: 'Backboard',
     edges: 'Edges',
     edgeFinish: 'Edge finish',
+    without: 'Without',
     singleEdge: 'Single side',
     doubleEdge: 'Double side',
 
@@ -205,6 +207,7 @@ const messages = {
     unknownError: 'უცნობი შეცდომა მოხდა. გთხოვთ, სცადოთ ხელახლა.',
 
     material: 'მასალა',
+    type: 'ტიპი',
     materialType: 'მასალის ტიპი',
     wood: 'ხე',
     mdf: 'MDF',
@@ -230,6 +233,7 @@ const messages = {
     backboard: 'უკანა დაფა',
     edges: 'კიდეები',
     edgeFinish: 'კიდეების დამუშავება',
+    without: 'გარეშე',
     singleEdge: 'ცალი მხარე',
     doubleEdge: 'ორმაგი მხარე',
 
@@ -334,6 +338,7 @@ const messages = {
     unknownError: 'Произошла неизвестная ошибка. Пожалуйста, попробуйте снова.',
 
     material: 'Материал',
+    type: 'Тип',
     materialType: 'Тип материала',
     wood: 'Древесина',
     mdf: 'МДФ',
@@ -359,6 +364,7 @@ const messages = {
     backboard: 'Задняя панель',
     edges: 'Края',
     edgeFinish: 'Отделка края',
+    without: 'Без',
     singleEdge: 'Односторонний',
     doubleEdge: 'Двусторонний',
 

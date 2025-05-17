@@ -18,15 +18,18 @@
         {
           "code": "",
           "name": "8mm",
+          "power": "",
+          "available": true,
+          "show": true,
+          "default": true,
+          "price": 0,
+
           "dimensions": {
             "length": "",
             "width": "",
             "depth": ""
           },
-          "power": "",
-          "available": true,
-          "show": true,
-          "price": 0,
+
           "colors": [
             {
               "code": "",
@@ -35,6 +38,7 @@
               "name": "warm",
               "quantity": 50,
               "available": true,
+              "default": true,
               "price": 0
             },
             {
@@ -44,6 +48,7 @@
               "name": "cold",
               "quantity": 50,
               "available": true,
+              "default": false,
               "price": 0
             },
             {
@@ -53,6 +58,7 @@
               "name": "neutral",
               "quantity": 50,
               "available": true,
+              "default": false,
               "price": 0
             },
             {
@@ -62,6 +68,7 @@
               "name": "blue",
               "quantity": 50,
               "available": true,
+              "default": false,
               "price": 0
             },
             {
@@ -71,6 +78,7 @@
               "name": "red",
               "quantity": 50,
               "available": true,
+              "default": false,
               "price": 0
             },
             {
@@ -80,6 +88,7 @@
               "name": "green",
               "quantity": 50,
               "available": true,
+              "default": false,
               "price": 0
             },
             {
@@ -89,6 +98,7 @@
               "name": "rgb",
               "quantity": 50,
               "available": true,
+              "default": false,
               "price": 0
             }
           ]
@@ -96,15 +106,18 @@
         {
           "code": "",
           "name": "10mm",
+          "power": "",
+          "available": true,
+          "show": true,
+          "default": false,
+          "price": 0,
+
           "dimensions": {
             "length": "",
             "width": "",
             "depth": ""
           },
-          "power": "",
-          "available": true,
-          "show": true,
-          "price": 0,
+
           "colors": [
             {
               "code": "",
@@ -113,6 +126,7 @@
               "name": "warm",
               "quantity": 50,
               "available": true,
+              "default": false,
               "price": 0
             },
             {
@@ -122,6 +136,7 @@
               "name": "cold",
               "quantity": 50,
               "available": true,
+              "default": false,
               "price": 0
             },
             {
@@ -131,6 +146,7 @@
               "name": "neutral",
               "quantity": 50,
               "available": true,
+              "default": false,
               "price": 0
             }
           ]
@@ -138,26 +154,19 @@
         {
           "code": "",
           "name": "12mm",
+          "power": "",
+          "available": false,
+          "show": true,
+          "default": false,
+          "price": 0,
+
           "dimensions": {
             "length": "",
             "width": "",
             "depth": ""
           },
-          "power": "",
-          "available": true,
-          "show": true,
-          "price": 0,
-          "colors": [
-            {
-              "code": "",
-              "color": "neutral",
-              "colorCode": "",
-              "name": "neutral",
-              "quantity": 50,
-              "available": true,
-              "price": 0
-            }
-          ]
+
+          "colors": [{}]
         }
       ]
     },
@@ -168,7 +177,7 @@
       "lightSource": "LED",
       "type": "bar",
 
-      "name": "ledStrip",
+      "name": "ledBar",
       "description": "",
       "highlight": "",
       "available": false,

@@ -32,6 +32,7 @@ import ToastService from 'primevue/toastservice'
 import Tooltip from 'primevue/tooltip'
 
 import Select from 'primevue/select'
+import IftaLabel from 'primevue/iftalabel'
 import FloatLabel from 'primevue/floatlabel'
 
 import Drawer from 'primevue/drawer'
@@ -104,6 +105,7 @@ app
   .component('Toast', Toast)
   .component('Select', Select)
   .component('FloatLabel', FloatLabel)
+  .component('IftaLabel', IftaLabel)
 
 app.directive('ripple', Ripple).directive('tooltip', Tooltip)
 

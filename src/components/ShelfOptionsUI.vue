@@ -2,19 +2,14 @@
     <div id="configurator-options-ui-container">
         <Fieldset :legend="$t('material')">
             <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-2">
-                    <span>{{ $t('materialType') }}</span>
-                    <div id="material-options" class="options-container flex flex-row flex-wrap gap-2">
-                        <button v-for="material in materials" @click.stop=""
-                            class=" selected p-button p-component p-button-secondary p-button-outlined param"
-                            :class="{ disabled: !material.availability }" :disabled="!material.availability">
-                            {{ $t(material.name) }}
-                        </button>
-                    </div>
+                <div id="material-options" class="flex flex-col gap-2">
+                    <span>{{ $t('type') }}</span>
+                    <Select v-model="materialVal" inputId="material" :options="materials" optionDisabled="disabled"
+                        optionLabel="label" class="w-full sm:w-56" />
                 </div>
                 <div class="flex flex-col gap-2">
                     <span>{{ $t('color') }}</span>
-                    <div id="material-color-options" class="options-container flex flex-row flex-wrap gap-2">
+                    <div id="material-color-options" class="flex flex-row flex-wrap gap-1.5">
                         <button v-for="color in materialColors" @click.stop=""
                             :style="`background-color: ${color.code};`"
                             class="p-button p-component p-button-secondary p-button-outlined param"
@@ -24,73 +19,95 @@
                 </div>
             </div>
         </Fieldset>
-        <Fieldset :legend="$t('otherOptions')">
-            <div id="other-options" class="options-container flex flex-col flex-wrap gap-4">
-                <div class="flex items-center gap-2 param" :class="{ 'selected': otherOptions.backboard }">
-                    <Checkbox v-model="otherOptions.backboard" binary inputId="backboard" name="backboard"
+        <Fieldset>
+            <template #legend>
+                <div class="flex items-center gap-2 p-fieldset-legend-label">
+                    <span>{{ $t('otherOptions') }}</span>
+                    <!-- <i class="pi pi-info-circle cursor-pointer"
+                        style="font-size: 1rem; color: var(--p-surface-400)"></i> -->
+                </div>
+            </template>
+            <div id="other-options" class="flex flex-col gap-4">
+                <div id="backboard-options" class="flex items-center gap-2">
+                    <Checkbox v-model="otherOptions.backboard" inputId="backboard" name="backboard" binary
                         @change="onBackboardChange" />
                     <label for="backboard">{{ $t('backboard') }}</label>
                 </div>
-                <div class="flex flex-col gap-2">
+                <div id="edge-options" class="flex flex-col gap-2">
                     <span>{{ $t('edgeFinish') }}</span>
-                    <div class="flex-wrap flex gap-4">
-                        <div class="flex items-center gap-2 param" :class="{ 'selected': otherOptions.edge === 1 }">
-                            <RadioButton v-model="otherOptions.edge" inputId="single_edge" name="edge" :value="1"
-                                @change="onEdgeChange" />
-                            <label for="single_edge">{{ $t('singleEdge') }}</label>
-                        </div>
-                        <div class="flex items-center gap-2 param" :class="{ 'selected': otherOptions.edge === 2 }">
-                            <RadioButton v-model="otherOptions.edge" inputId="double_edge" name="edge" :value="2"
-                                @change="onEdgeChange" />
-                            <label for="double_edge">{{ $t('doubleEdge') }}</label>
-                        </div>
-                    </div>
+                    <Select v-model="otherOptions.edge" inputId="edge" :options="edgeFinishOptions" optionLabel="label"
+                        optionValue="value" placeholder="" class="w-full sm:w-56" @change="onEdgeChange" />
                 </div>
             </div>
         </Fieldset>
         <Fieldset>
             <template #legend>
-                <div class="flex items-center gap-1.5 p-fieldset-legend-label">
+                <div class="flex items-center gap-2 p-fieldset-legend-label">
                     <span>{{ $t('lighting') }}</span>
-                    <i class="pi pi-info-circle cursor-pointer"
-                        style="font-size: 1rem; color: var(--p-surface-400)"></i>
+                    <!-- <i class="pi pi-info-circle cursor-pointer"
+                        style="font-size: 1rem; color: var(--p-surface-400)"></i> -->
                 </div>
             </template>
-            <div id="lighting-options" class="options-container flex flex-wrap justify-start items-stretch gap-2">
-                <FloatLabel class="w-full sm:w-56" variant="in">
-                    <Select v-model="lightingVal" showClear inputId="lighting" :options="lighting"
-                        optionDisabled="disabled" optionLabel="label" variant="filled" class="w-full text-sm py-0" />
-                    <label for="lighting">{{ $t('lightingType') }}</label>
-                </FloatLabel>
-                <FloatLabel class="w-full sm:w-56" variant="in">
-                    <Select v-model="lightingVariantVal" showClear inputId="lighting_variant"
-                        :options="lightingVariants" optionDisabled="disabled" optionLabel="label" variant="filled"
-                        class="w-full text-sm py-0" />
+            <div id="lighting-options" class="flex flex-wrap gap-y-4 gap-x-2 pt-2">
+                <floatLabel class="w-full sm:w-56" variant="on">
+                    <Select v-model="lightingTypeVal" showClear inputId="lighting_type" :options="lighting"
+                        optionDisabled="disabled" optionLabel="label" class="w-full" />
+                    <label for="lighting_type">{{ $t('lightingType') }}</label>
+                </floatLabel>
+                <floatLabel class="w-full sm:w-56" variant="on">
+                    <Select v-model="lightingVariantVal" inputId="lighting_variant" :options="lightingVariants"
+                        optionDisabled="disabled" optionLabel="label" class="w-full" />
                     <label for="lighting_variant">{{ $t('lightingSize') }}</label>
-                </FloatLabel>
-                <FloatLabel class="w-full sm:w-56" variant="in">
-                    <Select v-model="lightingColorVal" showClear inputId="lighting_color" :options="lightingColors"
-                        optionDisabled="disabled" optionLabel="label" variant="filled" class="w-full text-sm py-0" />
+                </floatLabel>
+                <floatLabel class="w-full sm:w-56" variant="on">
+                    <Select v-model="lightingColorVal" inputId="lighting_color" :options="lightingColors"
+                        optionDisabled="disabled" optionLabel="label" class="w-full" />
                     <label for="lighting_color">{{ $t('lightingColor') }}</label>
-                </FloatLabel>
+                </floatLabel>
             </div>
         </Fieldset>
     </div>
 </template>
 <script setup>
-import { reactive, ref, computed, onMounted } from "vue";
+import { reactive, ref, watch, computed, onMounted } from "vue";
 import { useI18n } from 'vue-i18n';
+
 const { t } = useI18n();
+
+/* Other options */
+const otherOptions = ref({
+    backboard: false,
+    edge: 0
+});
+
+const edgeFinishOptions = ref([
+    { name: "Without", label: computed(() => t('without')), value: 0 },
+    { name: "Single edge", label: computed(() => t('singleEdge')), value: 1 },
+    { name: "Double edge", label: computed(() => t('doubleEdge')), value: 2 }
+]);
+
+const onEdgeChange = (event) => {
+    if (event.value === 2) {
+        otherOptions.value.backboard = false;
+    }
+};
+
+const onBackboardChange = () => {
+    if (otherOptions.value.backboard && otherOptions.value.edge === 2) {
+        otherOptions.value.edge = 1;
+    }
+};
 
 /* Temporary Shelf Options Catalog */
 /* Material options */
-const materials = [
-    { name: 'wood', availability: true },
-    { name: 'mdf', availability: true },
-    { name: 'plywood', availability: false },
-    { name: 'metal', availability: false },
-    { name: 'glass', availability: false },
-];
+const materials = ref([
+    { name: 'wood', label: computed(() => t('wood')), value: 'wood', availability: true, disabled: false },
+    { name: 'mdf', label: computed(() => t('mdf')), value: 'mdf', availability: true, disabled: false },
+    { name: 'plywood', label: computed(() => t('plywood')), value: 'plywood', availability: false, disabled: true },
+    { name: 'metal', label: computed(() => t('metal')), value: 'metal', availability: false, disabled: true },
+    { name: 'glass', label: computed(() => t('glass')), value: 'glass', availability: false, disabled: true },
+]);
+const materialVal = ref(materials.value[0]);
 /* Material color options */
 const materialColors = [
     { name: 'white', code: '#f8fafc', availability: true },
@@ -104,27 +121,6 @@ const materialColors = [
     { name: 'green', code: '#4ade80;', availability: false },
     { name: 'black', code: '#030712;', availability: true },
 ];
-
-/* Other options */
-const otherOptions = ref({
-    backboard: false,
-    edge: 1,
-    lighting: 0
-});
-
-const onBackboardChange = () => {
-    if (otherOptions.value.backboard) {
-        otherOptions.value.edge = 1;
-    }
-};
-
-const onEdgeChange = () => {
-    if (otherOptions.value.edge === 2) {
-        otherOptions.value.backboard = false;
-    }
-};
-
-
 /* Lighting */
 const lighting = ref([
     { name: 'ledStrip', label: computed(() => t('ledStrip')), available: true, disabled: false },
@@ -132,7 +128,6 @@ const lighting = ref([
     { name: 'ledChannel', label: computed(() => t('ledChannel')), available: true, disabled: false },
     { name: 'various', label: computed(() => t('various')), available: false, disabled: true },
 ]);
-
 /* Lighting sizes */
 const lightingVariants = ref([
     { name: '', size: '8', label: computed(() => '8' + t('mm')), code: '', availability: true, disabled: false },
@@ -140,7 +135,6 @@ const lightingVariants = ref([
     { name: '', size: '12', label: computed(() => '12' + t('mm')), code: '', availability: false, disabled: true },
     { name: 'various', label: computed(() => t('various')), available: false, disabled: true }
 ]);
-
 /* Lighting colors */
 const lightingColors = ref([
     { name: 'warm', label: computed(() => t('warm')), code: '', availability: true, disabled: false },
@@ -153,9 +147,9 @@ const lightingColors = ref([
     { name: 'various', label: computed(() => t('various')), available: false, disabled: true }
 ]);
 
-const lightingColorVal = ref();
+const lightingTypeVal = ref();
 const lightingVariantVal = ref();
-const lightingVal = ref();
+const lightingColorVal = ref();
 
 </script>
 <style></style>
