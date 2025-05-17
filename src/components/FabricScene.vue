@@ -41,4 +41,14 @@ const toggleConfiguratorSettingsMenu = (event) => {
 };
 
 </script>
-<style></style>
+<style scoped>
+#fabric-scene-container {
+    & #fabric-toolbar {
+        & #tools {
+            background: var(--p-content-background);
+            border: 1px solid var(--p-content-border-color);
+            color: var(--p-content-color);
+        }
+    }
+}
+</style>

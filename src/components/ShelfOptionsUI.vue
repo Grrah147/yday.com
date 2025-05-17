@@ -4,7 +4,7 @@
             <div class="flex flex-col gap-4">
                 <div id="material-options" class="flex flex-col gap-2">
                     <span class="pl-0.5">{{ $t('type') }}</span>
-                    <Select v-model="materialVal" inputId="material" :options="materials" optionDisabled="disabled"
+                    <Select v-model="materialVal" inputId="material" :options="materials" optionDisabled="isDisabled"
                         optionLabel="label" class="w-full sm:w-40 min-w-min" />
                 </div>
                 <div class="flex flex-col gap-2">
@@ -13,7 +13,7 @@
                         <button v-for="color in materialColors" @click.stop=""
                             :style="`background-color: ${color.code};`"
                             class="p-button p-button-icon-only p-component p-button-secondary p-button-outlined"
-                            :class="{ disabled: !color.availability }" :disabled="!color.availability">
+                            :class="{ disabled: !color.isAvailable }" :disabled="!color.isAvailable">
                         </button>
                     </div>
                 </div>
@@ -95,25 +95,25 @@ const onBackboardChange = () => {
 /* Temporary Shelf Options Catalog */
 /* Material options */
 const materials = ref([
-    { name: 'wood', label: computed(() => t('wood')), value: 'wood', availability: true, disabled: false },
-    { name: 'mdf', label: computed(() => t('mdf')), value: 'mdf', availability: true, disabled: false },
-    { name: 'plywood', label: computed(() => t('plywood')), value: 'plywood', availability: false, disabled: true },
-    { name: 'metal', label: computed(() => t('metal')), value: 'metal', availability: false, disabled: true },
-    { name: 'glass', label: computed(() => t('glass')), value: 'glass', availability: false, disabled: true },
+    { name: 'wood', label: computed(() => t('wood')), value: 'wood', isAvailable: true, isDisabled: false },
+    { name: 'mdf', label: computed(() => t('mdf')), value: 'mdf', isAvailable: true, isDisabled: false },
+    { name: 'plywood', label: computed(() => t('plywood')), value: 'plywood', isAvailable: false, isDisabled: true },
+    { name: 'metal', label: computed(() => t('metal')), value: 'metal', isAvailable: false, isDisabled: true },
+    { name: 'glass', label: computed(() => t('glass')), value: 'glass', isAvailable: false, isDisabled: true },
 ]);
 const materialVal = ref(materials.value[0]);
 /* Material color options */
 const materialColors = [
-    { name: 'white', code: '#f8fafc', availability: true },
-    { name: 'gray', code: '#e5e7eb', availability: true },
-    { name: 'brown', code: '#a8a29e', availability: true },
-    { name: 'yellow', code: '#facc15', availability: true },
-    { name: 'red', code: '#f87171', availability: true },
-    { name: 'purple', code: '#a78bfa', availability: true },
-    { name: 'blue', code: '#60a5fa;', availability: true },
-    { name: 'green', code: '#4ade80;', availability: true },
-    { name: 'green', code: '#4ade80;', availability: false },
-    { name: 'black', code: '#030712;', availability: true },
+    { name: 'white', code: '#f8fafc', isAvailable: true },
+    { name: 'gray', code: '#e5e7eb', isAvailable: true },
+    { name: 'brown', code: '#a8a29e', isAvailable: true },
+    { name: 'yellow', code: '#facc15', isAvailable: true },
+    { name: 'red', code: '#f87171', isAvailable: true },
+    { name: 'purple', code: '#a78bfa', isAvailable: true },
+    { name: 'blue', code: '#60a5fa;', isAvailable: true },
+    { name: 'green', code: '#4ade80;', isAvailable: true },
+    { name: 'green', code: '#4ade80;', isAvailable: false },
+    { name: 'black', code: '#030712;', isAvailable: true },
 ];
 // Standardized lighting options
 const lightingOptions = ref([
@@ -175,4 +175,30 @@ const handleLightingTypeChange = (event) => {
 };
 
 </script>
-<style></style>
+<style scoped>
+#configurator-options-ui-container {
+    & #material-color-options {
+        & button {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            transition: transform 0.1s;
+        }
+
+        & button:not(:disabled) {
+            opacity: .8;
+
+            &:hover {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+
+        & button:disabled {
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+    }
+}
+</style>
