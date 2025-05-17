@@ -209,24 +209,7 @@ const proceed = (action, activateCallback) => {
     & button {
       width: 24px;
       height: 24px;
-    }
-  }
-
-  & .options-container {
-    & button {
-      border-radius: 0.25rem;
-    }
-  }
-
-  & .param,
-  & input {
-    color: var(--p-button-outlined-secondary-color);
-
-    &.selected,
-    &.active,
-    &.checked,
-    &:hover:not(.disabled) {
-      color: var(--p-fieldset-color);
+      border-radius: 4px;
     }
   }
 }

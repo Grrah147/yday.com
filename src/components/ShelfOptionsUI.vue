@@ -3,16 +3,16 @@
         <Fieldset :legend="$t('material')">
             <div class="flex flex-col gap-4">
                 <div id="material-options" class="flex flex-col gap-2">
-                    <span>{{ $t('type') }}</span>
+                    <span class="pl-0.5">{{ $t('type') }}</span>
                     <Select v-model="materialVal" inputId="material" :options="materials" optionDisabled="disabled"
                         optionLabel="label" class="w-full sm:w-56" />
                 </div>
                 <div class="flex flex-col gap-2">
-                    <span>{{ $t('color') }}</span>
+                    <span class="pl-0.5">{{ $t('color') }}</span>
                     <div id="material-color-options" class="flex flex-row flex-wrap gap-1.5">
                         <button v-for="color in materialColors" @click.stop=""
                             :style="`background-color: ${color.code};`"
-                            class="p-button p-component p-button-secondary p-button-outlined param"
+                            class="p-button p-button-icon-only p-component p-button-secondary p-button-outlined"
                             :class="{ disabled: !color.availability }" :disabled="!color.availability">
                         </button>
                     </div>
@@ -34,7 +34,7 @@
                     <label for="backboard">{{ $t('backboard') }}</label>
                 </div>
                 <div id="edge-options" class="flex flex-col gap-2">
-                    <span>{{ $t('edgeFinish') }}</span>
+                    <span class="pl-0.5">{{ $t('edgeFinish') }}</span>
                     <Select v-model="otherOptions.edge" inputId="edge" :options="edgeFinishOptions" optionLabel="label"
                         optionValue="value" placeholder="" class="w-full sm:w-56" @change="onEdgeChange" />
                 </div>
@@ -48,22 +48,16 @@
                         style="font-size: 1rem; color: var(--p-surface-400)"></i> -->
                 </div>
             </template>
-            <div id="lighting-options" class="flex flex-wrap gap-y-4 gap-x-2 pt-2">
-                <floatLabel class="w-full sm:w-56" variant="on">
-                    <Select v-model="lightingTypeVal" showClear inputId="lighting_type" :options="lighting"
-                        optionDisabled="disabled" optionLabel="label" class="w-full" />
-                    <label for="lighting_type">{{ $t('lightingType') }}</label>
-                </floatLabel>
-                <floatLabel class="w-full sm:w-56" variant="on">
-                    <Select v-model="lightingVariantVal" inputId="lighting_variant" :options="lightingVariants"
-                        optionDisabled="disabled" optionLabel="label" class="w-full" />
-                    <label for="lighting_variant">{{ $t('lightingSize') }}</label>
-                </floatLabel>
-                <floatLabel class="w-full sm:w-56" variant="on">
-                    <Select v-model="lightingColorVal" inputId="lighting_color" :options="lightingColors"
-                        optionDisabled="disabled" optionLabel="label" class="w-full" />
-                    <label for="lighting_color">{{ $t('lightingColor') }}</label>
-                </floatLabel>
+            <div id="lighting-options" class="flex flex-wrap gap-2 pt-1">
+                <Select v-model="lightingTypeVal" :showClear="isClearButtonVisible" inputId="lighting_type"
+                    :options="lightingOptions" optionLabel="label" optionDisabled="isDisabled"
+                    :placeholder="t('lightingType')" class="w-full sm:w-56" @change="handleLightingTypeChange" />
+                <Select v-model="lightingVariantVal" inputId="lighting_variant" :options="lightingVariantOptions"
+                    optionLabel="label" optionDisabled="isDisabled" :placeholder="t('lightingSize')"
+                    :disabled="isVariantSelectDisabled" class="w-full sm:w-56" />
+                <Select v-model="lightingColorVal" inputId="lighting_color" :options="lightingColorOptions"
+                    optionLabel="label" optionDisabled="isDisabled" :placeholder="t('lightingColor')"
+                    :disabled="isColorSelectDisabled" class="w-full sm:w-56" />
             </div>
         </Fieldset>
     </div>
@@ -121,35 +115,64 @@ const materialColors = [
     { name: 'green', code: '#4ade80;', availability: false },
     { name: 'black', code: '#030712;', availability: true },
 ];
-/* Lighting */
-const lighting = ref([
-    { name: 'ledStrip', label: computed(() => t('ledStrip')), available: true, disabled: false },
-    { name: 'ledBar', label: computed(() => t('ledBar')), available: true, disabled: false },
-    { name: 'ledChannel', label: computed(() => t('ledChannel')), available: true, disabled: false },
-    { name: 'various', label: computed(() => t('various')), available: false, disabled: true },
+// Standardized lighting options
+const lightingOptions = ref([
+    { name: 'Without', label: computed(() => t('without')), isAvailable: true, isDisabled: false, isDefault: true },
+    { name: 'ledStrip', label: computed(() => t('ledStrip')), isAvailable: true, isDisabled: false },
+    { name: 'ledBar', label: computed(() => t('ledBar')), isAvailable: true, isDisabled: false },
+    { name: 'ledChannel', label: computed(() => t('ledChannel')), isAvailable: true, isDisabled: false },
+    { name: 'various', label: computed(() => t('various')), isAvailable: false, isDisabled: true },
 ]);
-/* Lighting sizes */
-const lightingVariants = ref([
-    { name: '', size: '8', label: computed(() => '8' + t('mm')), code: '', availability: true, disabled: false },
-    { name: '', size: '10', label: computed(() => '10' + t('mm')), code: '', availability: true, disabled: false },
-    { name: '', size: '12', label: computed(() => '12' + t('mm')), code: '', availability: false, disabled: true },
-    { name: 'various', label: computed(() => t('various')), available: false, disabled: true }
+// Standardized lighting variant options
+const lightingVariantOptions = ref([
+    { name: 'size8', size: '8', label: computed(() => `8${t('mm')}`), isAvailable: true, isDisabled: false, isDefault: true },
+    { name: 'size10', size: '10', label: computed(() => `10${t('mm')}`), isAvailable: true, isDisabled: false },
+    { name: 'size12', size: '12', label: computed(() => `12${t('mm')}`), isAvailable: false, isDisabled: true },
+    { name: 'various', label: computed(() => t('various')), isAvailable: false, isDisabled: true },
 ]);
-/* Lighting colors */
-const lightingColors = ref([
-    { name: 'warm', label: computed(() => t('warm')), code: '', availability: true, disabled: false },
-    { name: 'cold', label: computed(() => t('cold')), code: '', availability: true, disabled: false },
-    { name: 'neutral', label: computed(() => t('neutral')), code: '', availability: true, disabled: false },
-    { name: 'blue', label: computed(() => t('blue')), code: '', availability: true, disabled: false },
-    { name: 'red', label: computed(() => t('red')), code: '', availability: true, disabled: false },
-    { name: 'green', label: computed(() => t('green')), code: '', availability: false, disabled: true },
-    { name: 'RGB', label: computed(() => t('RGB')), code: '', availability: true, disabled: false },
-    { name: 'various', label: computed(() => t('various')), available: false, disabled: true }
+// Standardized lighting color options
+const lightingColorOptions = ref([
+    { name: 'warm', label: computed(() => t('warm')), isAvailable: true, isDisabled: false, isDefault: true },
+    { name: 'cold', label: computed(() => t('cold')), isAvailable: true, isDisabled: false },
+    { name: 'neutral', label: computed(() => t('neutral')), isAvailable: true, isDisabled: false },
+    { name: 'blue', label: computed(() => t('blue')), isAvailable: true, isDisabled: false },
+    { name: 'red', label: computed(() => t('red')), isAvailable: true, isDisabled: false },
+    { name: 'green', label: computed(() => t('green')), isAvailable: false, isDisabled: true },
+    { name: 'RGB', label: computed(() => t('RGB')), isAvailable: true, isDisabled: false },
+    { name: 'various', label: computed(() => t('various')), isAvailable: false, isDisabled: true },
 ]);
 
-const lightingTypeVal = ref();
-const lightingVariantVal = ref();
-const lightingColorVal = ref();
+// Reactive state for selections
+const lightingTypeVal = ref(lightingOptions.value.find(opt => opt.isDefault)); // Default to "Without"
+const lightingVariantVal = ref(null);
+const lightingColorVal = ref(null);
+
+const isVariantSelectDisabled = computed(() => lightingTypeVal.value?.name === 'Without');
+const isColorSelectDisabled = computed(() => lightingTypeVal.value?.name === 'Without');
+
+// Compute if clear button should be visible
+const isClearButtonVisible = computed(() => lightingTypeVal.value?.name !== 'Without');
+
+// Handle lighting type changes
+const handleLightingTypeChange = (event) => {
+    const newValue = event.value;
+    if (newValue === null) {
+        // On clear, reset to default ("Without")
+        lightingTypeVal.value = lightingOptions.value.find(opt => opt.isDefault);
+    } else {
+        lightingTypeVal.value = newValue;
+    }
+
+    // Reset or set defaults for variants and colors
+    if (lightingTypeVal.value.name === 'Without') {
+        lightingVariantVal.value = null;
+        lightingColorVal.value = null;
+    } else {
+        // Set default variant and color for non-default lighting types
+        lightingVariantVal.value = lightingVariantOptions.value.find(opt => opt.isDefault);
+        lightingColorVal.value = lightingColorOptions.value.find(opt => opt.isDefault);
+    }
+};
 
 </script>
 <style></style>

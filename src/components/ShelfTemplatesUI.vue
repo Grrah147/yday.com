@@ -1,6 +1,6 @@
 <template>
     <div id="shelf-templates-ui-container" class="card w-full select-none">
-        <Panel :header="$t('template')" toggleable>
+        <Panel :header="$t('template')" toggleable collapsed>
             <Carousel :value="state.shelves" :numVisible="7" :numScroll="1" :responsiveOptions="responsiveOptions">
                 <template #item="slotProps">
                     <div :id="slotProps.data.id"
