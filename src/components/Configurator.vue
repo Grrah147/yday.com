@@ -28,10 +28,8 @@
                                 :label="$t('fullDetails')" severity="secondary"
                                 @click="configuratorShelfInfoPanel = true" />
                         </div>
-                        <span class="configurator-shelf-price text-surface-500 dark:text-surface-400">{{ $t('price') +
-                            ' ' + '345' +
-                            ' ' +
-                            $t('gel') }}
+                        <span class="configurator-shelf-price text-surface-500 dark:text-surface-400">
+                            {{ $t('price') + ' ' + '345' + ' ' + $t('gel') }}
                         </span>
                     </div>
                 </template>
@@ -55,7 +53,7 @@ const { t } = useI18n();
 const threeScene = ref(false);
 const configuratorShelfInfoPanel = ref(false);
 
-/* Error handling */
+// Error handling (temporary for demo)
 const emit = defineEmits(['update:error']);
 
 const ERROR_TYPES = {
@@ -73,9 +71,7 @@ const ERROR_MESSAGES = {
 
 // Configurator state (example: dimensions and touch points)
 const dimensions = ref({
-    width: 50,
-    height: 50,
-    depth: 30,
+    width: 50, height: 50, depth: 30,
 });
 const touchPoints = ref(2);
 const selectedMaterial = ref('wood');

@@ -44,9 +44,10 @@
                     <!-- <Button icon="pi pi-palette" variant="outlined" severity="secondary" aria-label="Theme"
                         @click="toggleGrayScaleMode()" /> -->
                     <Button icon="pi pi-user" type="button" variant="outlined" severity="secondary" aria-haspopup="true"
-                        aria-controls="user_account_overlay_dropdown_menu" @click="toggleUserAccountDropdownMenu" />
-                    <Menu ref="userAccountDropdownMenu" id="user_account_overlay_dropdown_menu"
-                        :model="userAccountDropdownMenuItems" :popup="true" />
+                        aria-controls="user_account_overlay_dropdown_menu" @click="toggleUserAccountDropdownMenu"
+                        disabled />
+                    <!-- <Menu ref="userAccountDropdownMenu" id="user_account_overlay_dropdown_menu"
+                        :model="userAccountDropdownMenuItems" :popup="true" /> -->
                     <Button icon="pi pi-shopping-cart" variant="outlined" severity="secondary" aria-label="Cart"
                         @click="" />
                 </div>
@@ -58,7 +59,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { updatePrimaryPalette } from '@primeuix/themes'
+// import { updatePrimaryPalette } from '@primeuix/themes'
 
 const { t, locale } = useI18n();
 
@@ -90,13 +91,31 @@ const items = ref([
     },
 ]);
 
-// Theme Switch
+// Theme switch
 const ydAppDark = ref(true);
+
 function toggleDarkMode() {
     document.documentElement.classList.toggle('yd-app-dark');
     ydAppDark.value = !ydAppDark.value;
 }
 
+// Language switch
+const flagMap = { en: 'gb', ka: 'ge', ru: 'ru' };
+
+const languageSwitchDropdownMenu = ref();
+const languageSwitchDropdownMenuItems = ref([
+    { icon: 'flag-icon flag-icon-gb', command: () => selectLanguage('en') },
+    { icon: 'flag-icon flag-icon-ge', command: () => selectLanguage('ka') },
+    { icon: 'flag-icon flag-icon-ru', command: () => selectLanguage('ru') },
+]);
+
+const toggleLanguageSwitchDropdownMenu = (event) => {
+    languageSwitchDropdownMenu.value.toggle(event);
+};
+
+const selectLanguage = (code) => { locale.value = code };
+
+// // Primary color switch
 // const colorOptions = ['blue', 'violet', 'gray'];
 // let currentColorIndex = 0;
 // function toggleGrayScaleMode() {
@@ -119,66 +138,68 @@ function toggleDarkMode() {
 //     currentColorIndex = (currentColorIndex + 1) % colorOptions.length;
 // }
 
-// Language switch
-const flagMap = {
-    en: 'gb',
-    ka: 'ge',
-    ru: 'ru',
-};
+// // User account dropdown menu
+// const userAccountDropdownMenu = ref();
+// const userAccountDropdownMenuItems = ref([
+//     {
+//         label: 'nikoloz.u@gmail.com',
+//         items: [
+//             { label: computed(() => t('account')), icon: 'pi pi-user', },
+//             { label: computed(() => t('orderHistory')), icon: 'pi pi-history', },
+//             { label: computed(() => t('cart')), icon: 'pi pi-shopping-cart', },
+//             { label: computed(() => t('signOut')), icon: 'pi pi-sign-out', },
+//         ],
+//     },
+// ]);
 
-const languageSwitchDropdownMenu = ref();
-const languageSwitchDropdownMenuItems = ref([
-    {
-        icon: 'flag-icon flag-icon-gb',
-        command: () => selectLanguage('en'),
-    },
-    {
-        icon: 'flag-icon flag-icon-ge',
-        command: () => selectLanguage('ka'),
-    },
-    {
-        icon: 'flag-icon flag-icon-ru',
-        command: () => selectLanguage('ru'),
-    },
-]);
-
-const toggleLanguageSwitchDropdownMenu = (event) => {
-    languageSwitchDropdownMenu.value.toggle(event);
-};
-
-const selectLanguage = (code) => {
-    locale.value = code; // Update Vue I18n locale
-};
-
-// User account dropdown menu
-const userAccountDropdownMenu = ref();
-const userAccountDropdownMenuItems = ref([
-    {
-        label: 'nikoloz.u@gmail.com', // user email or phone number.
-        items: [
-            {
-                label: computed(() => t('account')),
-                icon: 'pi pi-user',
-            },
-            {
-                label: computed(() => t('orderHistory')),
-                icon: 'pi pi-history',
-            },
-            {
-                label: computed(() => t('cart')),
-                icon: 'pi pi-shopping-cart',
-            },
-            {
-                label: computed(() => t('signOut')),
-                icon: 'pi pi-sign-out',
-            },
-        ],
-    },
-]);
-
-const toggleUserAccountDropdownMenu = (event) => {
-    userAccountDropdownMenu.value.toggle(event);
-};
+// const toggleUserAccountDropdownMenu = (event) => {
+//     userAccountDropdownMenu.value.toggle(event);
+// };
 </script>
 
-<style scoped></style>
+<style>
+.p-menubar {
+    & .p-menubar-item-link {
+        border-radius: var(--p-menubar-base-item-border-radius);
+        opacity: 0.9;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    & .router-link-active,
+    & .router-link-exact-active {
+        opacity: 1;
+        color: var(--p-menubar-item-focus-color);
+        background: var(--p-menubar-item-focus-background);
+        border-radius: var(--p-menubar-base-item-border-radius);
+    }
+
+    /* &.p-menubar-mobile { */
+    .p-menubar-item.p-focus>.p-menubar-item-content {
+        background: var(--p-menubar-background);
+        color: var(--p-menubar-color);
+    }
+
+    /* } */
+}
+
+.flag-icon {
+    line-height: inherit !important;
+    filter: grayscale(25%);
+}
+
+#language_switch_dropdown_menu {
+    min-width: min-content;
+
+    & div {
+        padding: var(--p-button-padding-y) var(--p-button-padding-x);
+        cursor: pointer;
+    }
+}
+
+#user_account_overlay_dropdown_menu_list li:last-child>div>a {
+    padding-bottom: 0.75rem;
+}
+</style>

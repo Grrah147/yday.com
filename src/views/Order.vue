@@ -70,9 +70,7 @@ const showWarn = () => {
   if (!errorMessage.value) return;
 
   toast.add({
-    severity: 'warn',
-    summary: computed(() => t('wrongFormat')),
-    detail: computed(() => t(errorMessage.value)),
+    severity: 'warn', summary: computed(() => t('wrongFormat')), detail: computed(() => t(errorMessage.value)),
   });
 };
 
@@ -85,25 +83,21 @@ const proceed = (action, activateCallback) => {
   if (action === 'order') {
     activateCallback('2');
   } else if (action === 'cart') {
-    // Add to cart functionality
-    //
+    // // Add to cart functionality
+
     // toast.add({
-    //   severity: 'success',
-    //   summary: 'Success',
-    //   detail: 'Shelf added to cart.',
-    //   life: 3000,
+    //   severity: 'success', summary: 'Success', detail: 'Shelf added to cart.', life: 3000,
     // });
   }
 };
 </script>
 
 <style>
-/* Order.vue */
 #order {
   width: 100%;
 }
 
-& .p-stepitem {
+.p-stepitem {
   & .p-step-title {
     font-weight: 600;
   }
@@ -119,5 +113,9 @@ const proceed = (action, activateCallback) => {
       overflow: hidden;
     }
   }
+}
+
+& .p-toast-message-icon {
+  margin-top: 0.15rem;
 }
 </style>
